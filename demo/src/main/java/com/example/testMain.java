@@ -14,14 +14,14 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class testMain 
+public final class testMain 
 {
 //	private String dburl = "jdbc:mysql://localhost:3306/sys"; 원후
 //	private String dbuser = "test1"; 원후
 //	private String dbpasswd = "test1";원후
-	private String dburl = "jdbc:mysql://localhost:3306/mydatabase"; //민지
-	private String dbuser = "root"; //민지
-	private String dbpasswd = "1367"; // 민지
+	private static  String dburl = "jdbc:mysql://localhost:3306/mydatabase"; //민지
+	private static String dbuser = "root"; //민지
+	private static String dbpasswd = "1367"; // 민지
 	
 	String sql = "SELECT * FROM student";
 	
@@ -204,25 +204,19 @@ public class testMain
 	
     public static void main( String[] args ) 
     {
+    	
+    	DBConnection dbConnection = new DBConnection(dburl, dbuser, dbpasswd);
+    	
+    	CreateTable createT = new CreateTable(dbConnection);
 
-//        Class.forName("com.mysql.cj.jdbc.Driver");
         
-//        Connection con = DriverManager.getConnection(dburl, dbpasswd, dbUser);
-//        Statement st = con.createStatement();
-//        ResultSet rs = st.executeQuery(sql);
-//       
-//        rs.close();
-//        st.close();
-//        con.close();
+
     	
-    	testMain my = new testMain();
+    	//testMain my = new testMain();
     	
-//    	List<student> list_students = my.getstudents();
-//    	for(student data: list_students) {
-//    		System.out.println(data);
-//    	}
+
     	//System.out.println(list_students.toString());
-    	
+    	/*
     	my.createTable();
     	
     	my.insertDummy(10, "dummy_name_1", 10);
@@ -231,7 +225,7 @@ public class testMain
     	List<dummy> list_dummies = my.getdummy();
     	for(dummy data: list_dummies) {
     		System.out.println(data);
-    	}
+    	}*/
 
     }
 }

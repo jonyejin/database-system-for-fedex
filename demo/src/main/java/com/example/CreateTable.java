@@ -22,12 +22,12 @@ import java.util.List;
 // foreign key(SUP_ID) reference table_name (tt_id);
 
 
-
 public class CreateTable {
 	private Connection conn = null;
 	private Statement stmt = null;
 		
 	private Connection Conn;
+	private String sql;
 	
 	public CreateTable() {
 		//assert("error");
@@ -38,26 +38,38 @@ public class CreateTable {
 		
 		try {
 			stmt = conn.createStatement();
+			
+			StringBuilder sb = new StringBuilder();
+            sql = sb.append("create table if not exists dummy(")
+                    .append("id int,")
+                    .append("name varchar(20),")
+                    .append("grade int")
+                    .append(");").toString();
+ 
+            //query문 날리기
+            stmt.execute(sql);
+            sb.delete(0,sb.length());
+            
+            
+            sql = sb.append("create table if not exists dummy(")
+                    .append("id int,")
+                    .append("name varchar(20),")
+                    .append("grade int")
+                    .append(");").toString();
+ 
+            //query문 날리기
+            stmt.execute(sql);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-	}
-	
-	public void createTable() {
-		List<dummy> list_dummies = my.getdummy();
-    	for(dummy data: list_dummies) {
-    		System.out.println(data);
-    	}
-    	
-        //query 만들기
-        StringBuilder sb = new StringBuilder();
-        String sql = sb.append("create table if not exists dummy(")
-                .append("id int,")
-                .append("name varchar(20),")
-                .append("grade int")
-                .append(");").toString();
 
-        //query문 날리기
-        stmt.execute(sql);
+		// dummy s = new dummy(1,"testName",10);
+		
+		
+		
+		
+		
+		
+	
 	}
 }

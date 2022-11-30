@@ -3,34 +3,26 @@ package com.example;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DBConnection {
-	private String dburl; //민지
-	private String dbuser; //민지
-	private String dbpasswd; // 민지
-	
+
 	
 	private Connection Conn;
 
-public class DBConnection 
-{
 	//원후 
-	private String dburl = "jdbc:mysql://localhost:3306/sys";
-	private String dbuser = "test1";
-	private String dbpasswd = "test1";
+	//private String dburl = "jdbc:mysql://localhost:3306/sys";
+	//private String dbuser = "test1";
+	//private String dbpasswd = "test1";
 	//민지 
-//	private String dburl = "jdbc:mysql://localhost:3306/mydatabase";
-//	private String dbuser = "root";
-//	private String dbpasswd = "1367";
+	private String dburl = "jdbc:mysql://localhost:3306/mydatabase";
+	private String dbuser = "root";
+	private String dbpasswd = "1367";
 	
-	String sql = "SELECT * FROM student";
+	//String sql = "SELECT * FROM student";
 	
-	public List<student> getstudents() {
-		List<student> list = new ArrayList<>();
-		
-		
-	}
-	
+
 	public DBConnection(String dburl, String dbuser, String dbpasswd) {
 		setDburl(dburl);
 		setDbuser(dbuser);
@@ -75,6 +67,12 @@ public class DBConnection
 
 	public void setConn(String dburl, String dbuser, String dbpasswd) {
 		try {
+			try {
+				Class.forName("com.mysql.cj.jdbc.Driver");
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			Conn = DriverManager.getConnection(dburl, dbuser, dbpasswd);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
