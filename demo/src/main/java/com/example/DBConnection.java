@@ -24,10 +24,11 @@ public class DBConnection {
 	
 
 	public DBConnection(String dburl, String dbuser, String dbpasswd) {
+		setConn(dburl,dbuser,dbpasswd);
+		
 		setDburl(dburl);
 		setDbuser(dbuser);
 		setDbpasswd(dbpasswd);
-		setConn(dburl,dbuser,dbpasswd);
 	}
 
 	public String getDburl() {
