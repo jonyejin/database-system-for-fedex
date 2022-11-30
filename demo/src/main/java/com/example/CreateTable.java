@@ -50,19 +50,11 @@ public class CreateTable {
             stmt.execute(sql);
             sb.delete(0,sb.length());
             
-            
-            sql = sb.append("create table if not exists dummy(")
-                    .append("id int,")
-                    .append("name varchar(20),")
-                    .append("grade int")
-                    .append(");").toString();
- 
-            //query문 날리기
-            stmt.execute(sql);
+            System.out.println("dummy table generated!");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-
+		
 		// dummy s = new dummy(1,"testName",10);
 		
 		
