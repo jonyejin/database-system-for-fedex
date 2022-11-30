@@ -16,12 +16,14 @@ import java.util.List;
 
 public class DBConnection 
 {
-//	private String dburl = "jdbc:mysql://localhost:3306/sys"; 원후
-//	private String dbuser = "test1"; 원후
-//	private String dbpasswd = "test1";원후
-	private String dburl = "jdbc:mysql://localhost:3306/mydatabase"; //민지
-	private String dbuser = "root"; //민지
-	private String dbpasswd = "1367"; // 민지
+	//원후 
+	private String dburl = "jdbc:mysql://localhost:3306/sys";
+	private String dbuser = "test1";
+	private String dbpasswd = "test1";
+	//민지 
+//	private String dburl = "jdbc:mysql://localhost:3306/mydatabase";
+//	private String dbuser = "root";
+//	private String dbpasswd = "1367";
 	
 	String sql = "SELECT * FROM student";
 	
