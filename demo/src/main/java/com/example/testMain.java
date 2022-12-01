@@ -208,8 +208,8 @@ public final class testMain
     	DBConnection dbConnection = new DBConnection(dburl, dbuser, dbpasswd);
     	
     	CreateTable createT = new CreateTable(dbConnection);
-
-        
+    	InsertTuple insertTuple = new InsertTuple(dbConnection);
+    	insertTuple.InsertDummy(10, "dummy_name_1", 10);
 
     	
     	//testMain my = new testMain();
@@ -222,10 +222,12 @@ public final class testMain
     	my.insertDummy(10, "dummy_name_1", 10);
     	
     	my.deleteDummy(10, "dummy_name_1", 10);
+    	
+    	//select문에 추가할 것! 결과 출력해줌
     	List<dummy> list_dummies = my.getdummy();
     	for(dummy data: list_dummies) {
     		System.out.println(data);
     	}*/
-
+    	
     }
 }
