@@ -25,69 +25,6 @@ public final class testMain
 	
 	String sql = "SELECT * FROM student";
 	
-	public List<student> getstudents() {
-		List<student> list = new ArrayList<>();
-		
-		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
-		
-		String sql = "SELECT * FROM student";
-		try(Connection conn = DriverManager.getConnection(dburl, dbuser, dbpasswd);
-				PreparedStatement ps = conn.prepareStatement(sql)) {
-			try(ResultSet rs = ps.executeQuery()) {
-				while(rs.next()) {
-					String des = rs.getString(1);
-					int id = rs.getInt("ID");
-					String name = rs.getString("name");
-					String dept_name = rs.getString("dept_name");
-					int tot_cred = rs.getInt("tot_cred");
-					student role = new student(id, name, dept_name, tot_cred);
-					list.add(role);
-				}
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-		return list;
-	}
-	
-	
-	public List<dummy> getdummy() {
-		List<dummy> list = new ArrayList<>();
-		
-		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
-		
-		String sql = "SELECT * FROM dummy";
-		try(Connection conn = DriverManager.getConnection(dburl, dbuser, dbpasswd);
-				PreparedStatement ps = conn.prepareStatement(sql)) {
-			try(ResultSet rs = ps.executeQuery()) {
-				while(rs.next()) {
-					String des = rs.getString(1);
-					int id = rs.getInt("ID");
-					String name = rs.getString("name");
-					int grade = rs.getInt("grade");
-					dummy data = new dummy(id, name, grade);
-					list.add(data);
-				}
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-		return list;
-	}
 	
 	
 	public void createTable() {
@@ -209,8 +146,18 @@ public final class testMain
     	CreateTable createT = new CreateTable(dbConnection);
     	
     	InsertTuple insertTuple = new InsertTuple(dbConnection);
-    	//insertTuple.InsertDummy(10, "dummy_name_1", 10);
+	
+    	//customer info insertion
     	insertTuple.InsertCustomerInfo("1","Peter", "Jone", "White", "12 1234 5678","123 1111 2222");
+    	insertTuple.InsertCustomerInfo("2","Genevieve", "Lana", "Cheona", "03 5545 5378","123 2222 3333");
+    	insertTuple.InsertCustomerInfo("3","Zendaya", "Faizan", "Anderson", "08 6986 3434","123 4444 5555");
+    	insertTuple.InsertCustomerInfo("4","Carolos", "Kira", "Akpabio", "12 3434 2424","123 6666 7777");
+    	insertTuple.InsertCustomerInfo("5","Elisa", "Lainey", "Lenkov", "12 5757 8989","123 5555 2342");
+    	insertTuple.InsertCustomerInfo("6","Famke", "Valentin", "Bianchi", "12 0987 8765","123 2347 8458");
+    	insertTuple.InsertCustomerInfo("7","Ansley", "Van", "Johnson", "12 3454 4565","123 4831 5758");
+    	insertTuple.InsertCustomerInfo("8","Kavya", "Artem", "Agrinya", "12 4545 8908","123 4734 6966");
+    	insertTuple.InsertCustomerInfo("9","Katharina", "Jozefa", "Ailana", "12 4342 5464","545 6787 2756");
+    	insertTuple.InsertCustomerInfo("10","Sadhbh", "Fionn", "Semenov", "12 4656 4545","243 4589 9632");
     	
     	//select test
     	//SelectTuple selectTuple = new SelectTuple(dbConnection);
@@ -218,22 +165,6 @@ public final class testMain
     	
     	
     	
-    	
-    	
-    	//testMain my = new testMain();
-    	//System.out.println(list_students.toString());
-    	/*
-    	my.createTable();
-    	
-    	my.insertDummy(10, "dummy_name_1", 10);
-    	
-    	my.deleteDummy(10, "dummy_name_1", 10);
-    	
-    	//select문에 추가할 것! 결과 출력해줌
-    	List<dummy> list_dummies = my.getdummy();
-    	for(dummy data: list_dummies) {
-    		System.out.println(data);
-    	}*/
-    	
+
     }
 }
