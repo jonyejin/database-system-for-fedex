@@ -19,6 +19,8 @@ import java.util.List;
  *  Statement stmt; 
  */
 
+//
+
 /* fk 설정하는법
  * foreign key(SUP_ID) reference table_name (tt_id);
  */
