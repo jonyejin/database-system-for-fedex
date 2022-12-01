@@ -26,7 +26,6 @@ public class SelectTuple {
 	}
 	
 	public void SelectDummy () {
-	    StringBuilder sb = new StringBuilder();
 	    List<dummy> list = new ArrayList<>();
 	    table = "dummy";
 	    sql = "SELECT * FROM "+table;
