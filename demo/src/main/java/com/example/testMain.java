@@ -206,11 +206,13 @@ public final class testMain
     {
     	
     	DBConnection dbConnection = new DBConnection(dburl, dbuser, dbpasswd);
-    	
     	CreateTable createT = new CreateTable(dbConnection);
+    	
     	InsertTuple insertTuple = new InsertTuple(dbConnection);
-    	insertTuple.InsertDummy(10, "dummy_name_1", 10);
+    	//insertTuple.InsertDummy(10, "dummy_name_1", 10);
 
+    	SelectTuple selectTuple = new SelectTuple(dbConnection);
+    	selectTuple.SelectDummy();
     	
     	//testMain my = new testMain();
     	
