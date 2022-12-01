@@ -210,13 +210,17 @@ public final class testMain
     	
     	InsertTuple insertTuple = new InsertTuple(dbConnection);
     	//insertTuple.InsertDummy(10, "dummy_name_1", 10);
-
-    	SelectTuple selectTuple = new SelectTuple(dbConnection);
-    	selectTuple.SelectDummy();
+    	insertTuple.InsertCustomerInfo("1","Peter", "Jone", "White", "12 1234 5678","123 1111 2222");
+    	
+    	//select test
+    	//SelectTuple selectTuple = new SelectTuple(dbConnection);
+    	//selectTuple.SelectDummy();
+    	
+    	
+    	
+    	
     	
     	//testMain my = new testMain();
-    	
-
     	//System.out.println(list_students.toString());
     	/*
     	my.createTable();

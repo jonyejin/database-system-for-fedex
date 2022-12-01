@@ -41,7 +41,7 @@ public class CreateTable {
 		try {
 			stmt = conn.createStatement();
 			
-			//dummy table 만들기
+			//dummy table gen
 			StringBuilder sb = new StringBuilder();
             sql = sb.append("create table if not exists dummy(")
                     .append("id int,")
@@ -49,12 +49,10 @@ public class CreateTable {
                     .append("grade int")
                     .append(");").toString();
  
-            //query문 날리기
-            stmt.execute(sql);
+            stmt.execute(sql); //query문 날리기
             sb.delete(0,sb.length());
             
-            
-            sb = new StringBuilder();
+            //customer_info table gen
             sql = sb.append("create table if not exists customer_info(")
                     .append("customer_id varchar(20),")
                     .append("first_name varchar(20),")
@@ -64,7 +62,6 @@ public class CreateTable {
                     .append("cell_phone varchar(20)")
                     .append(");").toString();
  
-            //query문 날리기
             stmt.execute(sql);
             sb.delete(0,sb.length());
             
