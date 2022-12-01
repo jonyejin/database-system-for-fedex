@@ -7,26 +7,26 @@ import java.sql.Statement;
 import java.util.List;
 
 
-/*
- String createString = "create table SUPPLIERSPK " +
-                "(SUP_ID INTEGER NOT NULL, " +
-                "SUP_NAME VARCHAR(40), " +
-                "STREET VARCHAR(40), " +
-                "CITY VARCHAR(20), " +
-                "STATE CHAR(2), " +
-                "ZIP CHAR(5), " +
-                "primary key(SUP_ID))";
-    Statement stmt; 
+/* pk  설정하는 법
+ * String createString = "create table SUPPLIERSPK " +
+ *              "(SUP_ID INTEGER NOT NULL, " +
+ *              "SUP_NAME VARCHAR(40), " +
+ *              "STREET VARCHAR(40), " +
+ *              "CITY VARCHAR(20), " +
+ *              "STATE CHAR(2), " +
+ *              "ZIP CHAR(5), " +
+ *              "primary key(SUP_ID))";
+ *  Statement stmt; 
  */
 
-// foreign key(SUP_ID) reference table_name (tt_id);
+/* fk 설정하는법
+ * foreign key(SUP_ID) reference table_name (tt_id);
+ */
 
 
 public class CreateTable {
 	private Connection conn = null;
 	private Statement stmt = null;
-		
-	private Connection Conn;
 	private String sql;
 	
 	public CreateTable() {
@@ -54,14 +54,6 @@ public class CreateTable {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
-		// dummy s = new dummy(1,"testName",10);
-		
-		
-		
-		
-		
-		
 	
 	}
 }

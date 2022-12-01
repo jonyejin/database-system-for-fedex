@@ -37,7 +37,6 @@ public class InsertTuple {
 	            stmt.executeUpdate(sql);
 	            System.out.println("insert dummy tuple");
 	     } catch (SQLException e) {
-	            // TODO Auto-generated catch block
 	            e.printStackTrace();
 	     }
 	}
