@@ -50,6 +50,7 @@ public class CreateTable {
                     .append(");").toString();
  
             stmt.execute(sql); //query문 날리기
+            System.out.println("dummy table generate!");
             sb.delete(0,sb.length());
             
             //customer_info table gen
@@ -62,10 +63,28 @@ public class CreateTable {
                     .append("cell_phone varchar(20),")
                     .append("primary key(customer_id)")
                     .append(");").toString();
-
  
             stmt.execute(sql);
+            System.out.println("customer_info table generate!");
             sb.delete(0,sb.length());
+            
+            
+            //customer_info table gen
+            sql = sb.append("create table if not exists customer_address(")
+            		//여기여기여
+                    .append("customer_id varchar(20),")
+                    .append("first_name varchar(20),")
+                    .append("middle_name varchar(20),")
+                    .append("last_name varchar(20),")
+                    .append("house_phone varchar(20),")
+                    .append("cell_phone varchar(20),")
+                    .append("primary key(customer_id)")
+                    .append(");").toString();
+ 
+            stmt.execute(sql);
+            System.out.println("customer_info table generate!");
+            sb.delete(0,sb.length());
+            
             
             System.out.println("table generated!");
 		} catch (SQLException e) {
