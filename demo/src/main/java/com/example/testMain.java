@@ -158,7 +158,7 @@ public final class testMain
     	insertTuple.InsertCustomerInfo("8","Kavya", "Artem", "Agrinya", "12 4545 8908","123 4734 6966");
     	insertTuple.InsertCustomerInfo("9","Katharina", "Jozefa", "Ailana", "12 4342 5464","545 6787 2756");
     	insertTuple.InsertCustomerInfo("10","Sadhbh", "Fionn", "Semenov", "12 4656 4545","243 4589 9632");
-    	
+    
     	//select test
     	//SelectTuple selectTuple = new SelectTuple(dbConnection);
     	//selectTuple.SelectDummy();

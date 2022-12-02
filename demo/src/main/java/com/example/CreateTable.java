@@ -59,8 +59,11 @@ public class CreateTable {
                     .append("middle_name varchar(20),")
                     .append("last_name varchar(20),")
                     .append("house_phone varchar(20),")
-                    .append("cell_phone varchar(20)")
+                    .append("cell_phone varchar(20),")
+                    .append("primary key(customer_id)")
                     .append(");").toString();
+            
+            //
  
             stmt.execute(sql);
             sb.delete(0,sb.length());
