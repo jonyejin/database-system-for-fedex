@@ -61,4 +61,28 @@ public class InsertTuple {
 	            e.printStackTrace();
 	     }
 	}
+	
+	public void InsertCustomerAddress(String address_1, String address_2, String customer_id, String country_region,
+			String town_city, String province_territory, int zip, long pccc, int building_pwd){
+	    StringBuilder sb = new StringBuilder();
+	    table = "customer_address";
+		 String sql = sb.append("insert into " + table + " values(")
+	                .append("'" + address_1 + "',")
+	                .append("'" + address_2 + "',")
+	                .append("'" + customer_id + "',")
+	                .append("'" + country_region + "',")
+	                .append("'" + town_city + "'")
+	                .append("'" + province_territory + "'")
+	                .append(zip + ",")
+	                .append(pccc + ",")
+	                .append(building_pwd + ",")
+	                .append(");")
+	                .toString();
+		 try {
+	            stmt.executeUpdate(sql);
+	            System.out.println("insert "+table+ " tuple");
+	     } catch (SQLException e) {
+	            e.printStackTrace();
+	     }
+	}
 }
