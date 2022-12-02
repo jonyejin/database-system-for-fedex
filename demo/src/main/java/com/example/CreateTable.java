@@ -69,16 +69,20 @@ public class CreateTable {
             sb.delete(0,sb.length());
             
             
-            //customer_info table gen
+            //customer_address table gen
             sql = sb.append("create table if not exists customer_address(")
             		//여기여기여
+                    .append("address_1 varchar(20),")
+                    .append("address_2 varchar(20),")
                     .append("customer_id varchar(20),")
-                    .append("first_name varchar(20),")
-                    .append("middle_name varchar(20),")
-                    .append("last_name varchar(20),")
-                    .append("house_phone varchar(20),")
-                    .append("cell_phone varchar(20),")
-                    .append("primary key(customer_id)")
+                    .append("country_region varchar(20),")
+                    .append("town_city varchar(20),")
+                    .append("province_territory varchar(20),")
+                    .append("zip int,")
+                    .append("pccc BIGINT,")
+                    .append("building_pwd BIGINT,")
+                    .append("primary key(address_1,address_2)")
+                    //.append("foreign key(customer_id) reference table_name (tt_id)")
                     .append(");").toString();
  
             stmt.execute(sql);

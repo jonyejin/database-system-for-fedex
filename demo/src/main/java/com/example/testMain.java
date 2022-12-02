@@ -147,7 +147,8 @@ public final class testMain
     	
     	InsertTuple insertTuple = new InsertTuple(dbConnection);
     	DropTable dropTable = new DropTable(dbConnection);
-    	dropTable.DropTableName("dummy");
+    	//dropTable.DropTableName("dummy");
+    	//dropTable.DropTableName("customer_address");
     	
     	//customer info insertion
     	//insertTuple.InsertCustomerInfo("1","Peter", "Jone", "White", "12 1234 5678","123 1111 2222");
@@ -163,8 +164,8 @@ public final class testMain
     	
     	//customer address insertion
     	//insertTuple.InsertCustomerInfo("5650 King Locks","720 Clyde Islands Suite 862", "Jone", "White", "12 1234 5678","123 1111 2222");
-    	insertTuple.InsertCustomerAddress("5824 Hester Squares Suite 129","665 Gutmann Flats Apt. 093", "1", "USA","Avondale" ,"Georgia",24332,6834563692499L,4342);
-    	insertTuple.InsertCustomerAddress("307 Schaden Creek","7784 Mayert Mall Suite 945", "2", "USA", "Kansas","Florida",21232,6542487656773L,4554);
+    	insertTuple.InsertCustomerAddress("5824 Hester Squares","Gutmann Apt. 093", "1", "USA","Avondale" ,"Georgia",24332,6834563692499L,4342);
+    	insertTuple.InsertCustomerAddress("307 Schaden Creek","7784 Mayert Mall", "2", "USA", "Kansas","Florida",21232,6542487656773L,4554);
     	insertTuple.InsertCustomerAddress("147 서초중앙로","2931 도산대로", "3", "South Korea", "서울특별시", "서울특별시",14535,7397457578633L,2343);
     	insertTuple.InsertCustomerAddress("6236 가락로","1533 영동대로", "4", "South Korea", "서울특별시", "서울특별시",57585,4262819252596L,1221);
     	insertTuple.InsertCustomerAddress("742 논현로","671 역삼로", "5", "South Korea", "서울특별시", "서울특별시",46738,8241645434378L,1111);
@@ -172,6 +173,7 @@ public final class testMain
     	insertTuple.InsertCustomerAddress("6459 테헤란로","0739 언주로", "7", "South Korea", "서울특별시", "서울특별시",47474,4316537831826L,8768);
     	insertTuple.InsertCustomerAddress("1556 양재천로","7636 영동대로", "8", "South Korea", "서울특별시", "서울특별시",23423,3778250143150L,6563);
     	insertTuple.InsertCustomerAddress("973 논현로","9252 잠실로", "9", "South Korea", "서울특별시", "서울특별시",12364,5778250143150L,2317);
+    	insertTuple.InsertCustomerAddress("149 영동대로","1533 영동대로", "10", "South Korea", "서울특별시", "서울특별시",43264,9975250143150L,2317);
     	
     	
     	

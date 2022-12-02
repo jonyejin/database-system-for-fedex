@@ -71,11 +71,11 @@ public class InsertTuple {
 	                .append("'" + address_2 + "',")
 	                .append("'" + customer_id + "',")
 	                .append("'" + country_region + "',")
-	                .append("'" + town_city + "'")
-	                .append("'" + province_territory + "'")
+	                .append("'" + town_city + "',")
+	                .append("'" + province_territory + "',")
 	                .append(zip + ",")
 	                .append(pccc + ",")
-	                .append(building_pwd + ",")
+	                .append(building_pwd )
 	                .append(");")
 	                .toString();
 		 try {
