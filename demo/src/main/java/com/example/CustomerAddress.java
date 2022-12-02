@@ -8,11 +8,11 @@ public class CustomerAddress {
 	private String town_city;
 	private String province_territory;
 	private int zip;
-	private int pccc;
+	private long pccc;
 	private int building_pwd;
 	
 	public CustomerAddress(String address_1, String address_2, String customer_id, String country_region,
-			String town_city, String province_territory, int zip, int pccc, int building_pwd) {
+			String town_city, String province_territory, int zip, long pccc, int building_pwd) {
 		super();
 		this.address_1 = address_1;
 		this.address_2 = address_2;
@@ -67,10 +67,10 @@ public class CustomerAddress {
 	public void setZip(int zip) {
 		this.zip = zip;
 	}
-	public int getPccc() {
+	public long getPccc() {
 		return pccc;
 	}
-	public void setPccc(int pccc) {
+	public void setPccc(long pccc) {
 		this.pccc = pccc;
 	}
 	public int getBuilding_pwd() {
