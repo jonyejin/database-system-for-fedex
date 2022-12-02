@@ -62,11 +62,23 @@ public class CreateTable {
                     .append("cell_phone varchar(20),")
                     .append("primary key(customer_id)")
                     .append(");").toString();
-            
-            //
- 
             stmt.execute(sql);
             sb.delete(0,sb.length());
+
+            // Payment 테이블
+            sql = sb.append("create table if not exists payment(")
+                    .append("card_number varchar(15),")
+                    .append("IN card_number varchar(15),")
+                        .append("IN card_type varchar(15),")
+                        .append("IN cvc varchar(3),")
+                        .append("IN expiration_year varchar(2),")
+                        .append("IN expiration_month varchar(2))")
+                    .append("primary key(customer_id)")
+                    .append(");").toString();
+        
+                stmt.execute(sql);
+                sb.delete(0,sb.length());
+        
             
             System.out.println("table generated!");
 		} catch (SQLException e) {
