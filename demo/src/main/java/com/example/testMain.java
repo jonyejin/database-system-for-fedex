@@ -230,6 +230,8 @@ public final class testMain
     	//SelectTuple selectTuple = new SelectTuple(dbConnection);
     	//selectTuple.SelectDummy();
     	
+    	//timestamp 데이터 넣기 
+    	//https://stackoverflow.com/questions/37616760/how-to-insert-timestamp-into-my-mysql-table
 			insertTuple.InsertPayment("1234123412341234", "10", "credit_card", "123", "2023", "3");
     }
 }
