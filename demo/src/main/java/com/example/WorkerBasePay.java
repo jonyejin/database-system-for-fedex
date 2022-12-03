@@ -9,6 +9,7 @@ public class WorkerBasePay {
 		this.seniority = seniority;
 		this.plus_amount = plus_amount;
 	}
+	
 	public int getSeniority() {
 		return seniority;
 	}

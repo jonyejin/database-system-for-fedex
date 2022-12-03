@@ -463,4 +463,162 @@ public class InsertTuple {
 	     }
 	}
 	
+	public void InsertUnitMeasureWeight(String parcel_id, String customer_id, int unit_measure_size_type, int unit_measure_weight_type,
+			float weight, float width, float depth, int is_fragile){
+	    StringBuilder sb = new StringBuilder();
+	    table = "unit_measure_weight";
+		 String sql = sb.append("insert into " + table + " values(")
+	                .append(unit_measure_weight_type)
+	                .append(");")
+	                .toString();
+		 try {
+	            stmt.executeUpdate(sql);
+	            System.out.println("insert "+table+ " tuple");
+	     } catch (SQLException e) {
+	            e.printStackTrace();
+	     }
+	}
+	
+	public void InsertUnitMeasureSize(int unit_measure_size_type){
+	    StringBuilder sb = new StringBuilder();
+	    table = "unit_measure_size";
+		 String sql = sb.append("insert into " + table + " values(")
+	                .append(unit_measure_size_type)
+	                .append(");")
+	                .toString();
+		 try {
+	            stmt.executeUpdate(sql);
+	            System.out.println("insert "+table+ " tuple");
+	     } catch (SQLException e) {
+	            e.printStackTrace();
+	     }
+	}
+	
+	public void InsertFedexMarket(String item_code, int unit_measure_size_type, int unit_measure_weight_type, String item_name,
+			int item_price, String item_type, float weight, float width, float height, float depth) {
+	    StringBuilder sb = new StringBuilder();
+	    table = "fedex_market";
+		 String sql = sb.append("insert into " + table + " values(")
+	                .append("'" + item_code + "',")
+	                .append(unit_measure_size_type)
+	                .append(unit_measure_weight_type)
+	                .append("'" + item_name + "',")
+	                .append(item_price)
+	                .append("'" + item_type + "',")
+	                .append(weight)
+	                .append(width)
+	                .append(height)
+	                .append(depth)
+	                .append(");")
+	                .toString();
+		 try {
+	            stmt.executeUpdate(sql);
+	            System.out.println("insert "+table+ " tuple");
+	     } catch (SQLException e) {
+	            e.printStackTrace();
+	     }
+	}
+	
+	public void InsertFedexInventory(String item_code, String area_id, int count){
+	    StringBuilder sb = new StringBuilder();
+	    table = "fedex_inventory";
+		 String sql = sb.append("insert into " + table + " values(")
+	                .append("'" + item_code + "',")
+	                .append("'" + area_id + "',")
+	                .append(count)
+	                .append(");")
+	                .toString();
+		 try {
+	            stmt.executeUpdate(sql);
+	            System.out.println("insert "+table+ " tuple");
+	     } catch (SQLException e) {
+	            e.printStackTrace();
+	     }
+	}
+	
+	public void InsertPickUp(String id, int is_delegate, int is_untact, String message){
+	    StringBuilder sb = new StringBuilder();
+	    table = "pick_up";
+		 String sql = sb.append("insert into " + table + " values(")
+	                .append("'" + id + "',")
+	                .append(is_delegate)
+	                .append(is_untact)
+	                .append("'" + message + "'")
+	                .append(");")
+	                .toString();
+		 try {
+	            stmt.executeUpdate(sql);
+	            System.out.println("insert "+table+ " tuple");
+	     } catch (SQLException e) {
+	            e.printStackTrace();
+	     }
+	}
+	
+	public void InsertDelegateInfo(String id, String message, String nickname, String cell_phone, String relationship) {
+	    StringBuilder sb = new StringBuilder();
+	    table = "delegate_info";
+		 String sql = sb.append("insert into " + table + " values(")
+	                .append("'" + id + "',")
+	                .append("'" + message + "',")
+	                .append("'" + nickname + "',")
+	                .append("'" + cell_phone + "',")
+	                .append("'" + relationship + "'")
+	                .append(");")
+	                .toString();
+		 try {
+	            stmt.executeUpdate(sql);
+	            System.out.println("insert "+table+ " tuple");
+	     } catch (SQLException e) {
+	            e.printStackTrace();
+	     }
+	}
+	
+	public void InsertWorkerBasePay(int seniority, int plus_amount) {
+	    StringBuilder sb = new StringBuilder();
+	    table = "worker_base_pay";
+		 String sql = sb.append("insert into " + table + " values(")
+	                .append(seniority)
+	                .append(plus_amount)
+	                .append(");")
+	                .toString();
+		 try {
+	            stmt.executeUpdate(sql);
+	            System.out.println("insert "+table+ " tuple");
+	     } catch (SQLException e) {
+	            e.printStackTrace();
+	     }
+	}
+	
+	public void InsertRegulatedBasePay(int year, int base_pay) {
+	    StringBuilder sb = new StringBuilder();
+	    table = "regulated_base_pay";
+		 String sql = sb.append("insert into " + table + " values(")
+	                .append(year)
+	                .append(base_pay)
+	                .append(");")
+	                .toString();
+		 try {
+	            stmt.executeUpdate(sql);
+	            System.out.println("insert "+table+ " tuple");
+	     } catch (SQLException e) {
+	            e.printStackTrace();
+	     }
+	}
+	
+	public void InsertRequestMinimumCharge(int year, int minimum_charge) {
+	    StringBuilder sb = new StringBuilder();
+	    table = "request_minimum_charge";
+		 String sql = sb.append("insert into " + table + " values(")
+	                .append(year)
+	                .append(minimum_charge)
+	                .append(");")
+	                .toString();
+		 try {
+	            stmt.executeUpdate(sql);
+	            System.out.println("insert "+table+ " tuple");
+	     } catch (SQLException e) {
+	            e.printStackTrace();
+	     }
+	}
+	
 }

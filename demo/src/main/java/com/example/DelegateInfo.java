@@ -6,9 +6,7 @@ public class DelegateInfo {
 	private String nickname;
 	private String cell_phone;
 	private String relationship;
-	public String getId() {
-		return id;
-	}
+	
 	public DelegateInfo(String id, String message, String nickname, String cell_phone, String relationship) {
 		super();
 		this.id = id;
@@ -16,6 +14,10 @@ public class DelegateInfo {
 		this.nickname = nickname;
 		this.cell_phone = cell_phone;
 		this.relationship = relationship;
+	}
+
+	public String getId() {
+		return id;
 	}
 	public void setId(String id) {
 		this.id = id;
