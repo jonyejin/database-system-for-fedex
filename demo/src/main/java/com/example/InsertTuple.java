@@ -328,4 +328,139 @@ public class InsertTuple {
 	            e.printStackTrace();
 	     }
 	}
+	
+	public void InsertDriverLicense(int license_type, int nation_type) {
+	    StringBuilder sb = new StringBuilder();
+	    table = "driver_license";
+		 String sql = sb.append("insert into " + table + " values(")
+	                .append(license_type)
+	                .append(nation_type)
+	                .append(");")
+	                .toString();
+		 try {
+	            stmt.executeUpdate(sql);
+	            System.out.println("insert "+table+ " tuple");
+	     } catch (SQLException e) {
+	            e.printStackTrace();
+	     }
+	}
+	
+	public void InsertD2ARequest(String customer_id, String whole_request_id, String worker_id, String plate_number,
+			String warehouse_id, int from_d, int is_done, String done_time_stamp) {
+	    StringBuilder sb = new StringBuilder();
+	    table = "d2a_request";
+		 String sql = sb.append("insert into " + table + " values(")
+	                .append("'" + customer_id + "',")
+	                .append("'" + whole_request_id + "',")
+	                .append("'" + worker_id + "',")
+	                .append("'" + plate_number + "',")
+	                .append("'" + warehouse_id + "',")
+	                .append(from_d)
+	                .append(is_done)
+	                .append("'" + done_time_stamp + "'")
+	                .append(");")
+	                .toString();
+		 try {
+	            stmt.executeUpdate(sql);
+	            System.out.println("insert "+table+ " tuple");
+	     } catch (SQLException e) {
+	            e.printStackTrace();
+	     }
+	}
+	
+	public void InsertCSDepartment(String cs_department_id, String area_id) {
+	    StringBuilder sb = new StringBuilder();
+	    table = "cs_department";
+		 String sql = sb.append("insert into " + table + " values(")
+	                .append("'" + cs_department_id + "',")
+	                .append("'" + area_id + "'")
+	                .append(");")
+	                .toString();
+		 try {
+	            stmt.executeUpdate(sql);
+	            System.out.println("insert "+table+ " tuple");
+	     } catch (SQLException e) {
+	            e.printStackTrace();
+	     }
+	}
+	
+	public void InsertCSWorkerInfo(String worker_id, String cs_department_id, int seat_no) {
+	    StringBuilder sb = new StringBuilder();
+	    table = "cs_worker_info";
+		 String sql = sb.append("insert into " + table + " values(")
+	                .append("'" + worker_id + "',")
+	                .append("'" + cs_department_id + "',")
+	                .append(seat_no)
+	                .append(");")
+	                .toString();
+		 try {
+	            stmt.executeUpdate(sql);
+	            System.out.println("insert "+table+ " tuple");
+	     } catch (SQLException e) {
+	            e.printStackTrace();
+	     }
+	}
+	
+	public void InsertBoard(String complaint_id, String whole_request_id, int question_type, String title, String body,
+			int is_answered){
+	    StringBuilder sb = new StringBuilder();
+	    table = "board";
+		 String sql = sb.append("insert into " + table + " values(")
+	                .append("'" + complaint_id + "',")
+	                .append("'" + whole_request_id + "',")
+	                .append(question_type)
+	                .append("'" + title + "',")
+	                .append("'" + body + "',")
+	                .append(is_answered)
+	                .append(");")
+	                .toString();
+		 try {
+	            stmt.executeUpdate(sql);
+	            System.out.println("insert "+table+ " tuple");
+	     } catch (SQLException e) {
+	            e.printStackTrace();
+	     }
+	}
+	
+	public void InsertBoardAnswer(String complaint_id, String cs_worker_id, String title, String body){
+	    StringBuilder sb = new StringBuilder();
+	    table = "board_answer";
+		 String sql = sb.append("insert into " + table + " values(")
+	                .append("'" + complaint_id + "',")
+	                .append("'" + cs_worker_id + "',")
+	                .append("'" + title + "',")
+	                .append("'" + body + "'")
+	                .append(");")
+	                .toString();
+		 try {
+	            stmt.executeUpdate(sql);
+	            System.out.println("insert "+table+ " tuple");
+	     } catch (SQLException e) {
+	            e.printStackTrace();
+	     }
+	}
+	
+	public void InsertParcel(String parcel_id, String customer_id, int unit_measure_size_type, int unit_measure_weight_type,
+			float weight, float width, float depth, int is_fragile){
+	    StringBuilder sb = new StringBuilder();
+	    table = "parcel";
+		 String sql = sb.append("insert into " + table + " values(")
+	                .append("'" + parcel_id + "',")
+	                .append("'" + customer_id + "',")
+	                .append(unit_measure_size_type)
+	                .append(unit_measure_weight_type)
+	                .append(weight)
+	                .append(width)
+	                .append(depth)
+	                .append(is_fragile)
+	                .append(");")
+	                .toString();
+		 try {
+	            stmt.executeUpdate(sql);
+	            System.out.println("insert "+table+ " tuple");
+	     } catch (SQLException e) {
+	            e.printStackTrace();
+	     }
+	}
+	
 }
