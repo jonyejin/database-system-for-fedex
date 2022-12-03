@@ -182,5 +182,150 @@ public class InsertTuple {
 	     }
 	}
 	
+	public void InsertWarehouseWorkerInfo(String worker_id, String warehouse_id){
+	    StringBuilder sb = new StringBuilder();
+	    table = "warehouse_worker_info";
+		 String sql = sb.append("insert into " + table + " values(")
+	                .append("'" + worker_id + "',")
+	                .append("'" + warehouse_id + "'")
+	                .append(");")
+	                .toString();
+		 try {
+	            stmt.executeUpdate(sql);
+	            System.out.println("insert "+table+ " tuple");
+	     } catch (SQLException e) {
+	            e.printStackTrace();
+	     }
+	}
+
+	public void InsertArea(String area_id){
+	    StringBuilder sb = new StringBuilder();
+	    table = "area";
+		 String sql = sb.append("insert into " + table + " values(")
+	                .append("'" + area_id + "'")
+	                .append(");")
+	                .toString();
+		 try {
+	            stmt.executeUpdate(sql);
+	            System.out.println("insert "+table+ " tuple");
+	     } catch (SQLException e) {
+	            e.printStackTrace();
+	     }
+	}
 	
+	public void InsertWholeRequest(String id, String sender_address_id, String customer_id, String parcel_id, String time_stamp,
+			int departure_area_id, int arrival_area_id, String receiver_address_id, String receiver_id){
+	    StringBuilder sb = new StringBuilder();
+	    table = "whole_request";
+		 String sql = sb.append("insert into " + table + " values(")
+	                .append("'" + id + "',")
+	                .append("'" + sender_address_id + "',")
+	                .append("'" + customer_id + "',")
+	                .append("'" + parcel_id + "',")
+	                .append("'" + time_stamp + "',")
+	                .append(departure_area_id+",")
+	                .append(arrival_area_id+",")
+	                .append("'" + receiver_address_id + "',")
+	                .append("'" + receiver_id + "'")
+	                .append(");")
+	                .toString();
+		 try {
+	            stmt.executeUpdate(sql);
+	            System.out.println("insert "+table+ " tuple");
+	     } catch (SQLException e) {
+	            e.printStackTrace();
+	     }
+	}
+	
+	public void InsertWarehouse(String warehouse_id, String warehouse_area, String warehouse_name) {
+	    StringBuilder sb = new StringBuilder();
+	    table = "warehouse";
+		 String sql = sb.append("insert into " + table + " values(")
+	                .append("'" + warehouse_id + "',")
+	                .append("'" + warehouse_area + "',")
+	                .append("'" + warehouse_name + "'")
+	                .append(");")
+	                .toString();
+		 try {
+	            stmt.executeUpdate(sql);
+	            System.out.println("insert "+table+ " tuple");
+	     } catch (SQLException e) {
+	            e.printStackTrace();
+	     }
+	}
+	
+	public void InsertWarehouseConnection(String start_warehouse_area, String dest_warehouse_area, int edge_weight)  {
+	    StringBuilder sb = new StringBuilder();
+	    table = "warehouse_connection";
+		 String sql = sb.append("insert into " + table + " values(")
+	                .append("'" + start_warehouse_area + "',")
+	                .append("'" + dest_warehouse_area + "',")
+	                .append(edge_weight)
+	                .append(");")
+	                .toString();
+		 try {
+	            stmt.executeUpdate(sql);
+	            System.out.println("insert "+table+ " tuple");
+	     } catch (SQLException e) {
+	            e.printStackTrace();
+	     }
+	}
+	
+	public void InsertA2ARequest(String a2a_id, String whole_request_id, String worker_id, String plate_number, int is_done,
+			int departure, int arrival, String done_time_stamp)  {
+	    StringBuilder sb = new StringBuilder();
+	    table = "a2a_request";
+		 String sql = sb.append("insert into " + table + " values(")
+	                .append("'" + a2a_id + "',")
+	                .append("'" + whole_request_id + "',")
+	                .append("'" + worker_id + "',")
+	                .append("'" + plate_number + "',")
+	                .append(is_done)
+	                .append(departure)
+	                .append(arrival)
+	                .append("'" + done_time_stamp + "'")
+	                .append(");")
+	                .toString();
+		 try {
+	            stmt.executeUpdate(sql);
+	            System.out.println("insert "+table+ " tuple");
+	     } catch (SQLException e) {
+	            e.printStackTrace();
+	     }
+	}
+	
+	public void InsertVehicle(String plate_number, int nation_type, int type, int width, int height, int depth) {
+	    StringBuilder sb = new StringBuilder();
+	    table = "vehicle";
+		 String sql = sb.append("insert into " + table + " values(")
+	                .append("'" + plate_number + "',")
+	                .append(nation_type)
+	                .append(type)
+	                .append(width)
+	                .append(height)
+	                .append(depth)
+	                .append(");")
+	                .toString();
+		 try {
+	            stmt.executeUpdate(sql);
+	            System.out.println("insert "+table+ " tuple");
+	     } catch (SQLException e) {
+	            e.printStackTrace();
+	     }
+	}
+	
+	public void InsertNation(int nation_type) {
+	    StringBuilder sb = new StringBuilder();
+	    table = "nation";
+		 String sql = sb.append("insert into " + table + " values(")
+	                .append(nation_type)
+	                .append(");")
+	                .toString();
+		 try {
+	            stmt.executeUpdate(sql);
+	            System.out.println("insert "+table+ " tuple");
+	     } catch (SQLException e) {
+	            e.printStackTrace();
+	     }
+	}
 }
