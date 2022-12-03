@@ -77,7 +77,7 @@ public class CreateTable {
                     .append("town_city varchar(20),")
                     .append("province_territory varchar(20),")
                     .append("zip int,")
-                    .append("pccc int,")
+                    .append("pccc bigint,")
                     .append("building_pwd int,")
                     .append("primary key(address_1),")
                     .append("primary key(address_2),")
@@ -107,7 +107,7 @@ public class CreateTable {
             
             //payment table generation
             sql = sb.append("create table if not exists payment(")
-                    .append("card_number varchar(15),")
+                    .append("card_number varchar(16),")
                     .append("customer_id varchar(20),")
                     .append("card_type varchar(20),")
                     .append("cvc varchar(3),")
@@ -250,6 +250,46 @@ public class CreateTable {
         
             stmt.execute(sql);
             System.out.println("warehouse table has been generated!");
+            sb.delete(0,sb.length());
+            
+            //warehouse_worker_info table generation
+            sql = sb.append("create table if not exists warehouse_worker_info(")
+                    .append("worker_id varchar(20),")
+                    .append("warehouse_id varchar(20),")
+                    .append("foreign key(worker_id)")
+                    .append("references worker(worker_id) on update cascade,")
+                    .append("foreign key(warehouse_id)")
+                    .append("references warehouse(warehouse_id) on update cascade")
+                    .append(");").toString();
+        
+            stmt.execute(sql);
+            System.out.println("warehouse_worker_info table has been generated!");
+            sb.delete(0,sb.length());
+            
+            //whole_request table generation
+            sql = sb.append("create table if not exists whole_request(")
+                    .append("id varchar(20),")
+                    .append("sender_address_id varchar(20),")
+                    .append("customer_id varchar(20),")
+                    .append("parcel_id varchar(20),")
+                    .append("time_stamp date,")
+                    .append("departure_area_id tinyint,")
+                    .append("arrival_area_id tinyint,")
+                    .append("receiver_address_id varchar(20),")
+                    .append("receiver_id varchar(20),")
+                    .append("primary key(id),")
+                    .append("foreign key(sender_address)")
+                    .append("references customer_address(address_1) on update cascade,")
+                    .append("foreign key(sender_address_id)")
+                    .append("references customer_info(customer_id) on update cascade,")
+                    .append("foreign key(sender_address_id)")
+                    .append("references customer_info(customer_id) on update cascade,")
+                    .append("foreign key(sender_address_id)")
+                    .append("references customer_info(customer_id) on update cascade,")
+                    .append(");").toString();
+        
+            stmt.execute(sql);
+            System.out.println("whole_request table has been generated!");
             sb.delete(0,sb.length());
 
            
