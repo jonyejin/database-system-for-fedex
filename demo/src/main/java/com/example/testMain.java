@@ -175,6 +175,20 @@ public final class testMain
 //    	insertTuple.InsertCustomerAddress("973 논현로","9252 잠실로", "9", "South Korea", "서울특별시", "서울특별시",12364,5778250143150L,2317);
 //    	insertTuple.InsertCustomerAddress("149 영동대로","1533 영동대로", "10", "South Korea", "서울특별시", "서울특별시",43264,9975250143150L,2317);
     	
+    	
+    	//#3 customer organization
+//    	insertTuple.InsertCustomerOrganization("withink","1","1434 2323");
+//    	insertTuple.InsertCustomerOrganization("mooners","2","3434 4543");
+//    	insertTuple.InsertCustomerOrganization("impaign","3","4747 4747");
+//    	insertTuple.InsertCustomerOrganization("econd","4","2334 4636");
+//    	insertTuple.InsertCustomerOrganization("overloo","5","1234 2345");
+//    	insertTuple.InsertCustomerOrganization("dustraw","6","8765 5643");
+//    	insertTuple.InsertCustomerOrganization("unmoval","7","4676 5425");
+//    	insertTuple.InsertCustomerOrganization("entokin","8","2478 6479");
+//    	insertTuple.InsertCustomerOrganization("sometes","9","2479 2479");
+//    	insertTuple.InsertCustomerOrganization("runched","10","6945 4268");
+//    	
+    	
     	//#18 cs department
 //    	insertTuple.InsertCSDepartment("1","0000000001");
 //    	insertTuple.InsertCSDepartment("2","0000000010");
