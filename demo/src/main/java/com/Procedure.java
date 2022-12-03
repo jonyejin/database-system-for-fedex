@@ -31,7 +31,7 @@ public class Procedure {
 	                .append("'" + cell_phone + "'")
 	                .append(");")
 	                .toString();
-    String payment = sb2.append()
+    // String payment = sb2.append()
     
 
     String sql2 = insert_new_customer.append("create procedure newcustomer(IN customer_id varchar(20),")
@@ -47,7 +47,7 @@ public class Procedure {
                   .append("IN expiration_month varchar(2))")
                   .append("BEGIN")
                   .append(sql1)
-                  .append()
+                  // .append()
                   .toString();
     try {
             stmt.executeUpdate(sql);
