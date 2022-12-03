@@ -14,7 +14,6 @@ public class InsertTuple {
 	private String sql;
 	
 	public InsertTuple(DBConnection dBConnection) {
-		//assert("error");
 		conn = dBConnection.getConn();
 	
 		try {

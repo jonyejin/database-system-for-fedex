@@ -23,7 +23,6 @@ public class RequestMinimumCharge {
 		this.minimum_charge = minimum_charge;
 	}
 
-	
 	@Override
 	public String toString() {
 		return "RequestMinimumCharge [year=" + year + ", minimum_charge=" + minimum_charge + "]";
