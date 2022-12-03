@@ -19,9 +19,10 @@ public final class testMain
 //	private String dburl = "jdbc:mysql://localhost:3306/sys"; 원후
 //	private String dbuser = "test1"; 원후
 //	private String dbpasswd = "test1";원후
-	private static  String dburl = "jdbc:mysql://localhost:3306/mydatabase"; //민지
+	// private static  String dburl = "jdbc:mysql://localhost:3306/mydatabase"; //민지
+	private static String dburl = "jdbc:mysql://localhost:3306/fedex?useSSL=false";
 	private static String dbuser = "root"; //민지
-	private static String dbpasswd = "1367"; // 민지
+	private static String dbpasswd = "yejincho1!"; // 민지
 	
 	String sql = "SELECT * FROM student";
 	
@@ -229,8 +230,6 @@ public final class testMain
     	//SelectTuple selectTuple = new SelectTuple(dbConnection);
     	//selectTuple.SelectDummy();
     	
-    	
-    	
-
+			insertTuple.InsertPayment("1234123412341234", "10", "credit_card", "123", "2023", "3");
     }
 }
