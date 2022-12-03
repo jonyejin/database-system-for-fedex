@@ -3,9 +3,9 @@ package com.example;
 public class DriverInfo {
 	private String worker_id;
 	private String vehicle_id;
-	private String license_type;
+	private int license_type;
 	
-	public DriverInfo(String worker_id, String vehicle_id, String license_type) {
+	public DriverInfo(String worker_id, String vehicle_id, int license_type) {
 		super();
 		this.worker_id = worker_id;
 		this.vehicle_id = vehicle_id;
@@ -24,10 +24,10 @@ public class DriverInfo {
 	public void setVehicle_id(String vehicle_id) {
 		this.vehicle_id = vehicle_id;
 	}
-	public String getLicense_type() {
+	public int getLicense_type() {
 		return license_type;
 	}
-	public void setLicense_type(String license_type) {
+	public void setLicense_type(int license_type) {
 		this.license_type = license_type;
 	}
 	@Override

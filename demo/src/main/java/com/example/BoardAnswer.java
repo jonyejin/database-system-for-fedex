@@ -1,12 +1,12 @@
 package com.example;
 
-public class CustomerServiceAnswer {
+public class BoardAnswer {
 	private String complaint_id;
 	private String cs_worker_id;
 	private String title;
 	private String body;
 	
-	public CustomerServiceAnswer(String complaint_id, String cs_worker_id, String title, String body) {
+	public BoardAnswer(String complaint_id, String cs_worker_id, String title, String body) {
 		super();
 		this.complaint_id = complaint_id;
 		this.cs_worker_id = cs_worker_id;

@@ -1,6 +1,6 @@
 package com.example;
 
-public class CustomerService {
+public class Board {
 	private String complaint_id;
 	private String whole_request_id;
 	private int question_type;
@@ -8,7 +8,7 @@ public class CustomerService {
 	private String body;
 	private int is_answered;
 	
-	public CustomerService(String complaint_id, String whole_request_id, int question_type, String title, String body,
+	public Board(String complaint_id, String whole_request_id, int question_type, String title, String body,
 			int is_answered) {
 		super();
 		this.complaint_id = complaint_id;
