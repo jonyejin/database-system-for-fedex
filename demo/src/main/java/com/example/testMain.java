@@ -175,55 +175,55 @@ public final class testMain
 //    	insertTuple.InsertCustomerAddress("149 영동대로","1533 영동대로", "10", "South Korea", "서울특별시", "서울특별시",43264,9975250143150L,2317);
     	
     	//#18 cs department
-    	insertTuple.InsertCSDepartment("1","0000000001");
-    	insertTuple.InsertCSDepartment("2","0000000010");
-    	insertTuple.InsertCSDepartment("3","0000000100");
-    	insertTuple.InsertCSDepartment("4","0000001000");
-    	insertTuple.InsertCSDepartment("5","0000010000");
-    	insertTuple.InsertCSDepartment("6","0000100000");
-    	insertTuple.InsertCSDepartment("7","0001000000");
-    	insertTuple.InsertCSDepartment("8","0010000000");
-    	insertTuple.InsertCSDepartment("9","0100000000");
-    	insertTuple.InsertCSDepartment("10","1000000000");
+//    	insertTuple.InsertCSDepartment("1","0000000001");
+//    	insertTuple.InsertCSDepartment("2","0000000010");
+//    	insertTuple.InsertCSDepartment("3","0000000100");
+//    	insertTuple.InsertCSDepartment("4","0000001000");
+//    	insertTuple.InsertCSDepartment("5","0000010000");
+//    	insertTuple.InsertCSDepartment("6","0000100000");
+//    	insertTuple.InsertCSDepartment("7","0001000000");
+//    	insertTuple.InsertCSDepartment("8","0010000000");
+//    	insertTuple.InsertCSDepartment("9","0100000000");
+//    	insertTuple.InsertCSDepartment("10","1000000000");
     	
     	//#19 cs worker info (worker id,cs_department_id,seat_no)
-    	insertTuple.InsertCSWorkerInfo("1","5",3);
-    	insertTuple.InsertCSWorkerInfo("2","2",10);
-    	insertTuple.InsertCSWorkerInfo("3","3",5);
-    	insertTuple.InsertCSWorkerInfo("4","7",1);
-    	insertTuple.InsertCSWorkerInfo("5","6",8);
-    	insertTuple.InsertCSWorkerInfo("6","4",9);
-    	insertTuple.InsertCSWorkerInfo("7","1",7);
-    	insertTuple.InsertCSWorkerInfo("8","9",2);
-    	insertTuple.InsertCSWorkerInfo("9","10",4);
-    	insertTuple.InsertCSWorkerInfo("10","8",6);
-    	insertTuple.InsertCSWorkerInfo("11","10",6);
+//    	insertTuple.InsertCSWorkerInfo("1","5",3);
+//    	insertTuple.InsertCSWorkerInfo("2","2",10);
+//    	insertTuple.InsertCSWorkerInfo("3","3",5);
+//    	insertTuple.InsertCSWorkerInfo("4","7",1);
+//    	insertTuple.InsertCSWorkerInfo("5","6",8);
+//    	insertTuple.InsertCSWorkerInfo("6","4",9);
+//    	insertTuple.InsertCSWorkerInfo("7","1",7);
+//    	insertTuple.InsertCSWorkerInfo("8","9",2);
+//    	insertTuple.InsertCSWorkerInfo("9","10",4);
+//    	insertTuple.InsertCSWorkerInfo("10","8",6);
+//    	insertTuple.InsertCSWorkerInfo("11","10",6);
     	
     	//#20 board
-    	insertTuple.InsertBoard("1","2",1,"언제도착하나요","안녕하세요 제 택배 언제 도착하나요",1);  
-    	insertTuple.InsertBoard("2","6",3,"택배를 신청했는데","택배 신청했는데 언제 방문하시나요? ",1);
-    	insertTuple.InsertBoard("3","7",2,"택배 없음","집앞에 택배 없는데 배송완료라고 뜨네요.. 확인부탁드립니다.",0);
-    	insertTuple.InsertBoard("4","8",1,"내일 입어야 하는데","옷 언제배송 예정인가요?? 내일까지 꼭 받아야 돼요ㅜㅠㅜㅠ",1);
-    	insertTuple.InsertBoard("5","1",3,"편의점에서","편의점에서 택배 보낼수있나여??",1);
-    	insertTuple.InsertBoard("6","5",3,"물건 현재 위치","제 택배 어딨는지 어떻게 확인하나요",1);
-    	insertTuple.InsertBoard("7","9",2,"택배 어디까지 왔어요?","제 택배 지금 어디까지 왔는지 어떻게 알아요??????",1);
-    	insertTuple.InsertBoard("8","10",3,"국외 택배","어떻게 보내나요?",1);
-    	insertTuple.InsertBoard("9","3",2,"배송완료아닌데 배송완료라고 함","아직 도착 안했는데 확인해보니 배송완료라는데요??",1);
-    	insertTuple.InsertBoard("10","4",3,"공휴일에 배달 가능한가요?","공휴일에 배달 가능한가요? 일요일은요?",1);
-    	insertTuple.InsertBoard("11","11",3,"인터넷 쇼핑?","인터넷 쇼핑으로 산거 반품 되나요?",1);
+//    	insertTuple.InsertBoard("1","2",1,"언제도착하나요","안녕하세요 제 택배 언제 도착하나요",1);  
+//    	insertTuple.InsertBoard("2","6",3,"택배를 신청했는데","택배 신청했는데 언제 방문하시나요? ",1);
+//    	insertTuple.InsertBoard("3","7",2,"택배 없음","집앞에 택배 없는데 배송완료라고 뜨네요.. 확인부탁드립니다.",0);
+//    	insertTuple.InsertBoard("4","8",1,"내일 입어야 하는데","옷 언제배송 예정인가요?? 내일까지 꼭 받아야 돼요ㅜㅠㅜㅠ",1);
+//    	insertTuple.InsertBoard("5","1",3,"편의점에서","편의점에서 택배 보낼수있나여??",1);
+//    	insertTuple.InsertBoard("6","5",3,"물건 현재 위치","제 택배 어딨는지 어떻게 확인하나요",1);
+//    	insertTuple.InsertBoard("7","9",2,"택배 어디까지 왔어요?","제 택배 지금 어디까지 왔는지 어떻게 알아요??????",1);
+//    	insertTuple.InsertBoard("8","10",3,"국외 택배","어떻게 보내나요?",1);
+//    	insertTuple.InsertBoard("9","3",2,"배송완료아닌데 배송완료라고 함","아직 도착 안했는데 확인해보니 배송완료라는데요??",1);
+//    	insertTuple.InsertBoard("10","4",3,"공휴일에 배달 가능한가요?","공휴일에 배달 가능한가요? 일요일은요?",1);
+//    	insertTuple.InsertBoard("11","11",3,"인터넷 쇼핑?","인터넷 쇼핑으로 산거 반품 되나요?",1);
     	
     	
     	//#21 board answer (complaint_id,worker id, title,body)
-    	insertTuple.InsertBoardAnswer("1","1","답변 드립니다.","당사 홈페이지 내의 [조회/예약]-[택배조회]를 이용하시면 이동경로 확인이 가능합니다.");
-    	insertTuple.InsertBoardAnswer("2","2","답변 드립니다.","상품 인수를 위한 방문 희망 일로 지정하신 요청일에 방문합니다.");
-    	insertTuple.InsertBoardAnswer("4","4","답변 드립니다.","당사 홈페이지 내의 [조회/예약]-[택배조회]를 이용하시면 이동경로 확인이 가능합니다.");
-    	insertTuple.InsertBoardAnswer("5","5","답변 드립니다.","편의점으로 상품을 가져가시면 택배 서비스를 이용하실 수 있습니다. ");
-    	insertTuple.InsertBoardAnswer("6","6","답변 드립니다.","당사 홈페이지 내의 [조회/예약]-[택배조회]를 이용하시면 이동경로 확인이 가능합니다.");
-    	insertTuple.InsertBoardAnswer("7","7","답변 드립니다.","당사 홈페이지 내의 [조회/예약]-[택배조회]를 이용하시면 이동경로 확인이 가능합니다.");
-    	insertTuple.InsertBoardAnswer("8","8","답변 드립니다.","해외로 물품을 보내시는 경우 가까운 편의점 중 Postbox가 설치된 곳에 내방하시면 접수 가능합니다.");
-    	insertTuple.InsertBoardAnswer("9","9","답변 드립니다.","당사 홈페이지 내의 [조회/예약]-[택배조회]를 이용하시면 이동경로 확인이 가능합니다.");
-    	insertTuple.InsertBoardAnswer("10","10","답변 드립니다.","공휴일과 일요일은 택배사 휴무로 방문이 어려우니 양해 바랍니다. 더 나은 서비스를 제공하기 위해 최선을 다하겠습니다.");
-    	insertTuple.InsertBoardAnswer("11","11","답변 드립니다.","주문하신 물품 구입처에 반품 의사를 전달하시면 구매업체에서 직접 접수를 해주거나 택배사로 접수하시도록 안내를 받으실 수 있습니다. ");
+//    	insertTuple.InsertBoardAnswer("1","1","답변 드립니다.","당사 홈페이지 내의 [조회/예약]-[택배조회]를 이용하시면 이동경로 확인이 가능합니다.");
+//    	insertTuple.InsertBoardAnswer("2","2","답변 드립니다.","상품 인수를 위한 방문 희망 일로 지정하신 요청일에 방문합니다.");
+//    	insertTuple.InsertBoardAnswer("4","4","답변 드립니다.","당사 홈페이지 내의 [조회/예약]-[택배조회]를 이용하시면 이동경로 확인이 가능합니다.");
+//    	insertTuple.InsertBoardAnswer("5","5","답변 드립니다.","편의점으로 상품을 가져가시면 택배 서비스를 이용하실 수 있습니다. ");
+//    	insertTuple.InsertBoardAnswer("6","6","답변 드립니다.","당사 홈페이지 내의 [조회/예약]-[택배조회]를 이용하시면 이동경로 확인이 가능합니다.");
+//    	insertTuple.InsertBoardAnswer("7","7","답변 드립니다.","당사 홈페이지 내의 [조회/예약]-[택배조회]를 이용하시면 이동경로 확인이 가능합니다.");
+//    	insertTuple.InsertBoardAnswer("8","8","답변 드립니다.","해외로 물품을 보내시는 경우 가까운 편의점 중 Postbox가 설치된 곳에 내방하시면 접수 가능합니다.");
+//    	insertTuple.InsertBoardAnswer("9","9","답변 드립니다.","당사 홈페이지 내의 [조회/예약]-[택배조회]를 이용하시면 이동경로 확인이 가능합니다.");
+//    	insertTuple.InsertBoardAnswer("10","10","답변 드립니다.","공휴일과 일요일은 택배사 휴무로 방문이 어려우니 양해 바랍니다. 더 나은 서비스를 제공하기 위해 최선을 다하겠습니다.");
+//    	insertTuple.InsertBoardAnswer("11","11","답변 드립니다.","주문하신 물품 구입처에 반품 의사를 전달하시면 구매업체에서 직접 접수를 해주거나 택배사로 접수하시도록 안내를 받으실 수 있습니다. ");
     	    	
     	//select test
     	//SelectTuple selectTuple = new SelectTuple(dbConnection);

@@ -71,12 +71,12 @@ public class CreateTable {
             // Payment 테이블
             sql = sb.append("create table if not exists payment(")
                     .append("card_number varchar(15),")
-                    .append("IN card_number varchar(15),")
-                        .append("IN card_type varchar(15),")
-                        .append("IN cvc varchar(3),")
-                        .append("IN expiration_year varchar(2),")
-                        .append("IN expiration_month varchar(2))")
-                    .append("primary key(customer_id)")
+                    .append("customer_id varchar(20),")
+                    .append("card_type varchar(20),")
+                    .append("cvc varchar(3),")
+                    .append("expiration_year varchar(2),")
+                    .append("expiration_month varchar(2),")
+                    .append("primary key(card_number)")
                     .append(");").toString();
         
                 stmt.execute(sql);
