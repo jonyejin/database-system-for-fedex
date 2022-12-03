@@ -163,7 +163,6 @@ public final class testMain
     	//insertTuple.InsertCustomerInfo("10","Sadhbh", "Fionn", "Semenov", "12 4656 4545","243 4589 9632");
     	
     	//customer address insertion
-    	//insertTuple.InsertCustomerInfo("5650 King Locks","720 Clyde Islands Suite 862", "Jone", "White", "12 1234 5678","123 1111 2222");
     	insertTuple.InsertCustomerAddress("5824 Hester Squares","Gutmann Apt. 093", "1", "USA","Avondale" ,"Georgia",24332,6834563692499L,4342);
     	insertTuple.InsertCustomerAddress("307 Schaden Creek","7784 Mayert Mall", "2", "USA", "Kansas","Florida",21232,6542487656773L,4554);
     	insertTuple.InsertCustomerAddress("147 서초중앙로","2931 도산대로", "3", "South Korea", "서울특별시", "서울특별시",14535,7397457578633L,2343);

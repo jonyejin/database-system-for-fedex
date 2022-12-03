@@ -85,4 +85,102 @@ public class InsertTuple {
 	            e.printStackTrace();
 	     }
 	}
+	 
+	public void InsertCustomerOrganization(String name, String customer_id, String phone){
+	    StringBuilder sb = new StringBuilder();
+	    table = "customer_organization";
+		 String sql = sb.append("insert into " + table + " values(")
+	                .append("'" + name + "',")
+	                .append("'" + customer_id + "',")
+	                .append("'" + phone + "'")
+	                .append(");")
+	                .toString();
+		 try {
+	            stmt.executeUpdate(sql);
+	            System.out.println("insert "+table+ " tuple");
+	     } catch (SQLException e) {
+	            e.printStackTrace();
+	     }
+	}
+	
+	public void InsertPayment(String card_number, String customer_id, String card_type, String cvc, String expiration_year,
+			String expiration_month){
+	    StringBuilder sb = new StringBuilder();
+	    table = "payment";
+		 String sql = sb.append("insert into " + table + " values(")
+	                .append("'" + card_number + "',")
+	                .append("'" + customer_id + "',")
+	                .append("'" + card_type + "',")
+	                .append("'" + cvc + "',")
+	                .append("'" + expiration_year + "',")
+	                .append("'" + expiration_month + "'")
+	                .append(");")
+	                .toString();
+		 try {
+	            stmt.executeUpdate(sql);
+	            System.out.println("insert "+table+ " tuple");
+	     } catch (SQLException e) {
+	            e.printStackTrace();
+	     }
+	}
+	
+	public void InsertWorker(String worker_id, String area_id, String first_name, String middle_name, String last_name,
+			String house_phone, String cell_phone, String doe){
+	    StringBuilder sb = new StringBuilder();
+	    table = "worker";
+		 String sql = sb.append("insert into " + table + " values(")
+	                .append("'" + worker_id + "',")
+	                .append("'" + area_id + "',")
+	                .append("'" + first_name + "',")
+	                .append("'" + middle_name + "',")
+	                .append("'" + last_name + "',")
+	                .append("'" + house_phone + "',")
+	                .append("'" + cell_phone + "',")
+	                .append("'" + doe + "'")
+	                .append(");")
+	                .toString();
+		 try {
+	            stmt.executeUpdate(sql);
+	            System.out.println("insert "+table+ " tuple");
+	     } catch (SQLException e) {
+	            e.printStackTrace();
+	     }
+	}
+	
+	public void InsertSalaryLog(String date, String worker_id, String monthly_pay, String incentive){
+	    StringBuilder sb = new StringBuilder();
+	    table = "salary_log";
+		 String sql = sb.append("insert into " + table + " values(")
+	                .append("'" + date + "',")
+	                .append("'" + worker_id + "',")
+	                .append("'" + monthly_pay + "',")
+	                .append("'" + incentive + "'")
+	                .append(");")
+	                .toString();
+		 try {
+	            stmt.executeUpdate(sql);
+	            System.out.println("insert "+table+ " tuple");
+	     } catch (SQLException e) {
+	            e.printStackTrace();
+	     }
+	}
+	
+	public void InsertDriverInfo(String worker_id, String vehicle_id, int license_type){
+	    StringBuilder sb = new StringBuilder();
+	    table = "driver_info";
+		 String sql = sb.append("insert into " + table + " values(")
+	                .append("'" + worker_id + "',")
+	                .append("'" + vehicle_id + "',")
+	                .append(license_type)
+	                .append(");")
+	                .toString();
+		 try {
+	            stmt.executeUpdate(sql);
+	            System.out.println("insert "+table+ " tuple");
+	     } catch (SQLException e) {
+	            e.printStackTrace();
+	     }
+	}
+	
+	
 }
