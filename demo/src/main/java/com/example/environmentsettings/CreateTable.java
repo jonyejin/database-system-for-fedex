@@ -600,8 +600,8 @@ public class CreateTable {
       //fedex_market table generation
         sql = sb.append("create table if not exists fedex_market(")
                 .append("item_code varchar(20),")
-                .append("unit_measure_size_type tinyint,")
-                .append("unit_measure_weight_type tinyint,")
+                .append("unit_measure_size_type bigint,")
+                .append("unit_measure_weight_type bigint,")
                 .append("item_name varchar(20),")
                 .append("item_price int,")
                 .append("weight float,")
