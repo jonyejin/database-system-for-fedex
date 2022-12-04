@@ -294,7 +294,7 @@ public class InsertTuple {
 	     }
 	}
 	
-	public void InsertVehicle(String plate_number, int nation_type, int type, int width, int height, int depth) {
+	public void InsertVehicle(String plate_number, String nation_type, String type, int width, int height, int depth) {
 	    StringBuilder sb = new StringBuilder();
 	    table = "vehicle";
 		 String sql = sb.append("insert into " + table + " values(")
@@ -329,12 +329,12 @@ public class InsertTuple {
 	     }
 	}
 	
-	public void InsertDriverLicense(int license_type, int nation_type) {
+	public void InsertDriverLicense(String license_type, String nation_type) {
 	    StringBuilder sb = new StringBuilder();
 	    table = "driver_license";
 		 String sql = sb.append("insert into " + table + " values(")
-	                .append(license_type)
-	                .append(nation_type)
+	                .append("'"+license_type+"',")
+	                .append("'"+nation_type+"'")
 	                .append(");")
 	                .toString();
 		 try {
@@ -479,7 +479,7 @@ public class InsertTuple {
 	     }
 	}
 	
-	public void InsertUnitMeasureSize(int unit_measure_size_type){
+	public void InsertUnitMeasureSize(String unit_measure_size_type){
 	    StringBuilder sb = new StringBuilder();
 	    table = "unit_measure_size";
 		 String sql = sb.append("insert into " + table + " values(")

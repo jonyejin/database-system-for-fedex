@@ -174,8 +174,8 @@ public class CreateTable {
                 
             //driver_license table generation
             sql = sb.append("create table if not exists driver_license(")
-                    .append("license_type tinyint,")
-                    .append("nation_type tinyint,")
+                    .append("license_type bigint,")
+                    .append("nation_type bigint,")
                     .append("primary key(license_type),")
                     .append("foreign key(nation_type)")
                     .append("references nation(nation_type) on update cascade")
@@ -188,7 +188,7 @@ public class CreateTable {
                 
             //unit_measure_size table generation
             sql = sb.append("create table if not exists unit_measure_size(")
-                    .append("unit_measure_size_type tinyint,")
+                    .append("unit_measure_size_type bigint,")
                     .append("primary key(unit_measure_size_type)")
                     .append(");").toString();
         

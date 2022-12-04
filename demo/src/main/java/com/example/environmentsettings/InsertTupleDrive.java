@@ -90,8 +90,7 @@ public class InsertTupleDrive {
 	}
 	
 	public void InsertPayment() {
-		// 카드번호 16으로 바꿨고
-		// expiration year는 2자리야 예진쿤
+		// 카드번호 16으로 바꿨고 expiration year는 2자리야 예진쿤
 		driver.InsertPayment("1234123412341234", "1", "credit_card", "123", "23", "3");
 		driver.InsertPayment("2345123412341234", "2", "credit_card", "234", "23", "4");
 		driver.InsertPayment("3545123412341234", "3", "credit_card", "345", "23", "6");
@@ -157,15 +156,42 @@ public class InsertTupleDrive {
 	}
 	
 	public void InsertDriverLicense() {
-		
+		driver.InsertDriverLicense("0000000001","0000000001");
+		driver.InsertDriverLicense("0000000001","0000000010");
+		driver.InsertDriverLicense("0000000001","0000000100");
+		driver.InsertDriverLicense("0000000010","0000001000");
+		driver.InsertDriverLicense("0000000010","0000010000");
+		driver.InsertDriverLicense("0000000100","0000100000");
+		driver.InsertDriverLicense("0000000100","0001000000");
+		driver.InsertDriverLicense("0000000100","0010000000");
+		driver.InsertDriverLicense("0000001000","0100000000");
+		driver.InsertDriverLicense("0000001000","1000000000");	
 	}
 	
 	public void InsertUnitMeasureSize() {
-		
+		driver.InsertUnitMeasureSize("0000000001");
+		driver.InsertUnitMeasureSize("0000000010");
+		driver.InsertUnitMeasureSize("0000000100");
+		driver.InsertUnitMeasureSize("0000001000");
+		driver.InsertUnitMeasureSize("0000010000");
+		driver.InsertUnitMeasureSize("0000100000");
+		driver.InsertUnitMeasureSize("0001000000");
+		driver.InsertUnitMeasureSize("0010000000");
+		driver.InsertUnitMeasureSize("0100000000");
+		driver.InsertUnitMeasureSize("1000000000");
 	}
 	
 	public void InsertVehicle() {
-		
+		driver.InsertVehicle("80배1234","0000000001","0000000001",122,234,345);
+		driver.InsertVehicle("80배2345","0000000010","0000000001",745,654,431);
+		driver.InsertVehicle("81배1234","0000000100","0000000001",123,654,345);
+		driver.InsertVehicle("81배3456","0000001000","0000000001",765,745,453);
+		driver.InsertVehicle("81배4567","0000010000","0000000010",465,235,856);
+		driver.InsertVehicle("82배7643","0000100000","0000000010",685,457,463);
+		driver.InsertVehicle("82배4326","0001000000","0000000010",967,574,685);
+		driver.InsertVehicle("83배8765","0010000000","0000000010",685,679,967);
+		driver.InsertVehicle("83배3245","0100000000","0000000010",965,865,634);
+		driver.InsertVehicle("84배7532","1000000000","0000000010",634,586,967);
 	}
 	
 	public void InsertDriverInfo() {

@@ -1,24 +1,24 @@
 package com.example.dataclass;
 
 public class DriverLicense {
-	private int license_type;
-	private int nation_type;
+	private String license_type;
+	private String nation_type;
 	
-	public DriverLicense(int license_type, int nation_type) {
+	public DriverLicense(String license_type, String nation_type) {
 		super();
 		this.license_type = license_type;
 		this.nation_type = nation_type;
 	}
-	public int getLicense_type() {
+	public String getLicense_type() {
 		return license_type;
 	}
-	public void setLicense_type(int license_type) {
+	public void setLicense_type(String license_type) {
 		this.license_type = license_type;
 	}
-	public int getNation_type() {
+	public String getNation_type() {
 		return nation_type;
 	}
-	public void setNation_type(int nation_type) {
+	public void setNation_type(String nation_type) {
 		this.nation_type = nation_type;
 	}
 	

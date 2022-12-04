@@ -2,13 +2,13 @@ package com.example.dataclass;
 
 public class Vehicle {
 	private String plate_number;
-	private int nation_type;
-	private int type;
+	private String nation_type;
+	private String type;
 	private int width;
 	private int height;
 	private int depth;
 
-	public Vehicle(String plate_number, int nation_type, int type, int width, int height, int depth) {
+	public Vehicle(String plate_number, String nation_type, String type, int width, int height, int depth) {
 		super();
 		this.plate_number = plate_number;
 		this.nation_type = nation_type;
@@ -24,16 +24,16 @@ public class Vehicle {
 	public void setPlate_number(String plate_number) {
 		this.plate_number = plate_number;
 	}
-	public int getNation_type() {
+	public String getNation_type() {
 		return nation_type;
 	}
-	public void setNation_type(int nation_type) {
+	public void setNation_type(String nation_type) {
 		this.nation_type = nation_type;
 	}
-	public int getType() {
+	public String getType() {
 		return type;
 	}
-	public void setType(int type) {
+	public void setType(String type) {
 		this.type = type;
 	}
 	public int getWidth() {
