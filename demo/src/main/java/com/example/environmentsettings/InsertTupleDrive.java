@@ -91,25 +91,69 @@ public class InsertTupleDrive {
 	
 	public void InsertPayment() {
 		// 카드번호 16으로 바꿨고
-		// expiration year는 2자리야 예진쿤 
-		// driver.InsertPayment("1234123412341234", "10", "credit_card", "123", "2023", "3");
-		driver.InsertPayment("1234123412341234", "10", "credit_card", "123", "23", "3");
+		// expiration year는 2자리야 예진쿤
+		driver.InsertPayment("1234123412341234", "1", "credit_card", "123", "23", "3");
+		driver.InsertPayment("2345123412341234", "2", "credit_card", "234", "23", "4");
+		driver.InsertPayment("3545123412341234", "3", "credit_card", "345", "23", "6");
+		driver.InsertPayment("6464123412341234", "4", "credit_card", "456", "23", "7");
+		driver.InsertPayment("7676123412341234", "5", "credit_card", "567", "24", "8");
+		driver.InsertPayment("6868123412341234", "6", "credit_card", "678", "24", "8");
+		driver.InsertPayment("2424123412341234", "7", "credit_card", "789", "24", "9");
+		driver.InsertPayment("8787123412341234", "8", "credit_card", "876", "24", "10");
+		driver.InsertPayment("9876123412341234", "9", "credit_card", "654", "24", "11");
+		driver.InsertPayment("9675123412341234", "10", "credit_card", "543", "24", "12");
 	}
 	
 	public void InsertArea() {
-		
+		driver.InsertArea("0000000001");
+		driver.InsertArea("0000000010");
+		driver.InsertArea("0000000100");
+		driver.InsertArea("0000001000");
+		driver.InsertArea("0000010000");
+		driver.InsertArea("0000100000");
+		driver.InsertArea("0001000000");
+		driver.InsertArea("0010000000");
+		driver.InsertArea("0100000000");
+		driver.InsertArea("1000000000");
 	}
 	
 	public void InsertWorker() {
-		
+		driver.InsertWorker("1","0000000001","Elbert","Whitehead","Daphne","03 1212 2424","123 1234 1234","2020-09-21");	
+		driver.InsertWorker("2","0000000010","Daphne","Lambert","Gray","04 4546 4321","234 8765 1234","2020-11-11");	
+		driver.InsertWorker("3","0000000100","Anthony","Elmer","Spencer","05 3454 2424","123 5252 5432","2020-07-05");	
+		driver.InsertWorker("4","0000001000","Bond","Pascall","Gordon","06 1212 6464","222 1234 8392","2020-04-08");	
+		driver.InsertWorker("5","0000010000","Vincent","Leon","Malcom","02 1212 3557","344 6321 1234","2020-09-13");	
+		driver.InsertWorker("6","0000100000","Harrison","Georgie","Fennimore","03 2444 7654","744 4422 1234","2021-04-15");	
+		driver.InsertWorker("7","0001000000","Brian","Robertson","Parkinson","03 7654 6543","876 5432 2424","2022-05-19");	
+		driver.InsertWorker("8","0010000000","Bobby","Cunningham","Beck","03 8654 2321","022 3453 1234","2019-04-23");	
+		driver.InsertWorker("9","0100000000","Ike","Dolton","Frost","03 7433 4321","058 5432 6543","2019-09-11");	
+		driver.InsertWorker("10","1000000000","Sterling","Zeph","Geis","03 6543 8765","274 1234 8765","2019-08-18");	
 	}
 	
 	public void InsertSalaryLog() {
-		
+		driver.InsertSalaryLog("20200131","1","3000000","300000");		
+		driver.InsertSalaryLog("20200430","2","3000000","300000");		
+		driver.InsertSalaryLog("20200430","3","3000000","300000");		
+		driver.InsertSalaryLog("20210331","4","3000000","300000");		
+		driver.InsertSalaryLog("20210430","5","4000000","400000");		
+		driver.InsertSalaryLog("20220531","6","4000000","400000");		
+		driver.InsertSalaryLog("20220630","7","4000000","500000");		
+		driver.InsertSalaryLog("20220731","8","5000000","500000");		
+		driver.InsertSalaryLog("20220831","9","5000000","500000");		
+		driver.InsertSalaryLog("20221031","10","5000000","500000");		
 	}
 	
 	public void InsertNation() {
-		
+		driver.InsertNation("0000000001");
+		driver.InsertNation("0000000010");
+		driver.InsertNation("0000000100");
+		driver.InsertNation("0000001000");
+		driver.InsertNation("0000010000");
+		driver.InsertNation("0000100000");
+		driver.InsertNation("0001000000");
+		driver.InsertNation("0010000000");
+		driver.InsertNation("0100000000");
+		driver.InsertNation("1000000000");
 	}
 	
 	public void InsertDriverLicense() {
@@ -147,7 +191,7 @@ public class InsertTupleDrive {
 	public void InsertWholeRequest() {
 		
 	}
-	
+	// 여기까지
 	public void InsertWarehouseConnection() {
 		
 	}

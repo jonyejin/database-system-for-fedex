@@ -18,13 +18,13 @@ public final class TestDrive
     	
     	CreateTable CT = new CreateTable(DBC);
     	DropTable DT = new DropTable(DBC);
-    	InsertTupleDrive ITD = new InsertTupleDrive(DBC);
+//    	InsertTupleDrive ITD = new InsertTupleDrive(DBC);
     	
 //    	create table into db.
     	CT.CreateTableAll();
     	
 //    	insert tuple into db.
-    	ITD.InsertAll();
+//    	ITD.InsertTupleAll();
     	
 //    	drop table from db.
 //    	DT.DropTableAll();

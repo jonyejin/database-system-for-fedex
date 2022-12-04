@@ -118,7 +118,7 @@ public class CreateTable {
                 
             //area table generation
             sql = sb.append("create table if not exists area(")
-                    .append("area_id varchar(20),")
+                    .append("area_id int,")
                     .append("primary key(area_id)")
                     .append(");").toString();
         
@@ -163,7 +163,7 @@ public class CreateTable {
                 
             //nation table generation
             sql = sb.append("create table if not exists nation(")
-                    .append("nation_type tinyint,")
+                    .append("nation_type bigint,")
                     .append("primary key(nation_type)")
                     .append(");").toString();
         
@@ -200,7 +200,7 @@ public class CreateTable {
             sql = sb.append("create table if not exists vehicle(")
                     .append("plate_number varchar(20),")
                     .append("nation_type tinyint,")
-                    .append("unit_measure_size_type tinyint,")
+                    .append("unit_measure_size_type bigint,")
                     .append("width int,")
                     .append("height int,")
                     .append("depth int,")
@@ -457,7 +457,6 @@ public class CreateTable {
                     .append("unit_measure_weight_type tinyint,")
                     .append("item_name varchar(20),")
                     .append("item_price int,")
-                    .append("item_type varchar(20),")
                     .append("weight float,")
                     .append("width float,")
                     .append("height float,")

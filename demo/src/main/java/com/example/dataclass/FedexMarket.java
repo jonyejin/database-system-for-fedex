@@ -6,21 +6,19 @@ public class FedexMarket {
 	private int unit_measure_weight_type;
 	private String item_name;
 	private int item_price;
-	private String item_type;
 	private float weight;
 	private float width;
 	private float height;
 	private float depth;
 	
 	public FedexMarket(String item_code, int unit_measure_size_type, int unit_measure_weight_type, String item_name,
-			int item_price, String item_type, float weight, float width, float height, float depth) {
+			int item_price, float weight, float width, float height, float depth) {
 		super();
 		this.item_code = item_code;
 		this.unit_measure_size_type = unit_measure_size_type;
 		this.unit_measure_weight_type = unit_measure_weight_type;
 		this.item_name = item_name;
 		this.item_price = item_price;
-		this.item_type = item_type;
 		this.weight = weight;
 		this.width = width;
 		this.height = height;
@@ -56,12 +54,6 @@ public class FedexMarket {
 	public void setItem_price(int item_price) {
 		this.item_price = item_price;
 	}
-	public String getItem_type() {
-		return item_type;
-	}
-	public void setItem_type(String item_type) {
-		this.item_type = item_type;
-	}
 	public float getWeight() {
 		return weight;
 	}
@@ -90,7 +82,7 @@ public class FedexMarket {
 	public String toString() {
 		return "FedexMarket [item_code=" + item_code + ", unit_measure_size_type=" + unit_measure_size_type
 				+ ", unit_measure_weight_type=" + unit_measure_weight_type + ", item_name=" + item_name
-				+ ", item_price=" + item_price + ", item_type=" + item_type + ", weight=" + weight + ", width=" + width
+				+ ", item_price=" + item_price + ", weight=" + weight + ", width=" + width
 				+ ", height=" + height + ", depth=" + depth + "]";
 	}
 }

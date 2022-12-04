@@ -202,7 +202,7 @@ public class InsertTuple {
 	    StringBuilder sb = new StringBuilder();
 	    table = "area";
 		 String sql = sb.append("insert into " + table + " values(")
-	                .append("'" + area_id + "'")
+	                .append("'"+area_id+"'")
 	                .append(");")
 	                .toString();
 		 try {
@@ -314,11 +314,11 @@ public class InsertTuple {
 	     }
 	}
 	
-	public void InsertNation(int nation_type) {
+	public void InsertNation(String nation_type) {
 	    StringBuilder sb = new StringBuilder();
 	    table = "nation";
 		 String sql = sb.append("insert into " + table + " values(")
-	                .append(nation_type)
+	                .append("'"+nation_type+"'")
 	                .append(");")
 	                .toString();
 		 try {
@@ -504,7 +504,6 @@ public class InsertTuple {
 	                .append(unit_measure_weight_type)
 	                .append("'" + item_name + "',")
 	                .append(item_price)
-	                .append("'" + item_type + "',")
 	                .append(weight)
 	                .append(width)
 	                .append(height)
