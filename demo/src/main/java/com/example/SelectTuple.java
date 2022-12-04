@@ -26,7 +26,7 @@ public class SelectTuple {
 	}
 	
 	public void SelectDummy () {
-	    List<dummy> list = new ArrayList<>();
+	    List<Dummy> list = new ArrayList<>();
 	    table = "dummy";
 	    sql = "SELECT * FROM "+table;
 	    
@@ -38,13 +38,13 @@ public class SelectTuple {
 					int id = rs.getInt("ID");
 					String name = rs.getString("name");
 					int grade = rs.getInt("grade");
-					dummy data = new dummy(id, name, grade);
+					Dummy data = new Dummy(id, name, grade);
 					list.add(data);
 				}
 				
 				//print tuple
 				System.out.println("--Select "+table+" Table Result------------");
-				for(dummy data: list) {
+				for(Dummy data: list) {
 		    		System.out.println(data);
 		    	}
 				System.out.println("---------------------------------------");
