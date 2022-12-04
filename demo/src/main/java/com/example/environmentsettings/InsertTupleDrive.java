@@ -219,16 +219,7 @@ public class InsertTupleDrive {
 	}
 	// 여기까지
 	public void InsertWarehouseConnection() {
-		driver.InsertWarehouseConnection("0000000001", "0000000010", 345);
-		driver.InsertWarehouseConnection("0000000001", "0000000100", 511);
-		driver.InsertWarehouseConnection("0000000001", "0000001000", 114);
-		driver.InsertWarehouseConnection("0000000001", "0000010000", 987);
-		driver.InsertWarehouseConnection("0000000001", "0000100000", 1000);
-		driver.InsertWarehouseConnection("0000000001", "0001000000", 100);
-		driver.InsertWarehouseConnection("0000000001", "0010000000", 143);
-		driver.InsertWarehouseConnection("0000000001", "0100000000", 311);
-		driver.InsertWarehouseConnection("0000000001", "1000000000", 500);
-		driver.InsertWarehouseConnection("0000000010", "0100000000", 300);
+		driver.Insert
 	}
 	
 	public void InsertA2ARequest() {
