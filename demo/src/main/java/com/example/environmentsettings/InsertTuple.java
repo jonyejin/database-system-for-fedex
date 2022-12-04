@@ -463,12 +463,11 @@ public class InsertTuple {
 	     }
 	}
 	
-	public void InsertUnitMeasureWeight(String parcel_id, String customer_id, int unit_measure_size_type, int unit_measure_weight_type,
-			float weight, float width, float depth, int is_fragile){
+	public void InsertUnitMeasureWeight(String unit_measure_weight_type){
 	    StringBuilder sb = new StringBuilder();
 	    table = "unit_measure_weight";
 		 String sql = sb.append("insert into " + table + " values(")
-	                .append(unit_measure_weight_type)
+	                .append("'"+unit_measure_weight_type+"'")
 	                .append(");")
 	                .toString();
 		 try {

@@ -256,7 +256,16 @@ public class InsertTupleDrive {
 	}
 	
 	public void InsertUnitMeasureWeight() {
-		
+		driver.InsertUnitMeasureWeight("0000000001");
+		driver.InsertUnitMeasureWeight("0000000010");
+		driver.InsertUnitMeasureWeight("0000000100");
+		driver.InsertUnitMeasureWeight("0000001000");
+		driver.InsertUnitMeasureWeight("0000010000");
+		driver.InsertUnitMeasureWeight("0000100000");
+		driver.InsertUnitMeasureWeight("0001000000");
+		driver.InsertUnitMeasureWeight("0010000000");
+		driver.InsertUnitMeasureWeight("0100000000");
+		driver.InsertUnitMeasureWeight("1000000000");	
 	}
 	
 	public void InsertParcel() {

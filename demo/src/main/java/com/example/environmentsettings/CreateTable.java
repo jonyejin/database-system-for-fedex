@@ -262,7 +262,7 @@ public class CreateTable {
             
           //unit_measure_weight table generation
             sql = sb.append("create table if not exists unit_measure_weight(")
-                    .append("unit_measure_weight_type tinyint,")
+                    .append("unit_measure_weight_type bigint,")
                     .append("primary key(unit_measure_weight_type)")
                     .append(");").toString();
         
