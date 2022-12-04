@@ -157,15 +157,15 @@ public class InsertTupleDrive {
 	
 	public void InsertDriverLicense() {
 		driver.InsertDriverLicense("0000000001","0000000001");
-		driver.InsertDriverLicense("0000000001","0000000010");
-		driver.InsertDriverLicense("0000000001","0000000100");
-		driver.InsertDriverLicense("0000000010","0000001000");
-		driver.InsertDriverLicense("0000000010","0000010000");
-		driver.InsertDriverLicense("0000000100","0000100000");
-		driver.InsertDriverLicense("0000000100","0001000000");
-		driver.InsertDriverLicense("0000000100","0010000000");
-		driver.InsertDriverLicense("0000001000","0100000000");
-		driver.InsertDriverLicense("0000001000","1000000000");	
+		driver.InsertDriverLicense("0000000010","0000000010");
+		driver.InsertDriverLicense("0000000100","0000000100");
+		driver.InsertDriverLicense("0000001000","0000001000");
+		driver.InsertDriverLicense("0000010000","0000010000");
+		driver.InsertDriverLicense("0000100000","0000100000");
+		driver.InsertDriverLicense("0001000000","0001000000");
+		driver.InsertDriverLicense("0010000000","0010000000");
+		driver.InsertDriverLicense("0100000000","0100000000");
+		driver.InsertDriverLicense("1000000000","1000000000");	
 	}
 	
 	public void InsertUnitMeasureSize() {
@@ -195,7 +195,16 @@ public class InsertTupleDrive {
 	}
 	
 	public void InsertDriverInfo() {
-		
+		driver.InsertDriverInfo("1","80배1234","0000000001");
+		driver.InsertDriverInfo("2","80배2345","0000000010");
+		driver.InsertDriverInfo("3","81배1234","0000000100");
+		driver.InsertDriverInfo("4","81배3456","0000001000");
+		driver.InsertDriverInfo("5","81배4567","0000010000");
+		driver.InsertDriverInfo("6","82배7643","0000100000");
+		driver.InsertDriverInfo("7","82배4326","0001000000");
+		driver.InsertDriverInfo("8","83배8765","0010000000");
+		driver.InsertDriverInfo("9","83배3245","0100000000");
+		driver.InsertDriverInfo("10","84배7532","1000000000");
 	}
 	
 	public void InsertWarehouse() {

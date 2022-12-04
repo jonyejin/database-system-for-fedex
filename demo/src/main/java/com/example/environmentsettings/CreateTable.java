@@ -199,7 +199,7 @@ public class CreateTable {
           //vehicle table generation
             sql = sb.append("create table if not exists vehicle(")
                     .append("plate_number varchar(20),")
-                    .append("nation_type tinyint,")
+                    .append("nation_type bigint,")
                     .append("unit_measure_size_type bigint,")
                     .append("width int,")
                     .append("height int,")
@@ -219,7 +219,7 @@ public class CreateTable {
             sql = sb.append("create table if not exists driver_info(")
                     .append("worker_id varchar(20),")
                     .append("vehicle_id varchar(20),")
-                    .append("license_type tinyint,")
+                    .append("license_type bigint,")
                     .append("foreign key(worker_id)")
                     .append("references worker(worker_id) on update cascade,")
                     .append("foreign key(vehicle_id)")

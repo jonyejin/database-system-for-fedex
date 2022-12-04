@@ -165,13 +165,13 @@ public class InsertTuple {
 	     }
 	}
 	
-	public void InsertDriverInfo(String worker_id, String vehicle_id, int license_type){
+	public void InsertDriverInfo(String worker_id, String vehicle_id, String license_type){
 	    StringBuilder sb = new StringBuilder();
 	    table = "driver_info";
 		 String sql = sb.append("insert into " + table + " values(")
 	                .append("'" + worker_id + "',")
 	                .append("'" + vehicle_id + "',")
-	                .append(license_type)
+	                .append("'"+license_type+"'")
 	                .append(");")
 	                .toString();
 		 try {
@@ -299,8 +299,8 @@ public class InsertTuple {
 	    table = "vehicle";
 		 String sql = sb.append("insert into " + table + " values(")
 	                .append("'" + plate_number + "',")
-	                .append(nation_type)
-	                .append(type)
+	                .append("'"+nation_type+"',")
+	                .append("'"+type+"',")
 	                .append(width)
 	                .append(height)
 	                .append(depth)
