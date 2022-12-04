@@ -111,7 +111,10 @@ public final class testMain
     	//select test
     	//SelectTuple selectTuple = new SelectTuple(dbConnection);
     	//selectTuple.SelectDummy();
-    	
-			insertTuple.InsertPayment("1234123412341234", "10", "credit_card", "123", "2023", "3");
+    		
+    	// 카드번호 16으로 바꿨고
+    	// expiration year는 2자리야 예진쿤 
+//		insertTuple.InsertPayment("1234123412341234", "10", "credit_card", "123", "2023", "3");
+    	insertTuple.InsertPayment("1234123412341234", "10", "credit_card", "123", "23", "3");
     }
 }

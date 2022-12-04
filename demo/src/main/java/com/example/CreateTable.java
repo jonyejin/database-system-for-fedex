@@ -169,7 +169,7 @@ public class CreateTable {
             //nation table generation
             sql = sb.append("create table if not exists nation(")
                     .append("nation_type tinyint,")
-                    .append("primary key(nation_type),")
+                    .append("primary key(nation_type)")
                     .append(");").toString();
         
             stmt.execute(sql);
@@ -227,7 +227,7 @@ public class CreateTable {
                     .append("license_type tinyint,")
                     .append("foreign key(worker_id)")
                     .append("references worker(worker_id) on update cascade,")
-                    .append("foreign key(plate_number)")
+                    .append("foreign key(vehicle_id)")
                     .append("references vehicle(plate_number) on update cascade,")
                     .append("foreign key(license_type)")
                     .append("references driver_license(license_type) on update cascade")
@@ -358,7 +358,7 @@ public class CreateTable {
                     .append("references whole_request(id) on update cascade,")
                     .append("foreign key(worker_id)")
                     .append("references driver_info(worker_id) on update cascade,")
-                    .append("foreign key(plate_number)")
+                    .append("foreign key(vehicle_id)")
                     .append("references driver_info(vehicle_id) on update cascade")
                     .append(");").toString();
         
@@ -383,7 +383,7 @@ public class CreateTable {
                     .append("references whole_request(id) on update cascade,")
                     .append("foreign key(worker_id)")
                     .append("references driver_info(worker_id) on update cascade,")
-                    .append("foreign key(plate_number)")
+                    .append("foreign key(vehicle_id)")
                     .append("references driver_info(vehicle_id) on update cascade,")
                     .append("foreign key(warehouse_id)")
                     .append("references warehouse(warehouse_id) on update cascade")
