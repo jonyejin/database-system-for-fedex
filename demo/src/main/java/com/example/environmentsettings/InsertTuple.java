@@ -282,7 +282,7 @@ public class InsertTuple {
 	                .append(is_done)
 	                .append(departure)
 	                .append(arrival)
-	                .append("'" + done_time_stamp + "'")
+	                .append((done_time_stamp == "null") ? "null" : "'" + done_time_stamp + "'")
 	                .append(");")
 	                .toString();
 		 try {
