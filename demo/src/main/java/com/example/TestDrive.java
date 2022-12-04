@@ -24,10 +24,10 @@ public final class TestDrive
     	CT.CreateTableAll();
     	
 //    	insert tuple into db.
-//    	ITD.InsertAll();
+    	ITD.InsertTupleAll();
     	
 //    	drop table from db.
-    	DT.DropTableAll();
+//    	DT.DropTableAll();
     	
 //    	disconnect
     	DBC.disConn();

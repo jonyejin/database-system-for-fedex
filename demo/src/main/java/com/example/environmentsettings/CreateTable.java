@@ -68,6 +68,7 @@ public class CreateTable {
                     .append("address_1 varchar(20),")
                     .append("address_2 varchar(20),")
                     .append("customer_id varchar(20),")
+                    .append("country_region varchar(20),")
                     .append("town_city varchar(20),")
                     .append("province_territory varchar(20),")
                     .append("zip int,")
