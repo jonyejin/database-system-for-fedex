@@ -145,7 +145,7 @@ public class CreateTable {
             
         //area table generation
         sql = sb.append("create table if not exists area(")
-                .append("area_id int,")
+                .append("area_id varchar(20),")
                 .append("primary key(area_id)")
                 .append(");").toString();
     
