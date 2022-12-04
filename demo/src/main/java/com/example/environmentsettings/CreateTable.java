@@ -671,7 +671,7 @@ public class CreateTable {
         //delegate_info table generation
         sql = sb.append("create table if not exists delegate_info(")
                 .append("whole_request_id varchar(20),")
-                .append("message varchar(20),")
+                .append("message varchar(100),")
                 .append("nickname varchar(20),")
                 .append("cell_phone varchar(20),")
                 .append("relationship varchar(20),")
