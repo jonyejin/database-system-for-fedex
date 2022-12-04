@@ -15,15 +15,19 @@ public final class TestDrive
     public static void main( String[] args ) 
     {
     	
+//    	select test
+//    	SelectTuple selectTuple = new SelectTuple(dbConnection);
+//    	selectTuple.SelectDummy();
+    	
     	DBConnection dbConnection = new DBConnection();
     	CreateTable createT = new CreateTable(dbConnection);
     	DropTable dropTable = new DropTable(dbConnection);
     	InsertTupleDrive ITD = new InsertTupleDrive(dbConnection);
     	
+    	
+//    	디비에 튜플 넣기.
 //    	ITD.InsertAllTogether();
-//    	select test
-//    	SelectTuple selectTuple = new SelectTuple(dbConnection);
-//    	selectTuple.SelectDummy();
+
     		
     }
 }
