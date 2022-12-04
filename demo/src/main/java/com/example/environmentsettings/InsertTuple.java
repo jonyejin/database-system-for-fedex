@@ -448,9 +448,9 @@ public class InsertTuple {
 	                .append("'" + customer_id + "',")
 	                .append("'"+unit_measure_size_type+"',")
 	                .append("'"+unit_measure_weight_type+"',")
-	                .append(weight)
-	                .append(width)
-	                .append(depth)
+	                .append(weight+",")
+	                .append(width+",")
+	                .append(depth+",")
 	                .append(is_fragile)
 	                .append(");")
 	                .toString();
