@@ -590,7 +590,7 @@ public class InsertTuple {
 	    StringBuilder sb = new StringBuilder();
 	    table = "regulated_base_pay";
 		 String sql = sb.append("insert into " + table + " values(")
-	                .append(year)
+	                .append(year+",")
 	                .append(base_pay)
 	                .append(");")
 	                .toString();
@@ -606,7 +606,7 @@ public class InsertTuple {
 	    StringBuilder sb = new StringBuilder();
 	    table = "request_minimum_charge";
 		 String sql = sb.append("insert into " + table + " values(")
-	                .append(year)
+	                .append(year+",")
 	                .append(minimum_charge)
 	                .append(");")
 	                .toString();
