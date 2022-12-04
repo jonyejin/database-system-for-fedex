@@ -272,7 +272,7 @@ public class InsertTuple {
 	}
 	
 	public void InsertA2ARequest(String a2a_id, String whole_request_id, String worker_id, String plate_number, int is_done,
-			int departure, int arrival, String done_time_stamp)  {
+			String departure, String arrival, String done_time_stamp)  {
 	    StringBuilder sb = new StringBuilder();
 	    table = "a2a_request";
 		 String sql = sb.append("insert into " + table + " values(")
