@@ -493,7 +493,7 @@ public class InsertTuple {
 	     }
 	}
 	
-	public void InsertFedexMarket(String item_code, int unit_measure_size_type, int unit_measure_weight_type, String item_name,
+	public void InsertFedexMarket(String item_code, String unit_measure_size_type, String unit_measure_weight_type, String item_name,
 			int item_price, float weight, float width, float height, float depth) {
 	    StringBuilder sb = new StringBuilder();
 	    table = "fedex_market";
