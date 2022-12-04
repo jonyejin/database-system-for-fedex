@@ -269,7 +269,16 @@ public class InsertTupleDrive {
 	}
 	
 	public void InsertParcel() {
-		
+		driver.InsertParcel("1","1","0000000001","0000000001",321,32,1,0);
+		driver.InsertParcel("2","2","0000000001","0000000001",32,24,21,0);
+		driver.InsertParcel("3","3","0000000001","0000000001",12,345,45,0);
+		driver.InsertParcel("4","4","0000000001","0000000001",243,45,324,0);
+		driver.InsertParcel("5","5","0000000001","0000000001",22,46,24,0);
+		driver.InsertParcel("6","6","0000000010","0000000010",132,46,23,1);
+		driver.InsertParcel("7","7","0000000010","0000000010",54,76,17,1);
+		driver.InsertParcel("8","8","0000000010","0000000010",65,34,23,1);
+		driver.InsertParcel("9","9","0000000100","0000000100",46,345,21,1);
+		driver.InsertParcel("10","10","0000000100","0000000100",35,27,50,1);	
 	}
 	
 	public void InsertWholeRequest() {

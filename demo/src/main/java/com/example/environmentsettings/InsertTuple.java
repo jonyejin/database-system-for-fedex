@@ -440,15 +440,15 @@ public class InsertTuple {
 	     }
 	}
 	
-	public void InsertParcel(String parcel_id, String customer_id, int unit_measure_size_type, int unit_measure_weight_type,
+	public void InsertParcel(String parcel_id, String customer_id, String unit_measure_size_type, String unit_measure_weight_type,
 			float weight, float width, float depth, int is_fragile){
 	    StringBuilder sb = new StringBuilder();
 	    table = "parcel";
 		 String sql = sb.append("insert into " + table + " values(")
 	                .append("'" + parcel_id + "',")
 	                .append("'" + customer_id + "',")
-	                .append(unit_measure_size_type)
-	                .append(unit_measure_weight_type)
+	                .append("'"+unit_measure_size_type+"',")
+	                .append("'"+unit_measure_weight_type+"',")
 	                .append(weight)
 	                .append(width)
 	                .append(depth)
