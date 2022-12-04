@@ -448,7 +448,7 @@ public class CreateTable {
                     .append("title varchar(100),")
                     .append("body varchar(300),")
                     .append("foreign key(complaint_id)")
-                    .append("references customer_service(complaint_id) on update cascade,")
+                    .append("references board(complaint_id) on update cascade,")
                     .append("foreign key(worker_id)")
                     .append("references cs_worker_info(worker_id) on update cascade")
                     .append(");").toString();
