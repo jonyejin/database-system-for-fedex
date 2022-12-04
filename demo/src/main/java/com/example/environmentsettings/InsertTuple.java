@@ -538,8 +538,8 @@ public class InsertTuple {
 	    table = "pick_up";
 		 String sql = sb.append("insert into " + table + " values(")
 	                .append("'" + id + "',")
-	                .append(is_delegate)
-	                .append(is_untact)
+	                .append(is_delegate+",")
+	                .append(is_untact+",")
 	                .append("'" + message + "'")
 	                .append(");")
 	                .toString();
