@@ -295,12 +295,12 @@ public class InsertTupleDrive {
 		driver.InsertWholeRequest("6","149 영동대로","6","1","2022-12-06","0000100000","0001000000","6459 테헤란로","7");
 		driver.InsertWholeRequest("7","6459 테헤란로","7","1","2022-12-30","0001000000","0010000000","1556 양재천로","8");
 		driver.InsertWholeRequest("8","1556 양재천로","8","1","2022-12-28","0010000000","0100000000","973 논현로","9");
-		driver.InsertWholeRequest("9","973 논현로","9","1","2022-10-34","0100000000","1000000000","149 영동대로","10");
+		driver.InsertWholeRequest("9","973 논현로","9","1","2022-10-30","0100000000","1000000000","149 영동대로","10");
 		driver.InsertWholeRequest("10","149 영동대로","10","1","2022-11-14","1000000000","0000000001","5824 Hester Squares","1");
 		driver.InsertWholeRequest("11","149 영동대로","6","11","2022-12-06","0000100000","0001000000","1556 양재천로","8");
 		driver.InsertWholeRequest("12","6459 테헤란로","7","12","2022-12-30","0001000000","0010000000","973 논현로","9");
 		driver.InsertWholeRequest("13","1556 양재천로","8","13","2022-12-28","0010000000","0100000000","149 영동대로","10");
-		driver.InsertWholeRequest("14","973 논현로","9","14","2022-10-34","0100000000","1000000000","5824 Hester Squares","1");
+		driver.InsertWholeRequest("14","973 논현로","9","14","2022-10-30","0100000000","1000000000","5824 Hester Squares","1");
 		driver.InsertWholeRequest("15","149 영동대로","10","15","2022-11-14","1000000000","0000000001","307 Schaden Creek","2");
 		
 	}
@@ -320,25 +320,59 @@ public class InsertTupleDrive {
 	}
 	
 	public void InsertA2ARequest() {
-		driver.InsertWholeRequest("1","5824 Hester Squares","1","1","2022-12-04","0000000001","0000000100","147 서초중앙로","3");
-		driver.InsertWholeRequest("2","307 Schaden Creek","2","1","2022-12-05","0000000010","0000000100","147 서초중앙로","3");
-		driver.InsertWholeRequest("3","147 서초중앙로","3","1","2022-11-13","0000000100","0000001000","6236 가락로","4");
-		driver.InsertWholeRequest("4","6236 가락로","4","1","2022-12-23","0000001000","0000010000","742 논현로","5");
-		driver.InsertWholeRequest("5","742 논현로","5","1","2022-12-02","0000010000","0000100000","149 영동대로","6");
-		driver.InsertWholeRequest("6","149 영동대로","6","1","2022-12-06","0000100000","0001000000","6459 테헤란로","7");
-		driver.InsertWholeRequest("7","6459 테헤란로","7","1","2022-12-30","0001000000","0010000000","1556 양재천로","8");
-		driver.InsertWholeRequest("8","1556 양재천로","8","1","2022-12-28","0010000000","0100000000","973 논현로","9");
-		driver.InsertWholeRequest("9","973 논현로","9","1","2022-10-34","0100000000","1000000000","149 영동대로","10");
-		driver.InsertWholeRequest("10","149 영동대로","10","1","2022-11-14","1000000000","0000000001","5824 Hester Squares","1");
-		
-		driver.InsertA2ARequest("01", "1", "1", null, 0, 0, 0, null);
-		(String a2a_id, String whole_request_id, String worker_id, String plate_number, int is_done,
-				int departure, int arrival, String done_time_stamp)
+		driver.InsertA2ARequest("01", "1", "1", "80배1234", 0, "1", "3", null);
+		driver.InsertA2ARequest("02", "2", "2", "80배2345", 1, "2", "1", "2022-12-05");
+		driver.InsertA2ARequest("12", "2", "1", "80배1234", 1, "1", "4", "2022-12-05");
+		driver.InsertA2ARequest("22", "2", "4", "81배3456", 1, "4", "3", "2022-12-06");
+		driver.InsertA2ARequest("03", "3", "3", "81배1234", 1, "3", "4", "2022-11-13");
+		driver.InsertA2ARequest("04", "4", "4", "81배3456", 1, "4", "5", "2022-12-23");
+		driver.InsertA2ARequest("05", "5", "5"," 81배4567", 1, "5", "6", "2022-12-02");
+		driver.InsertA2ARequest("06", "6", "6", "82배7643", 1, "6", "10", "2022-12-06");
+		driver.InsertA2ARequest("16", "6", "10", "84배7532", 1, "10", "8", "2022-12-08");
+		driver.InsertA2ARequest("26", "6", "8", "83배8765", 1, "8", "7", "2022-12-08");
+		driver.InsertA2ARequest("07", "7", "7", "82배4326", 1, "7", "8", "2022-12-30");
+		driver.InsertA2ARequest("08", "8", "8", "83배8765", 1, "8", "9", "2022-12-28");
+		driver.InsertA2ARequest("09", "9", "9", "83배3245", 1, "9", "10", "2022-10-30");
+		driver.InsertA2ARequest("010", "10", "10", "84배7532", 1, "10", "1", "2022-11-14");
+		driver.InsertA2ARequest("011", "11", "6", "82배7643", 1, "6", "7", "2022-12-06");
+		driver.InsertA2ARequest("012", "12", "7", "82배4326", 1, "7", "8", "2022-12-30");
+		driver.InsertA2ARequest("013", "13", "8", "83배8765", 1, "8", "9", "2022-12-28");
+		driver.InsertA2ARequest("014", "14", "9", "83배3245", 1, "9", "10", "2022-10-30");
+		driver.InsertA2ARequest("015", "15", "10", "84배7532", 0, "10", "7", null);
+		driver.InsertA2ARequest("115", "15", "7", "82배4326", 0, "7", "1", null);
 	}
 	
 	public void InsertD2ARequest() {
-		(String customer_id, String whole_request_id, String worker_id, String plate_number,
-				String warehouse_id, int from_d, int is_done, String done_time_stamp)
+		driver.InsertD2ARequest("1", "1", "1", "80배1234", "1", 1, 0, null);
+		driver.InsertD2ARequest("1", "1", "3", "81배1234", "3", 0, 0, null);
+		driver.InsertD2ARequest("2", "2", "2", "80배2345", "2", 1, 1, "2022-12-05");
+		driver.InsertD2ARequest("2", "2", "3", "81배1234", "3", 0, 1, "2022-12-06");
+		driver.InsertD2ARequest("3", "3", "3", "81배1234", "3", 1, 1, "2022-11-13");
+		driver.InsertD2ARequest("3", "3", "4", "81배3456", "4", 0, 1, "2022-11-13");
+		driver.InsertD2ARequest("4", "4", "4", "81배3456", "4", 1, 1, "2022-12-23");
+		driver.InsertD2ARequest("4", "4", "5", "81배4567", "5", 0, 1, "2022-12-23");
+		driver.InsertD2ARequest("5", "5", "5", "81배4567", "5", 1, 1, "2022-12-02");
+		driver.InsertD2ARequest("5", "5", "6", "82배7643", "6", 0, 1, "2022-12-02");
+		driver.InsertD2ARequest("6", "6", "6", "82배7643", "6", 1, 1, "2022-12-06");
+		driver.InsertD2ARequest("6", "6", "7", "82배4326", "7", 0, 0, null);
+		driver.InsertD2ARequest("7", "7", "7", "82배4326", "7", 1, 1, "2022-12-30");
+		driver.InsertD2ARequest("7", "7", "8", "83배8765", "8", 0, 1, "2022-12-30");
+		driver.InsertD2ARequest("8", "8", "8", "83배8765", "8", 1, 1, "2022-12-28");
+		driver.InsertD2ARequest("8", "8", "9", "83배3245", "9", 0, 1, "2022-12-28");
+		driver.InsertD2ARequest("9", "9", "9", "83배3245", "9", 1, 1, "2022-10-30");
+		driver.InsertD2ARequest("9", "9", "10", "84배7532", "10", 0, 1, "2022-10-30");
+		driver.InsertD2ARequest("10", "10", "10", "84배7532", "10", 1, 1, "2022-11-14");
+		driver.InsertD2ARequest("10", "10", "1", "80배1234", "1", 0, 1, "2022-11-14");
+		driver.InsertD2ARequest("6", "11", "6", "82배7643", "6", 1, 1, "2022-12-06");
+		driver.InsertD2ARequest("6", "11", "7", "82배4326", "7", 0, 1, "2022-12-06");
+		driver.InsertD2ARequest("7", "12", "7", "82배4326", "7", 1, 1, "2022-12-30");
+		driver.InsertD2ARequest("7", "12", "8", "83배8765", "8", 0, 1, "2022-12-30");
+		driver.InsertD2ARequest("8", "13", "8", "83배8765", "8", 1, 1, "2022-12-28");
+		driver.InsertD2ARequest("8", "13", "9", "83배3245", "9", 0, 1, "2022-12-28");
+		driver.InsertD2ARequest("9", "14", "9", "83배3245", "9", 1, 1, "2022-10-30");
+		driver.InsertD2ARequest("9", "14", "10", "84배7532", "10", 0, 1, "2022-10-30");
+		driver.InsertD2ARequest("10", "15", "10", "84배7532", "10", 1, 1, "2022-11-14");
+		driver.InsertD2ARequest("10", "15", "1", "80배1234", "1", 0, 0, null);
 	}
 	
 	public void InsertCSDepartment() {
