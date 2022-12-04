@@ -21,8 +21,6 @@ public class DBConnection {
 //	private String dbuser = "root";
 //	private String dbpasswd = "1367";
 	
-	//String sql = "SELECT * FROM student";
-	
 
 	public DBConnection() {
 		setConn(dburl,dbuser,dbpasswd);
