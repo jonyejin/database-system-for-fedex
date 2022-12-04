@@ -282,8 +282,19 @@ public class InsertTupleDrive {
 	}
 	
 	public void InsertWholeRequest() {
+		driver.InsertWholeRequest("1","5824 Hester Squares","1","1","2022-12-04","0000000001","0000000100","147 서초중앙로","3");
+		driver.InsertWholeRequest("2","307 Schaden Creek","2","1","2022-12-05","0000000010","0000000100","147 서초중앙로","3");
+		driver.InsertWholeRequest("3","147 서초중앙로","3","1","2022-11-13","0000000100","0000001000","6236 가락로","4");
+		driver.InsertWholeRequest("4","6236 가락로","4","1","2022-12-23","0000001000","0000010000","742 논현로","5");
+		driver.InsertWholeRequest("5","742 논현로","5","1","2022-12-02","0000010000","0000100000","149 영동대로","6");
+		driver.InsertWholeRequest("6","149 영동대로","6","1","2022-12-06","0000100000","0001000000","6459 테헤란로","7");
+		driver.InsertWholeRequest("7","6459 테헤란로","7","1","2022-12-30","0001000000","0010000000","1556 양재천로","8");
+		driver.InsertWholeRequest("8","1556 양재천로","8","1","2022-12-28","0010000000","0100000000","973 논현로","9");
+		driver.InsertWholeRequest("9","973 논현로","9","1","2022-10-34","0100000000","1000000000","149 영동대로","10");
+		driver.InsertWholeRequest("10","149 영동대로","10","1","2022-11-14","1000000000","0000000001","5824 Hester Squares","1");
 		
 	}
+	
 	// 여기까지
 	public void InsertWarehouseConnection() {
 		

@@ -1,18 +1,18 @@
 package com.example.dataclass;
 
 public class WholeRequest {
-	private String id;
-	private String sender_address_id;
-	private String customer_id;
-	private String parcel_id;
+	private String id;//
+	private String sender_address_id;//
+	private String customer_id;//
+	private String parcel_id;//
 	private String time_stamp;
-	private int departure_area_id;
-	private int arrival_area_id;
-	private String receiver_address_id;
-	private String receiver_id;
+	private String departure_area_id;
+	private String arrival_area_id;
+	private String receiver_address_id;//
+	private String receiver_id;//
 	
 	public WholeRequest(String id, String sender_address_id, String customer_id, String parcel_id, String time_stamp,
-			int departure_area_id, int arrival_area_id, String receiver_address_id, String receiver_id) {
+			String departure_area_id, String arrival_area_id, String receiver_address_id, String receiver_id) {
 		super();
 		this.id = id;
 		this.sender_address_id = sender_address_id;
@@ -55,16 +55,16 @@ public class WholeRequest {
 	public void setTime_stamp(String time_stamp) {
 		this.time_stamp = time_stamp;
 	}
-	public int getDeparture_area_id() {
+	public String getDeparture_area_id() {
 		return departure_area_id;
 	}
-	public void setDeparture_area_id(int departure_area_id) {
+	public void setDeparture_area_id(String departure_area_id) {
 		this.departure_area_id = departure_area_id;
 	}
-	public int getArrival_area_id() {
+	public String getArrival_area_id() {
 		return arrival_area_id;
 	}
-	public void setArrival_area_id(int arrival_area_id) {
+	public void setArrival_area_id(String arrival_area_id) {
 		this.arrival_area_id = arrival_area_id;
 	}
 	public String getReceiver_address_id() {

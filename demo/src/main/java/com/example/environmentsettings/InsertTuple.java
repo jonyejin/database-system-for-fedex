@@ -214,7 +214,7 @@ public class InsertTuple {
 	}
 	
 	public void InsertWholeRequest(String id, String sender_address_id, String customer_id, String parcel_id, String time_stamp,
-			int departure_area_id, int arrival_area_id, String receiver_address_id, String receiver_id){
+			String departure_area_id, String arrival_area_id, String receiver_address_id, String receiver_id){
 	    StringBuilder sb = new StringBuilder();
 	    table = "whole_request";
 		 String sql = sb.append("insert into " + table + " values(")
@@ -223,8 +223,8 @@ public class InsertTuple {
 	                .append("'" + customer_id + "',")
 	                .append("'" + parcel_id + "',")
 	                .append("'" + time_stamp + "',")
-	                .append(departure_area_id+",")
-	                .append(arrival_area_id+",")
+	                .append("'" +departure_area_id+"',")
+	                .append("'" +arrival_area_id+"',")
 	                .append("'" + receiver_address_id + "',")
 	                .append("'" + receiver_id + "'")
 	                .append(");")
