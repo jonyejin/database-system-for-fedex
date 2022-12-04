@@ -326,7 +326,7 @@ public class InsertTupleDrive {
 		driver.InsertA2ARequest("22", "2", "4", "81배3456", 1, "4", "3", "2022-12-06");
 		driver.InsertA2ARequest("03", "3", "3", "81배1234", 1, "3", "4", "2022-11-13");
 		driver.InsertA2ARequest("04", "4", "4", "81배3456", 1, "4", "5", "2022-12-23");
-		driver.InsertA2ARequest("05", "5", "5"," 81배4567", 1, "5", "6", "2022-12-02");
+		driver.InsertA2ARequest("05", "5", "5", "81배4567", 1, "5", "6", "2022-12-02");
 		driver.InsertA2ARequest("06", "6", "6", "82배7643", 1, "6", "10", "2022-12-06");
 		driver.InsertA2ARequest("16", "6", "10", "84배7532", 1, "10", "8", "2022-12-08");
 		driver.InsertA2ARequest("26", "6", "8", "83배8765", 1, "8", "7", "2022-12-08");
