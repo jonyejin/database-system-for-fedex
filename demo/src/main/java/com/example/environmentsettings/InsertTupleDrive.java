@@ -318,23 +318,50 @@ public class InsertTupleDrive {
 	}
 	
 	public void InsertPickup() {
-		
+		//needs whole_request_id
 	}
 	
 	public void InsertDelegateInfo() {
-		
+		//needs whole_request_id
 	}
 	
 	public void InsertWorkerBasePay() {
-		
+		driver.InsertWorkerBasePay(1, 1000);
+		driver.InsertWorkerBasePay(2, 1100);
+		driver.InsertWorkerBasePay(3, 1200);
+		driver.InsertWorkerBasePay(4, 1300);
+		driver.InsertWorkerBasePay(5, 1400);
+		driver.InsertWorkerBasePay(6, 1500);
+		driver.InsertWorkerBasePay(7, 1600);
+		driver.InsertWorkerBasePay(8, 1700);
+		driver.InsertWorkerBasePay(9, 1800);
+		driver.InsertWorkerBasePay(10, 2000);
 	}
 	
 	public void InsertRegulatedBasePay() {
-		
+		driver.InsertRegulatedBasePay(2020, 10000);
+		driver.InsertRegulatedBasePay(2021, 10150);
+		driver.InsertRegulatedBasePay(2022, 10300);
+		driver.InsertRegulatedBasePay(2023, 10450);
+		driver.InsertRegulatedBasePay(2024, 10600);
+		driver.InsertRegulatedBasePay(2025, 10750);
+		driver.InsertRegulatedBasePay(2026, 10900);
+		driver.InsertRegulatedBasePay(2027, 11050);
+		driver.InsertRegulatedBasePay(2028, 11200);
+		driver.InsertRegulatedBasePay(2029, 11350);
 	}
 	
-	public void InsertRequestMiniumCharge() {
-		
+	public void InsertRequestMinimumCharge() {
+		driver.InsertRequestMinimumCharge(2020, 10);
+		driver.InsertRequestMinimumCharge(2021, 10);
+		driver.InsertRequestMinimumCharge(2022, 11);
+		driver.InsertRequestMinimumCharge(2023, 11);
+		driver.InsertRequestMinimumCharge(2024, 12);
+		driver.InsertRequestMinimumCharge(2025, 12);
+		driver.InsertRequestMinimumCharge(2026, 13);
+		driver.InsertRequestMinimumCharge(2027, 13);
+		driver.InsertRequestMinimumCharge(2028, 13);
+		driver.InsertRequestMinimumCharge(2029, 13);
 	}
 	
 }
