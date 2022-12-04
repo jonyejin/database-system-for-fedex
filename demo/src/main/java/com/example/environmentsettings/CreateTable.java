@@ -1,4 +1,4 @@
-package com.example.sqlsettings;
+package com.example.environmentsettings;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -42,18 +42,6 @@ public class CreateTable {
 		
 		try {
 			stmt = conn.createStatement();
-			
-			//dummy table gen
-//			StringBuilder sb = new StringBuilder();
-//            sql = sb.append("create table if not exists dummy(")
-//                    .append("id int,")
-//                    .append("name varchar(20),")
-//                    .append("grade int")
-//                    .append(");").toString();
-// 
-//            stmt.execute(sql); //query문 날리기
-//            System.out.println("dummy table generate!");
-//            sb.delete(0,sb.length());
             
             //customer_info table generation
 			StringBuilder sb = new StringBuilder();

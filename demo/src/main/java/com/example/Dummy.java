@@ -1,11 +1,11 @@
 package com.example;
 
-public class dummy {
+public class Dummy {
 	private int ID;
 	private String name;
 	private int grade;
 	
-	public dummy(int ID, String name, int grade) {
+	public Dummy(int ID, String name, int grade) {
 		super();
 		this.ID = ID;
 		this.name = name;

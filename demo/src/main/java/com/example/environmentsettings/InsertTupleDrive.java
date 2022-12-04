@@ -1,4 +1,4 @@
-package com.example.sqlsettings;
+package com.example.environmentsettings;
 
 import com.example.DBConnection;
 
@@ -13,8 +13,43 @@ public class InsertTupleDrive {
 		
 	}
 	
+	public void InsertAllTogether() {
+		// 반드시 이 순서대로 insert해야함
+		// Foreign key에 유의해서 만들어야한다...
+		InsertCustomerInfo();
+		InsertCustomerAddress();
+		InsertCustomerOrganization();
+		InsertPayment();
+		InsertArea();
+		InsertWorker();
+		InsertSalaryLog();
+		InsertNation();
+		InsertDriverLicense();
+		InsertUnitMeasureSize();
+		InsertVehicle();
+		InsertDriverInfo();
+		InsertWarehouse();
+		InsertWarehouseWorkerInfo();
+		InsertUnitMeasureWeight();
+		InsertParcel();
+		InsertWholeRequest();
+		InsertWarehouseConnection();
+		InsertA2ARequest();
+		InsertD2ARequest();
+		InsertCSDepartment();
+		InsertCSWorkerInfo();
+		InsertBoard();
+		InsertBoardAnswer();
+		InsertFedexMarket();
+		InsertFedexInventory();
+		InsertPickup();
+		InsertDelegateInfo();
+		InsertWorkerBasePay();
+		InsertRegulatedBasePay();
+		InsertRequestMiniumCharge();
+	}
+	
 	public void InsertCustomerInfo() {
-		//#1 customer info insertion
 		driver.InsertCustomerInfo("1","Peter", "Jone", "White", "12 1234 5678","123 1111 2222");
 		driver.InsertCustomerInfo("2","Genevieve", "Lana", "Cheona", "03 5545 5378","123 2222 3333");
 		driver.InsertCustomerInfo("3","Zendaya", "Faizan", "Anderson", "08 6986 3434","123 4444 5555");
@@ -28,7 +63,6 @@ public class InsertTupleDrive {
 	}
 	
 	public void InsertCustomerAddress() {
-		//#2 customer address insertion
 		driver.InsertCustomerAddress("5824 Hester Squares","Gutmann Apt. 093", "1", "USA","Avondale" ,"Georgia",24332,6834563692499L,4342);
 		driver.InsertCustomerAddress("307 Schaden Creek","7784 Mayert Mall", "2", "USA", "Kansas","Florida",21232,6542487656773L,4554);
 		driver.InsertCustomerAddress("147 서초중앙로","2931 도산대로", "3", "South Korea", "서울특별시", "서울특별시",14535,7397457578633L,2343);
@@ -42,8 +76,7 @@ public class InsertTupleDrive {
 	}
 	
 
-	public void InsertCustomerorganization() {
-		//#3 customer organization
+	public void InsertCustomerOrganization() {
 		driver.InsertCustomerOrganization("withink","1","1434 2323");
 		driver.InsertCustomerOrganization("mooners","2","3434 4543");
 		driver.InsertCustomerOrganization("impaign","3","4747 4747");
@@ -56,8 +89,78 @@ public class InsertTupleDrive {
 		driver.InsertCustomerOrganization("runched","10","6945 4268");
 	}
 	
+	public void InsertPayment() {
+		// 카드번호 16으로 바꿨고
+		// expiration year는 2자리야 예진쿤 
+		// driver.InsertPayment("1234123412341234", "10", "credit_card", "123", "2023", "3");
+		driver.InsertPayment("1234123412341234", "10", "credit_card", "123", "23", "3");
+	}
+	
+	public void InsertArea() {
+		
+	}
+	
+	public void InsertWorker() {
+		
+	}
+	
+	public void InsertSalaryLog() {
+		
+	}
+	
+	public void InsertNation() {
+		
+	}
+	
+	public void InsertDriverLicense() {
+		
+	}
+	
+	public void InsertUnitMeasureSize() {
+		
+	}
+	
+	public void InsertVehicle() {
+		
+	}
+	
+	public void InsertDriverInfo() {
+		
+	}
+	
+	public void InsertWarehouse() {
+		
+	}
+	
+	public void InsertWarehouseWorkerInfo() {
+		
+	}
+	
+	public void InsertUnitMeasureWeight() {
+		
+	}
+	
+	public void InsertParcel() {
+		
+	}
+	
+	public void InsertWholeRequest() {
+		
+	}
+	
+	public void InsertWarehouseConnection() {
+		
+	}
+	
+	public void InsertA2ARequest() {
+		
+	}
+	
+	public void InsertD2ARequest() {
+		
+	}
+	
 	public void InsertCSDepartment() {
-		//#18 CSDepartment
 		driver.InsertCSDepartment("1","0000000001");
 		driver.InsertCSDepartment("2","0000000010");
 		driver.InsertCSDepartment("3","0000000100");
@@ -70,8 +173,8 @@ public class InsertTupleDrive {
 		driver.InsertCSDepartment("10","1000000000");
 	}
 
+	
 	public void InsertCSWorkerInfo() {
-		//#19 cs worker info (worker id,cs_department_id,seat_no)
 		driver.InsertCSWorkerInfo("1","5",3);
 		driver.InsertCSWorkerInfo("2","2",10);
 		driver.InsertCSWorkerInfo("3","3",5);
@@ -86,7 +189,6 @@ public class InsertTupleDrive {
 	}
 
 	public void InsertBoard() {
-		//#20 board
 		driver.InsertBoard("1","2",1,"언제도착하나요","안녕하세요 제 택배 언제 도착하나요",1);  
 		driver.InsertBoard("2","6",3,"택배를 신청했는데","택배 신청했는데 언제 방문하시나요? ",1);
 		driver.InsertBoard("3","7",2,"택배 없음","집앞에 택배 없는데 배송완료라고 뜨네요.. 확인부탁드립니다.",0);
@@ -101,7 +203,6 @@ public class InsertTupleDrive {
 	}
 
 	public void InsertBoardAnswer() {
-		//#21 board answer (complaint_id,worker id, title,body)
 		driver.InsertBoardAnswer("1","1","답변 드립니다.","당사 홈페이지 내의 [조회/예약]-[택배조회]를 이용하시면 이동경로 확인이 가능합니다.");
 		driver.InsertBoardAnswer("2","2","답변 드립니다.","상품 인수를 위한 방문 희망 일로 지정하신 요청일에 방문합니다.");
 		driver.InsertBoardAnswer("4","4","답변 드립니다.","당사 홈페이지 내의 [조회/예약]-[택배조회]를 이용하시면 이동경로 확인이 가능합니다.");
@@ -114,10 +215,32 @@ public class InsertTupleDrive {
 		driver.InsertBoardAnswer("11","11","답변 드립니다.","주문하신 물품 구입처에 반품 의사를 전달하시면 구매업체에서 직접 접수를 해주거나 택배사로 접수하시도록 안내를 받으실 수 있습니다. ");
 	}
 	
-	public void InsertPayment() {
-		// 카드번호 16으로 바꿨고
-		// expiration year는 2자리야 예진쿤 
-		// driver.InsertPayment("1234123412341234", "10", "credit_card", "123", "2023", "3");
-		driver.InsertPayment("1234123412341234", "10", "credit_card", "123", "23", "3");
+	public void InsertFedexMarket() {
+		
 	}
+	
+	public void InsertFedexInventory() {
+		
+	}
+	
+	public void InsertPickup() {
+		
+	}
+	
+	public void InsertDelegateInfo() {
+		
+	}
+	
+	public void InsertWorkerBasePay() {
+		
+	}
+	
+	public void InsertRegulatedBasePay() {
+		
+	}
+	
+	public void InsertRequestMiniumCharge() {
+		
+	}
+	
 }
