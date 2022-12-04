@@ -463,8 +463,7 @@ public class InsertTuple {
 	     }
 	}
 	
-	public void InsertUnitMeasureWeight(String parcel_id, String customer_id, int unit_measure_size_type, int unit_measure_weight_type,
-			float weight, float width, float depth, int is_fragile){
+	public void InsertUnitMeasureWeight(String unit_measure_weight_type){
 	    StringBuilder sb = new StringBuilder();
 	    table = "unit_measure_weight";
 		 String sql = sb.append("insert into " + table + " values(")
@@ -495,7 +494,7 @@ public class InsertTuple {
 	}
 	
 	public void InsertFedexMarket(String item_code, int unit_measure_size_type, int unit_measure_weight_type, String item_name,
-			int item_price, String item_type, float weight, float width, float height, float depth) {
+			int item_price, float weight, float width, float height, float depth) {
 	    StringBuilder sb = new StringBuilder();
 	    table = "fedex_market";
 		 String sql = sb.append("insert into " + table + " values(")
