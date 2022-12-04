@@ -462,12 +462,26 @@ public class InsertTupleDrive {
 		driver.InsertPickUp("6", 1, 0, "편의점에 택배 놓고 문자 남겨주세요");
 		driver.InsertPickUp("7", 1, 0, "제가 없으면 집안에 있으신 사람에게 부탁드립니다");
 		driver.InsertPickUp("8", 0, 0, "오시면 연락 부탁드리겠습니다");
-		driver.InsertPickUp("9", 0, 1, "초인종 누르시고 문 앞에 놔주세요");
-		driver.InsertPickUp("10", 1, 1, "초인종 누르시고 문 앞에 놔주세요");
+		driver.InsertPickUp("9", 0, 0, "초인종 누르시고 기다려주세요");
+		driver.InsertPickUp("10", 1, 0, "1층 경비실에 놓고 연락해주세요");
+		driver.InsertPickUp("11", 1, 0, "편의점에 택배 놓고 문자 남겨주세요");
+		driver.InsertPickUp("12", 1, 0, "제가 없으면 집안에 있으신 사람에게 부탁드립니다");
+		driver.InsertPickUp("13", 1, 0, "집 앞에 놓고 연락주세요");
+		driver.InsertPickUp("14", 1, 0, "초인종 누르시고 기다려주세요");
+		driver.InsertPickUp("15", 1, 0, "1층 경비실에 놓고 연락해주세요");
 	}
 	
 	public void InsertDelegateInfo() {
-		(String id, String message, String nickname, String cell_phone, String relationship)
+		driver.InsertDelegateInfo("3", "경비실에 택배 놓고 전화 주세요", "John", "08 1823 7582", "아파트 경비원");
+		driver.InsertDelegateInfo("5", "경비실에 택배 놓고 전화 주세요", "Gigerable", "12 1826 6124", "아파트 경비원");
+		driver.InsertDelegateInfo("6", "편의점에 택배 놓고 문자 남겨주세요", "Potter", "12 3485 3905", "편의점");
+		driver.InsertDelegateInfo("7", "제가 없으면 집안에 있으신 사람에게 부탁드립니다", "Monochrome", "123 7481 9182", "아버지");
+		driver.InsertDelegateInfo("10", "1층 경비실에 놓고 연락해주세요", "Larry", "02 4431 1234", "사무실 경비원");
+		driver.InsertDelegateInfo("11", "편의점에 택배 놓고 문자 남겨주세요", "Potter", "12 3485 3905", "편의점");
+		driver.InsertDelegateInfo("12", "제가 없으면 집안에 있으신 사람에게 부탁드립니다", "Fiona", "456 9123 1123", "어머니");
+		driver.InsertDelegateInfo("13", "집 앞에 놓고 연락주세요", "Beast", "123 0173 0283", "남편");
+		driver.InsertDelegateInfo("14", "초인종 누르시고 기다려주세요", "Beauty", "456 6064 4291", "아내");
+		driver.InsertDelegateInfo("15", "1층 경비실에 놓고 연락해주세요", "Larry", "12 4431 1234", "사무실 경비원");
 	}
 	
 	public void InsertWorkerBasePay() {
