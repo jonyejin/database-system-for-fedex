@@ -19,14 +19,21 @@ public final class TestDrive
 //    	SelectTuple selectTuple = new SelectTuple(dbConnection);
 //    	selectTuple.SelectDummy();
     	
-    	DBConnection dbConnection = new DBConnection();
-    	CreateTable createT = new CreateTable(dbConnection);
-    	DropTable dropTable = new DropTable(dbConnection);
-    	InsertTupleDrive ITD = new InsertTupleDrive(dbConnection);
+    	DBConnection DBC = new DBConnection();
     	
+    	CreateTable CT = new CreateTable(DBC);
+    	DropTable DT = new DropTable(DBC);
+    	InsertTupleDrive ITD = new InsertTupleDrive(DBC);
     	
-//    	디비에 튜플 넣기.
-//    	ITD.InsertAllTogether();
+//    	create table into db.
+    	CT.CreateTableAll();
+    	
+//    	insert tuple into db.
+//    	ITD.InsertAll();
+    	
+//    	drop table from db.
+    	DT.DropTableAll();
+    	
 
     		
     }
