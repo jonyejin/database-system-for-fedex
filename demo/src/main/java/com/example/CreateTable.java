@@ -422,8 +422,8 @@ public class CreateTable {
             System.out.println("cs_worker_info table has been generated!");
             sb.delete(0,sb.length());
             
-          //customer_service table generation
-            sql = sb.append("create table if not exists customer_service(")
+          //board table generation
+            sql = sb.append("create table if not exists board(")
                     .append("complaint_id varchar(20),")
                     .append("whole_request_id varchar(20),")
                     .append("question_type tinyint,")
@@ -436,11 +436,11 @@ public class CreateTable {
                     .append(");").toString();
         
             stmt.execute(sql);
-            System.out.println("customer_service table has been generated!");
+            System.out.println("board table has been generated!");
             sb.delete(0,sb.length());
             
-          //customer_service_answer table generation
-            sql = sb.append("create table if not exists customer_service_answer(")
+          //board_answer table generation
+            sql = sb.append("create table if not exists board_answer(")
                     .append("complaint_id varchar(20),")
                     .append("worker_id varchar(20),")
                     .append("title varchar(100),")
@@ -452,7 +452,7 @@ public class CreateTable {
                     .append(");").toString();
         
             stmt.execute(sql);
-            System.out.println("customer_service_answer table has been generated!");
+            System.out.println("board_answer table has been generated!");
             sb.delete(0,sb.length());
             
           //fedex_market table generation
