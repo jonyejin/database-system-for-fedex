@@ -38,7 +38,6 @@ public final class TestDrive
     	SetType.put("address_1", "String");
     	Where.put("customer_id", "1");
     	WhereType.put("customer_id", "String");
-    	
     	UpdateTuple.WithSetWhere(Table, Set, SetType, Where, WhereType);
     	
 //    	drop table
