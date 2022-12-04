@@ -79,8 +79,7 @@ public class CreateTable {
                     .append("zip int,")
                     .append("pccc bigint,")
                     .append("building_pwd int,")
-                    .append("primary key(address_1),")
-                    .append("primary key(address_2),")
+                    .append("primary key(address_1, address_2),")
                     .append("foreign key(customer_id)")
                     .append("references customer_info(customer_id) on update cascade")
                     .append(");").toString();
