@@ -14,7 +14,7 @@ public class DBConnection {
 	//원후 
 	private String dburl = "jdbc:mysql://localhost:3306/sys";
 	private String dbuser = "test1";
-	private String dbpasswd = "test1";
+	private String dbpasswd = "test1test1";
 	
 	//민지 
 //	private String dburl = "jdbc:mysql://localhost:3306/mydatabase";
