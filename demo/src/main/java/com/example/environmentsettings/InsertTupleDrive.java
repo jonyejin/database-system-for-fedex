@@ -127,6 +127,28 @@ public class InsertTupleDrive {
 		driver.InsertWorker("8","0010000000","Bobby","Cunningham","Beck","03 8654 2321","022 3453 1234","2019-04-23");	
 		driver.InsertWorker("9","0100000000","Ike","Dolton","Frost","03 7433 4321","058 5432 6543","2019-09-11");	
 		driver.InsertWorker("10","1000000000","Sterling","Zeph","Geis","03 6543 8765","274 1234 8765","2019-08-18");	
+
+		driver.InsertWorker("11","0000000001","Hannibal","Stephan","Peters","02 1324 4675","543 4753 1234","2021-02-21");	
+		driver.InsertWorker("12","0000000010","Tucker","Derick","Gray","01 6745 4567","234 4567 2512","2022-04-23");	
+		driver.InsertWorker("13","0000000100","Carl","Elmer","Robson","45 3564 4567","345 2534 4633","2021-03-13");	
+		driver.InsertWorker("14","0000001000","Les","Pascall","Malcom","26 2453 6897","234 6845 1423","2018-02-08");	
+		driver.InsertWorker("15","0000010000","Angela","Gordon","Mendoza","04 3421 7343","523 2455 1234","2019-01-13");	
+		driver.InsertWorker("16","0000100000","Lucas","Kain","Abby","06 4675 6235","865 4422 3421","2017-05-15");	
+		driver.InsertWorker("17","0001000000","Georgette","Robertson","Watts","04 5786 3467","123 9543 2424","2012-06-19");	
+		driver.InsertWorker("18","0010000000","Linden","Mcbride","Weber","03 8654 7675","323 2352 1234","2020-07-23");	
+		driver.InsertWorker("19","0100000000","Vera","Wood","Fletcher","02 8967 7654","123 1231 6543","2021-12-11");	
+		driver.InsertWorker("20","1000000000","Beata","Magnus","Aguilar","01 7098 2346","234 6006 8765","2020-12-22");	
+		
+		driver.InsertWorker("21","0000000001","Sandoval","Benjamin","Robertson","03 1212 2424","123 1234 1234","2021-05-11");	
+		driver.InsertWorker("22","0000000010","Grover","Wade","Pauley","04 4546 4321","234 8765 1234","2021-03-14");	
+		driver.InsertWorker("23","0000000100","Albion","Elmer","Reynolds","05 3454 2424","123 5252 5432","2018-02-22");	
+		driver.InsertWorker("24","0000001000","Penelope","Marvin","Stanley","06 1212 6464","222 1234 8392","2017-01-12");	
+		driver.InsertWorker("25","0000010000","Kennard","Feron","Black","02 1212 3557","344 6321 1234","2013-06-23");	
+		driver.InsertWorker("26","0000100000","Carmen","Soto","Nicholls","03 2444 7654","744 4422 1234","2020-07-02");	
+		driver.InsertWorker("27","0001000000","Eugenia","Holmes","Parkinson","03 7654 6543","876 5432 2424","2021-08-19");	
+		driver.InsertWorker("28","0010000000","Garth","Trista","Beck","03 8654 2321","022 3453 1234","2020-09-13");	
+		driver.InsertWorker("29","0100000000","Rhea","Hersey","Frost","03 7433 4321","058 5432 6543","2021-10-10");	
+		driver.InsertWorker("30","1000000000","Sarah","Vanessa","Harvey","03 6543 8765","274 1234 8765","2022-11-02");	
 	}
 	
 	public void InsertSalaryLog() {
@@ -157,15 +179,15 @@ public class InsertTupleDrive {
 	
 	public void InsertDriverLicense() {
 		driver.InsertDriverLicense("0000000001","0000000001");
-		driver.InsertDriverLicense("0000000001","0000000010");
-		driver.InsertDriverLicense("0000000001","0000000100");
-		driver.InsertDriverLicense("0000000010","0000001000");
-		driver.InsertDriverLicense("0000000010","0000010000");
-		driver.InsertDriverLicense("0000000100","0000100000");
-		driver.InsertDriverLicense("0000000100","0001000000");
-		driver.InsertDriverLicense("0000000100","0010000000");
-		driver.InsertDriverLicense("0000001000","0100000000");
-		driver.InsertDriverLicense("0000001000","1000000000");	
+		driver.InsertDriverLicense("0000000010","0000000010");
+		driver.InsertDriverLicense("0000000100","0000000100");
+		driver.InsertDriverLicense("0000001000","0000001000");
+		driver.InsertDriverLicense("0000010000","0000010000");
+		driver.InsertDriverLicense("0000100000","0000100000");
+		driver.InsertDriverLicense("0001000000","0001000000");
+		driver.InsertDriverLicense("0010000000","0010000000");
+		driver.InsertDriverLicense("0100000000","0100000000");
+		driver.InsertDriverLicense("1000000000","1000000000");	
 	}
 	
 	public void InsertUnitMeasureSize() {
@@ -195,28 +217,84 @@ public class InsertTupleDrive {
 	}
 	
 	public void InsertDriverInfo() {
-		
+		driver.InsertDriverInfo("1","80배1234","0000000001");
+		driver.InsertDriverInfo("2","80배2345","0000000010");
+		driver.InsertDriverInfo("3","81배1234","0000000100");
+		driver.InsertDriverInfo("4","81배3456","0000001000");
+		driver.InsertDriverInfo("5","81배4567","0000010000");
+		driver.InsertDriverInfo("6","82배7643","0000100000");
+		driver.InsertDriverInfo("7","82배4326","0001000000");
+		driver.InsertDriverInfo("8","83배8765","0010000000");
+		driver.InsertDriverInfo("9","83배3245","0100000000");
+		driver.InsertDriverInfo("10","84배7532","1000000000");
 	}
 	
 	public void InsertWarehouse() {
-		
+		driver.InsertWarehouse("1","0000000001","Memphis hub");
+		driver.InsertWarehouse("2","0000000010","Guangzhou hub");
+		driver.InsertWarehouse("3","0000000100","Osaka–Kansai hub");
+		driver.InsertWarehouse("4","0000001000","Seoul–Incheon hub");
+		driver.InsertWarehouse("5","0000010000","Shanghai–Pudong hub");
+		driver.InsertWarehouse("6","0000100000","Singapore hub");
+		driver.InsertWarehouse("7","0001000000","Toronto–Pearson hub");
+		driver.InsertWarehouse("8","0010000000","Cologne/Bonn hub");
+		driver.InsertWarehouse("9","0100000000","Liège hub");
+		driver.InsertWarehouse("10","1000000000","Milan–Malpensa hub");
 	}
 	
 	public void InsertWarehouseWorkerInfo() {
-		
+		driver.InsertWarehouseWorkerInfo("11","1");
+		driver.InsertWarehouseWorkerInfo("12","2");
+		driver.InsertWarehouseWorkerInfo("13","3");
+		driver.InsertWarehouseWorkerInfo("14","4");
+		driver.InsertWarehouseWorkerInfo("15","5");
+		driver.InsertWarehouseWorkerInfo("16","6");
+		driver.InsertWarehouseWorkerInfo("17","7");
+		driver.InsertWarehouseWorkerInfo("18","8");
+		driver.InsertWarehouseWorkerInfo("19","9");
+		driver.InsertWarehouseWorkerInfo("20","10");
 	}
 	
 	public void InsertUnitMeasureWeight() {
-		
+		driver.InsertUnitMeasureWeight("0000000001");
+		driver.InsertUnitMeasureWeight("0000000010");
+		driver.InsertUnitMeasureWeight("0000000100");
+		driver.InsertUnitMeasureWeight("0000001000");
+		driver.InsertUnitMeasureWeight("0000010000");
+		driver.InsertUnitMeasureWeight("0000100000");
+		driver.InsertUnitMeasureWeight("0001000000");
+		driver.InsertUnitMeasureWeight("0010000000");
+		driver.InsertUnitMeasureWeight("0100000000");
+		driver.InsertUnitMeasureWeight("1000000000");	
 	}
 	
 	public void InsertParcel() {
-		
+		driver.InsertParcel("1","1","0000000001","0000000001",321,32,1,0);
+		driver.InsertParcel("2","2","0000000001","0000000001",32,24,21,0);
+		driver.InsertParcel("3","3","0000000001","0000000001",12,345,45,0);
+		driver.InsertParcel("4","4","0000000001","0000000001",243,45,324,0);
+		driver.InsertParcel("5","5","0000000001","0000000001",22,46,24,0);
+		driver.InsertParcel("6","6","0000000010","0000000010",132,46,23,1);
+		driver.InsertParcel("7","7","0000000010","0000000010",54,76,17,1);
+		driver.InsertParcel("8","8","0000000010","0000000010",65,34,23,1);
+		driver.InsertParcel("9","9","0000000100","0000000100",46,345,21,1);
+		driver.InsertParcel("10","10","0000000100","0000000100",35,27,50,1);	
 	}
 	
 	public void InsertWholeRequest() {
+		driver.InsertWholeRequest("1","5824 Hester Squares","1","1","2022-12-04","0000000001","0000000100","147 서초중앙로","3");
+		driver.InsertWholeRequest("2","307 Schaden Creek","2","1","2022-12-05","0000000010","0000000100","147 서초중앙로","3");
+		driver.InsertWholeRequest("3","147 서초중앙로","3","1","2022-11-13","0000000100","0000001000","6236 가락로","4");
+		driver.InsertWholeRequest("4","6236 가락로","4","1","2022-12-23","0000001000","0000010000","742 논현로","5");
+		driver.InsertWholeRequest("5","742 논현로","5","1","2022-12-02","0000010000","0000100000","149 영동대로","6");
+		driver.InsertWholeRequest("6","149 영동대로","6","1","2022-12-06","0000100000","0001000000","6459 테헤란로","7");
+		driver.InsertWholeRequest("7","6459 테헤란로","7","1","2022-12-30","0001000000","0010000000","1556 양재천로","8");
+		driver.InsertWholeRequest("8","1556 양재천로","8","1","2022-12-28","0010000000","0100000000","973 논현로","9");
+		driver.InsertWholeRequest("9","973 논현로","9","1","2022-10-34","0100000000","1000000000","149 영동대로","10");
+		driver.InsertWholeRequest("10","149 영동대로","10","1","2022-11-14","1000000000","0000000001","5824 Hester Squares","1");
 		
 	}
+	
 	// 여기까지
 	public void InsertWarehouseConnection() {
 		driver.InsertWarehouseConnection("0000000001", "0000000010", 345);

@@ -199,7 +199,7 @@ public class CreateTable {
           //vehicle table generation
             sql = sb.append("create table if not exists vehicle(")
                     .append("plate_number varchar(20),")
-                    .append("nation_type tinyint,")
+                    .append("nation_type bigint,")
                     .append("unit_measure_size_type bigint,")
                     .append("width int,")
                     .append("height int,")
@@ -219,7 +219,7 @@ public class CreateTable {
             sql = sb.append("create table if not exists driver_info(")
                     .append("worker_id varchar(20),")
                     .append("vehicle_id varchar(20),")
-                    .append("license_type tinyint,")
+                    .append("license_type bigint,")
                     .append("foreign key(worker_id)")
                     .append("references worker(worker_id) on update cascade,")
                     .append("foreign key(vehicle_id)")
@@ -262,7 +262,7 @@ public class CreateTable {
             
           //unit_measure_weight table generation
             sql = sb.append("create table if not exists unit_measure_weight(")
-                    .append("unit_measure_weight_type tinyint,")
+                    .append("unit_measure_weight_type bigint,")
                     .append("primary key(unit_measure_weight_type)")
                     .append(");").toString();
         
@@ -275,8 +275,8 @@ public class CreateTable {
             sql = sb.append("create table if not exists parcel(")
                     .append("parcel_id varchar(20),")
                     .append("customer_id varchar(20),")
-                    .append("unit_measure_size_type tinyint,")
-                    .append("unit_measure_weight_type tinyint,")
+                    .append("unit_measure_size_type bigint,")
+                    .append("unit_measure_weight_type bigint,")
                     .append("weight float,")
                     .append("width float,")
                     .append("depth float,")
@@ -302,8 +302,8 @@ public class CreateTable {
                     .append("customer_id varchar(20),")
                     .append("parcel_id varchar(20),")
                     .append("time_stamp date,")
-                    .append("departure_area_id tinyint,")
-                    .append("arrival_area_id tinyint,")
+                    .append("departure_area_id bigint,")
+                    .append("arrival_area_id bigint,")
                     .append("receiver_address varchar(20),")
                     .append("receiver_id varchar(20),")
                     .append("primary key(id),")
