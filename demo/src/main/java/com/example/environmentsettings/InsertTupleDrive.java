@@ -320,7 +320,7 @@ public class InsertTupleDrive {
 	}
 	
 	public void InsertA2ARequest() {
-		driver.InsertA2ARequest("01", "1", "1", "80배1234", 0, "1", "3", null);
+		driver.InsertA2ARequest("01", "1", "1", "80배1234", 0, "1", "3", "null");
 		driver.InsertA2ARequest("02", "2", "2", "80배2345", 1, "2", "1", "2022-12-05");
 		driver.InsertA2ARequest("12", "2", "1", "80배1234", 1, "1", "4", "2022-12-05");
 		driver.InsertA2ARequest("22", "2", "4", "81배3456", 1, "4", "3", "2022-12-06");
@@ -338,8 +338,8 @@ public class InsertTupleDrive {
 		driver.InsertA2ARequest("012", "12", "7", "82배4326", 1, "7", "8", "2022-12-30");
 		driver.InsertA2ARequest("013", "13", "8", "83배8765", 1, "8", "9", "2022-12-28");
 		driver.InsertA2ARequest("014", "14", "9", "83배3245", 1, "9", "10", "2022-10-30");
-		driver.InsertA2ARequest("015", "15", "10", "84배7532", 0, "10", "7", null);
-		driver.InsertA2ARequest("115", "15", "7", "82배4326", 0, "7", "1", null);
+		driver.InsertA2ARequest("015", "15", "10", "84배7532", 0, "10", "7", "null");
+		driver.InsertA2ARequest("115", "15", "7", "82배4326", 0, "7", "1", "null");
 	}
 	
 	public void InsertD2ARequest() {
