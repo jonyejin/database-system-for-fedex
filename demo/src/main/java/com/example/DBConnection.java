@@ -12,14 +12,14 @@ public class DBConnection {
 	private Connection Conn;
 
 	//원후 
-//	private String dburl = "jdbc:mysql://localhost:3306/sys";
-//	private String dbuser = "test1";
-//	private String dbpasswd = "test1test1";
+	private String dburl = "jdbc:mysql://localhost:3306/sys";
+	private String dbuser = "test1";
+	private String dbpasswd = "test1test1";
 	
 	//민지 
-	private String dburl = "jdbc:mysql://localhost:3306/mydatabase";
-	private String dbuser = "root";
-	private String dbpasswd = "1367";
+//	private String dburl = "jdbc:mysql://localhost:3306/mydatabase";
+//	private String dbuser = "root";
+//	private String dbpasswd = "1367";
 	
 
 	public DBConnection() {
