@@ -24,7 +24,7 @@ public final class TestDrive
     	CT.CreateTableAll();
     	
 //    	insert tuple into db.
-//    	ITD.InsertAll();
+    	ITD.InsertAll();
     	
 //    	drop table from db.
     	DT.DropTableAll();
