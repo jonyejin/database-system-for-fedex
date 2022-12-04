@@ -27,7 +27,7 @@ public final class TestDrive
     	ITD.InsertAll();
     	
 //    	drop table from db.
-    	DT.DropTableAll();
+//    	DT.DropTableAll();
     	
 //    	disconnect
     	DBC.disConn();

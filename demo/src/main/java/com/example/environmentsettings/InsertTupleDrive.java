@@ -13,7 +13,7 @@ public class InsertTupleDrive {
 		
 	}
 	
-	public void InsertAll() {
+	public void InsertTupleAll() {
 		// 반드시 이 순서대로 insert해야함
 		// Foreign key에 유의해서 만들어야한다...
 		InsertCustomerInfo();
