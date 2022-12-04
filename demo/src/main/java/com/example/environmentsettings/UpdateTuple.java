@@ -75,7 +75,7 @@ public class UpdateTuple {
 
 	}
 	
-	public void WithSet(String Table, HashMap<String, String> Set) {
+	public void WithSet(String Table, HashMap<String, String> Set, HashMap<String, String> SetType) {
 		
 		//desired format
 //		UPDATE table_name
@@ -92,9 +92,9 @@ public class UpdateTuple {
 	    
 //	    set body
 	    sb.append("set ");
-		for (String key: Set.keySet()) {
-			sb.append(key + " = " + Set.get(key) + ", ");
-		}
+	    for (String key: Set.keySet()) {
+			sb.append(key + " = " + (SetType.get(key) == "String" ? "\"" : "") + Set.get(key) + (SetType.get(key) == "String" ? "\"" : "") + ", ");
+	    }
 
 //		delete dangling ", "
 		sb.delete(sb.length() - 2, sb.length());
