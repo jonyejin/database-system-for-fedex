@@ -407,7 +407,7 @@ public class InsertTuple {
 		 String sql = sb.append("insert into " + table + " values(")
 	                .append("'" + complaint_id + "',")
 	                .append("'" + whole_request_id + "',")
-	                .append(question_type)
+	                .append(question_type+",")
 	                .append("'" + title + "',")
 	                .append("'" + body + "',")
 	                .append(is_answered)
