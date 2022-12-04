@@ -279,9 +279,9 @@ public class InsertTuple {
 	                .append("'" + whole_request_id + "',")
 	                .append("'" + worker_id + "',")
 	                .append("'" + plate_number + "',")
-	                .append(is_done)
-	                .append(departure)
-	                .append(arrival)
+	                .append(is_done + ",")
+	                .append(departure+ ",")
+	                .append(arrival+ ",")
 	                .append((done_time_stamp == null) ? "null" : "'" + done_time_stamp + "'")
 	                .append(");")
 	                .toString();
