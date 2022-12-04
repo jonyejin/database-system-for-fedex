@@ -558,7 +558,7 @@ public class CreateTable {
                 .append("whole_request_id varchar(20),")
                 .append("question_type tinyint,")
                 .append("title varchar(20),")
-                .append("body varchar(20),")
+                .append("body varchar(100),")
                 .append("is_answered tinyint,")
                 .append("primary key (complaint_id),")
                 .append("foreign key(whole_request_id)")
