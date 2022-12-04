@@ -232,7 +232,6 @@ public class InsertTupleDrive {
 	}
 	
 	public void InsertA2ARequest() {
-		
 	}
 	
 	public void InsertD2ARequest() {
@@ -254,17 +253,16 @@ public class InsertTupleDrive {
 
 	
 	public void InsertCSWorkerInfo() {
-		driver.InsertCSWorkerInfo("1","5",3);
-		driver.InsertCSWorkerInfo("2","2",10);
-		driver.InsertCSWorkerInfo("3","3",5);
-		driver.InsertCSWorkerInfo("4","7",1);
-		driver.InsertCSWorkerInfo("5","6",8);
-		driver.InsertCSWorkerInfo("6","4",9);
-		driver.InsertCSWorkerInfo("7","1",7);
-		driver.InsertCSWorkerInfo("8","9",2);
-		driver.InsertCSWorkerInfo("9","10",4);
-		driver.InsertCSWorkerInfo("10","8",6);
-		driver.InsertCSWorkerInfo("11","10",6);
+		driver.InsertCSWorkerInfo("21","5",3);
+		driver.InsertCSWorkerInfo("22","2",10);
+		driver.InsertCSWorkerInfo("23","3",5);
+		driver.InsertCSWorkerInfo("24","7",1);
+		driver.InsertCSWorkerInfo("25","6",8);
+		driver.InsertCSWorkerInfo("26","4",9);
+		driver.InsertCSWorkerInfo("27","1",7);
+		driver.InsertCSWorkerInfo("28","9",2);
+		driver.InsertCSWorkerInfo("29","10",4);
+		driver.InsertCSWorkerInfo("30","8",6);
 	}
 
 	public void InsertBoard() {
@@ -278,28 +276,45 @@ public class InsertTupleDrive {
 		driver.InsertBoard("8","10",3,"국외 택배","어떻게 보내나요?",1);
 		driver.InsertBoard("9","3",2,"배송완료아닌데 배송완료라고 함","아직 도착 안했는데 확인해보니 배송완료라는데요??",1);
 		driver.InsertBoard("10","4",3,"공휴일에 배달 가능한가요?","공휴일에 배달 가능한가요? 일요일은요?",1);
-		driver.InsertBoard("11","11",3,"인터넷 쇼핑?","인터넷 쇼핑으로 산거 반품 되나요?",1);
 	}
 
 	public void InsertBoardAnswer() {
-		driver.InsertBoardAnswer("1","1","답변 드립니다.","당사 홈페이지 내의 [조회/예약]-[택배조회]를 이용하시면 이동경로 확인이 가능합니다.");
-		driver.InsertBoardAnswer("2","2","답변 드립니다.","상품 인수를 위한 방문 희망 일로 지정하신 요청일에 방문합니다.");
-		driver.InsertBoardAnswer("4","4","답변 드립니다.","당사 홈페이지 내의 [조회/예약]-[택배조회]를 이용하시면 이동경로 확인이 가능합니다.");
-		driver.InsertBoardAnswer("5","5","답변 드립니다.","편의점으로 상품을 가져가시면 택배 서비스를 이용하실 수 있습니다. ");
-		driver.InsertBoardAnswer("6","6","답변 드립니다.","당사 홈페이지 내의 [조회/예약]-[택배조회]를 이용하시면 이동경로 확인이 가능합니다.");
-		driver.InsertBoardAnswer("7","7","답변 드립니다.","당사 홈페이지 내의 [조회/예약]-[택배조회]를 이용하시면 이동경로 확인이 가능합니다.");
-		driver.InsertBoardAnswer("8","8","답변 드립니다.","해외로 물품을 보내시는 경우 가까운 편의점 중 Postbox가 설치된 곳에 내방하시면 접수 가능합니다.");
-		driver.InsertBoardAnswer("9","9","답변 드립니다.","당사 홈페이지 내의 [조회/예약]-[택배조회]를 이용하시면 이동경로 확인이 가능합니다.");
-		driver.InsertBoardAnswer("10","10","답변 드립니다.","공휴일과 일요일은 택배사 휴무로 방문이 어려우니 양해 바랍니다. 더 나은 서비스를 제공하기 위해 최선을 다하겠습니다.");
-		driver.InsertBoardAnswer("11","11","답변 드립니다.","주문하신 물품 구입처에 반품 의사를 전달하시면 구매업체에서 직접 접수를 해주거나 택배사로 접수하시도록 안내를 받으실 수 있습니다. ");
+		driver.InsertBoardAnswer("1","21","답변 드립니다.","당사 홈페이지 내의 [조회/예약]-[택배조회]를 이용하시면 이동경로 확인이 가능합니다.");
+		driver.InsertBoardAnswer("2","22","답변 드립니다.","상품 인수를 위한 방문 희망 일로 지정하신 요청일에 방문합니다.");
+		driver.InsertBoardAnswer("4","24","답변 드립니다.","당사 홈페이지 내의 [조회/예약]-[택배조회]를 이용하시면 이동경로 확인이 가능합니다.");
+		driver.InsertBoardAnswer("5","25","답변 드립니다.","편의점으로 상품을 가져가시면 택배 서비스를 이용하실 수 있습니다. ");
+		driver.InsertBoardAnswer("6","26","답변 드립니다.","당사 홈페이지 내의 [조회/예약]-[택배조회]를 이용하시면 이동경로 확인이 가능합니다.");
+		driver.InsertBoardAnswer("7","27","답변 드립니다.","당사 홈페이지 내의 [조회/예약]-[택배조회]를 이용하시면 이동경로 확인이 가능합니다.");
+		driver.InsertBoardAnswer("8","28","답변 드립니다.","해외로 물품을 보내시는 경우 가까운 편의점 중 Postbox가 설치된 곳에 내방하시면 접수 가능합니다.");
+		driver.InsertBoardAnswer("9","29","답변 드립니다.","당사 홈페이지 내의 [조회/예약]-[택배조회]를 이용하시면 이동경로 확인이 가능합니다.");
+		driver.InsertBoardAnswer("10","30","답변 드립니다.","공휴일과 일요일은 택배사 휴무로 방문이 어려우니 양해 바랍니다. 더 나은 서비스를 제공하기 위해 최선을 다하겠습니다.");
 	}
 	
 	public void InsertFedexMarket() {
-		
+		//unitmeasureweight 추가되면 마무리
+		driver.InsertFedexMarket("2000000001", "0000000001", " ", "페덱스_장난감트럭", 10000, 10.0, 15.0, 15.0, 75.5);
+		driver.InsertFedexMarket("2000000002", "0000000010", " ", "페덱스_장난감비행기", 15000, 15.0, 13.0, 8.0, 34.5);
+		driver.InsertFedexMarket("1000000001", "0000000100", " ", "페덱스_편지봉투", 1000, 0.1, 5.0, 5.0, 0.1);
+		driver.InsertFedexMarket("3000100001", "0000001000", " ", "페덱스_모자", 7000, 0.5, 13.0, 8.0, 34.5);
+		driver.InsertFedexMarket("3000560002", "0000010000", " ", "페덱스_외투", 10000, 1.0, 10.0, 50.0, 1.0);
+		driver.InsertFedexMarket("3000543003", "0000100000", " ", "페덱스_가방", 15000, 1.0, 30.0, 15.0, 30.0);
+		driver.InsertFedexMarket("4000010001", "0001000000", " ", "페덱스_홀더", 2000, 0.2, 10.0, 30.0, 1.0);
+		driver.InsertFedexMarket("4000340002", "0010000000", " ", "페덱스_공책", 1000, 0.2, 10.0, 30.0, 2.5);
+		driver.InsertFedexMarket("4000990003", "0100000000", " ", "페덱스_볼펜", 1500, 0.01, 0.5, 6.0, 0.5);
+		driver.InsertFedexMarket("5000871001", "1000000000", " ", "페덱스_컵", 14000, 0.5, 5.0, 5.0, 13.5);
 	}
 	
 	public void InsertFedexInventory() {
-		
+		driver.InsertFedexInventory("2000000001", "0000000001", 555);
+		driver.InsertFedexInventory("2000000002", "0000000010", 300);
+		driver.InsertFedexInventory("1000000001", "0000000100", 999);
+		driver.InsertFedexInventory("3000100001", "0000001000", 100);
+		driver.InsertFedexInventory("3000560002", "0000010000", 88);
+		driver.InsertFedexInventory("3000543003", "0000100000", 50);
+		driver.InsertFedexInventory("4000010001", "0001000000", 700);
+		driver.InsertFedexInventory("4000340002", "0010000000", 1500);
+		driver.InsertFedexInventory("4000990003", "0100000000", 500);
+		driver.InsertFedexInventory("5000871001", "1000000000", 10);
 	}
 	
 	public void InsertPickup() {
