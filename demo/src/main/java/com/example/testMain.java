@@ -1,5 +1,9 @@
 package com.example;
 
+import com.example.sqlsettings.CreateTable;
+import com.example.sqlsettings.DropTable;
+import com.example.sqlsettings.InsertTuple;
+
 /**
  * Hello world!
  *
