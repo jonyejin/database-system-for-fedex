@@ -535,7 +535,7 @@ public class InsertTuple {
 	
 	public void InsertPickUp(String id, int is_delegate, int is_untact, String message){
 	    StringBuilder sb = new StringBuilder();
-	    table = "pick_up";
+	    table = "pickup";
 		 String sql = sb.append("insert into " + table + " values(")
 	                .append("'" + id + "',")
 	                .append(is_delegate+",")
