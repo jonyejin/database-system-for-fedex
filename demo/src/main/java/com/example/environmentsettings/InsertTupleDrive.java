@@ -154,7 +154,7 @@ public class InsertTupleDrive {
 	public void InsertSalaryLog() {
 		driver.InsertSalaryLog("20200131","1","3000000","300000");		
 		driver.InsertSalaryLog("20200430","2","3000000","300000");		
-		driver.InsertSalaryLog("20200430","3","3000000","300000");		
+		driver.InsertSalaryLog("20200439","3","3000000","300000");		
 		driver.InsertSalaryLog("20210331","4","3000000","300000");		
 		driver.InsertSalaryLog("20210430","5","4000000","400000");		
 		driver.InsertSalaryLog("20220531","6","4000000","400000");		
