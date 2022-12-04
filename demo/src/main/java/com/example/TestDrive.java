@@ -4,11 +4,6 @@ import com.example.environmentsettings.CreateTable;
 import com.example.environmentsettings.DropTable;
 import com.example.environmentsettings.InsertTupleDrive;
 
-/**
- * Hello world!
- *
- */
-
 public final class TestDrive 
 {
 
