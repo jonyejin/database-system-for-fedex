@@ -46,7 +46,7 @@ public class InsertTupleDrive {
 		InsertDelegateInfo();
 		InsertWorkerBasePay();
 		InsertRegulatedBasePay();
-		InsertRequestMiniumCharge();
+		InsertRequestMinimumCharge();
 	}
 	
 	public void InsertCustomerInfo() {
