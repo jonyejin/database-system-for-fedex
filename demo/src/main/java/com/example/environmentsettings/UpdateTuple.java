@@ -17,10 +17,16 @@ public class UpdateTuple {
 	public UpdateTuple(DBConnection DBConnection) {
 		
 		conn = DBConnection.getConn();
+		try {
+			stmt = conn.createStatement();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 	
-	public void WithSetWhere(String Table, HashMap<String, String> Set, HashMap<String, String> Where) {
+	public void WithSetWhere(String Table, HashMap<String, String> Set, HashMap<String, String> SetType, HashMap<String, String> Where, HashMap<String, String> WhereType) {
 		
 		//desired format
 //		UPDATE table_name
@@ -38,12 +44,16 @@ public class UpdateTuple {
 //	    set body
 	    sb.append("set ");
 		for (String key: Set.keySet()) {
-			sb.append(key + " = " + Set.get(key) + ", ");
+			sb.append(key + " = " + (SetType.get(key) == "String" ? "\"" : "") + Set.get(key) + (SetType.get(key) == "String" ? "\"" : "") + ", ");
 		}
 		
+//		delete dangling ", "
+		sb.delete(sb.length() - 2, sb.length());
+		
 //		where body
+		sb.append(" where ");
 		for (String key: Where.keySet()) {
-			sb.append(key + " = " + Set.get(key) + " and ");
+			sb.append(key + " = " + (WhereType.get(key) == "String" ? "\"" : "") + Where.get(key) + (WhereType.get(key) == "String" ? "\"" : "") + " and ");
 		}
 		
 //		delete dangling " and "
@@ -53,12 +63,14 @@ public class UpdateTuple {
 		sb.append(";");
 		
 		String sql = sb.toString();
+		System.out.println(sql);
 		
 		 try {
 	            stmt.executeUpdate(sql);
+	            System.out.println("Successfully updated!");
 	            
 	     } catch (SQLException e) {
-	    	 
+	    	 System.out.println("Update Failed.");
 	     }
 
 	}
@@ -94,10 +106,12 @@ public class UpdateTuple {
 		
 		 try {
 	            stmt.executeUpdate(sql);
+	            System.out.println("Successfully updated!");	
 	            
 	     } catch (SQLException e) {
-	    	 
+	    	 System.out.println("Update Failed.");
 	     }
+
 
 	}
 	
