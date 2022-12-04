@@ -219,7 +219,7 @@ public class InsertTupleDrive {
 	}
 	// 여기까지
 	public void InsertWarehouseConnection() {
-		
+		driver.Insert
 	}
 	
 	public void InsertA2ARequest() {
