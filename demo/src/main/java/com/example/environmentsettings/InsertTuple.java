@@ -574,7 +574,7 @@ public class InsertTuple {
 	    StringBuilder sb = new StringBuilder();
 	    table = "worker_base_pay";
 		 String sql = sb.append("insert into " + table + " values(")
-	                .append(seniority)
+	                .append(seniority+",")
 	                .append(plus_amount)
 	                .append(");")
 	                .toString();
