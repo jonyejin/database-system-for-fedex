@@ -300,9 +300,9 @@ public class InsertTuple {
 	                .append("'" + plate_number + "',")
 	                .append("'"+nation_type+"',")
 	                .append("'"+type+"',")
-	                .append(width)
-	                .append(height)
-	                .append(depth)
+	                .append(width+"',")
+	                .append(height+"',")
+	                .append(depth+"',")
 	                .append(");")
 	                .toString();
 		 try {
