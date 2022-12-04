@@ -498,8 +498,8 @@ public class InsertTuple {
 	    table = "fedex_market";
 		 String sql = sb.append("insert into " + table + " values(")
 	                .append("'" + item_code + "',")
-	                .append(unit_measure_size_type)
-	                .append(unit_measure_weight_type)
+	                .append("'"+unit_measure_size_type+"',")
+	                .append("'"+unit_measure_weight_type+"',")
 	                .append("'" + item_name + "',")
 	                .append(item_price+",")
 	                .append(weight+",")
