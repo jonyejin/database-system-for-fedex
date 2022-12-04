@@ -12,7 +12,6 @@ public class InsertTuple {
 	private Connection conn = null;
 	private Statement stmt = null;
 	private String table;
-	private Connection Conn;
 	private String sql;
 	
 	public InsertTuple(DBConnection dBConnection) {

@@ -40,6 +40,10 @@ public class CreateTable {
 	public CreateTable(DBConnection dBConnection) {
 		conn = dBConnection.getConn();
 		
+	}
+	
+	public void CreateTableAll() {
+		
 		try {
 			stmt = conn.createStatement();
             

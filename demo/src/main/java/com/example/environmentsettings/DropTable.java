@@ -28,6 +28,10 @@ public class DropTable {
 		}
 	}
 	
+	public void DropTableAll() {
+		DropTableName("customer_info, customer_address, customer_organization, payment, area, worker, salary_log, nation, driver_license, unit_measure_size, vehicle, driver_info, warehouse, warehouse_worker_info, unit_measure_weight, parcel, whole_request, warehouse_connection, a2a_request, d2a_request, cs_department, cs_worker_info, board, board_answer, fedex_market, fedex_inventory, pickup, delegate_info, worker_base_pay, regulated_base_pay, request_minimum_charge");
+	}
+	
 	public void DropTableName(String tableName) {		
 		try {
 			stmt = conn.createStatement();
@@ -39,7 +43,7 @@ public class DropTable {
  
             stmt.execute(sql); //query문 날리기
             
-            System.out.println("dummy table deleted!");
+            System.out.println(tableName + " table has been deleted!");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
