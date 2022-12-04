@@ -127,6 +127,28 @@ public class InsertTupleDrive {
 		driver.InsertWorker("8","0010000000","Bobby","Cunningham","Beck","03 8654 2321","022 3453 1234","2019-04-23");	
 		driver.InsertWorker("9","0100000000","Ike","Dolton","Frost","03 7433 4321","058 5432 6543","2019-09-11");	
 		driver.InsertWorker("10","1000000000","Sterling","Zeph","Geis","03 6543 8765","274 1234 8765","2019-08-18");	
+
+		driver.InsertWorker("11","0000000001","Hannibal","Stephan","Peters","02 1324 4675","543 4753 1234","2021-02-21");	
+		driver.InsertWorker("12","0000000010","Tucker","Derick","Gray","01 6745 4567","234 4567 2512","2022-04-23");	
+		driver.InsertWorker("13","0000000100","Carl","Elmer","Robson","45 3564 4567","345 2534 4633","2021-03-13");	
+		driver.InsertWorker("14","0000001000","Les","Pascall","Malcom","26 2453 6897","234 6845 1423","2018-02-08");	
+		driver.InsertWorker("15","0000010000","Angela","Gordon","Mendoza","04 3421 7343","523 2455 1234","2019-01-13");	
+		driver.InsertWorker("16","0000100000","Lucas","Kain","Abby","06 4675 6235","865 4422 3421","2017-05-15");	
+		driver.InsertWorker("17","0001000000","Georgette","Robertson","Watts","04 5786 3467","123 9543 2424","2012-06-19");	
+		driver.InsertWorker("18","0010000000","Linden","Mcbride","Weber","03 8654 7675","323 2352 1234","2020-07-23");	
+		driver.InsertWorker("19","0100000000","Vera","Wood","Fletcher","02 8967 7654","123 1231 6543","2021-12-11");	
+		driver.InsertWorker("20","1000000000","Beata","Magnus","Aguilar","01 7098 2346","234 6006 8765","2020-12-22");	
+		
+		driver.InsertWorker("21","0000000001","Sandoval","Benjamin","Robertson","03 1212 2424","123 1234 1234","2021-05-11");	
+		driver.InsertWorker("22","0000000010","Grover","Wade","Pauley","04 4546 4321","234 8765 1234","2021-03-14");	
+		driver.InsertWorker("23","0000000100","Albion","Elmer","Reynolds","05 3454 2424","123 5252 5432","2018-02-22");	
+		driver.InsertWorker("24","0000001000","Penelope","Marvin","Stanley","06 1212 6464","222 1234 8392","2017-01-12");	
+		driver.InsertWorker("25","0000010000","Kennard","Feron","Black","02 1212 3557","344 6321 1234","2013-06-23");	
+		driver.InsertWorker("26","0000100000","Carmen","Soto","Nicholls","03 2444 7654","744 4422 1234","2020-07-02");	
+		driver.InsertWorker("27","0001000000","Eugenia","Holmes","Parkinson","03 7654 6543","876 5432 2424","2021-08-19");	
+		driver.InsertWorker("28","0010000000","Garth","Trista","Beck","03 8654 2321","022 3453 1234","2020-09-13");	
+		driver.InsertWorker("29","0100000000","Rhea","Hersey","Frost","03 7433 4321","058 5432 6543","2021-10-10");	
+		driver.InsertWorker("30","1000000000","Sarah","Vanessa","Harvey","03 6543 8765","274 1234 8765","2022-11-02");	
 	}
 	
 	public void InsertSalaryLog() {
@@ -208,11 +230,29 @@ public class InsertTupleDrive {
 	}
 	
 	public void InsertWarehouse() {
-		
+		driver.InsertWarehouse("1","0000000001","Memphis hub");
+		driver.InsertWarehouse("2","0000000010","Guangzhou hub");
+		driver.InsertWarehouse("3","0000000100","Osaka–Kansai hub");
+		driver.InsertWarehouse("4","0000001000","Seoul–Incheon hub");
+		driver.InsertWarehouse("5","0000010000","Shanghai–Pudong hub");
+		driver.InsertWarehouse("6","0000100000","Singapore hub");
+		driver.InsertWarehouse("7","0001000000","Toronto–Pearson hub");
+		driver.InsertWarehouse("8","0010000000","Cologne/Bonn hub");
+		driver.InsertWarehouse("9","0100000000","Liège hub");
+		driver.InsertWarehouse("10","1000000000","Milan–Malpensa hub");
 	}
 	
 	public void InsertWarehouseWorkerInfo() {
-		
+		driver.InsertWarehouseWorkerInfo("11","1");
+		driver.InsertWarehouseWorkerInfo("12","2");
+		driver.InsertWarehouseWorkerInfo("13","3");
+		driver.InsertWarehouseWorkerInfo("14","4");
+		driver.InsertWarehouseWorkerInfo("15","5");
+		driver.InsertWarehouseWorkerInfo("16","6");
+		driver.InsertWarehouseWorkerInfo("17","7");
+		driver.InsertWarehouseWorkerInfo("18","8");
+		driver.InsertWarehouseWorkerInfo("19","9");
+		driver.InsertWarehouseWorkerInfo("20","10");
 	}
 	
 	public void InsertUnitMeasureWeight() {
