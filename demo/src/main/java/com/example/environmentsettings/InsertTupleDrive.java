@@ -307,15 +307,38 @@ public class InsertTupleDrive {
 	
 	// 여기까지
 	public void InsertWarehouseConnection() {
-		
+		driver.InsertWarehouseConnection("0000000001", "0000000010", 345);
+		driver.InsertWarehouseConnection("0000000001", "0000000100", 511);
+		driver.InsertWarehouseConnection("0000000001", "0000001000", 114);
+		driver.InsertWarehouseConnection("0000000001", "0000010000", 987);
+		driver.InsertWarehouseConnection("0000000001", "0000100000", 1000);
+		driver.InsertWarehouseConnection("0000000001", "0001000000", 100);
+		driver.InsertWarehouseConnection("0000000001", "0010000000", 143);
+		driver.InsertWarehouseConnection("0000000001", "0100000000", 311);
+		driver.InsertWarehouseConnection("0000000001", "1000000000", 500);
+		driver.InsertWarehouseConnection("0000000010", "0100000000", 300);
 	}
 	
 	public void InsertA2ARequest() {
+		driver.InsertWholeRequest("1","5824 Hester Squares","1","1","2022-12-04","0000000001","0000000100","147 서초중앙로","3");
+		driver.InsertWholeRequest("2","307 Schaden Creek","2","1","2022-12-05","0000000010","0000000100","147 서초중앙로","3");
+		driver.InsertWholeRequest("3","147 서초중앙로","3","1","2022-11-13","0000000100","0000001000","6236 가락로","4");
+		driver.InsertWholeRequest("4","6236 가락로","4","1","2022-12-23","0000001000","0000010000","742 논현로","5");
+		driver.InsertWholeRequest("5","742 논현로","5","1","2022-12-02","0000010000","0000100000","149 영동대로","6");
+		driver.InsertWholeRequest("6","149 영동대로","6","1","2022-12-06","0000100000","0001000000","6459 테헤란로","7");
+		driver.InsertWholeRequest("7","6459 테헤란로","7","1","2022-12-30","0001000000","0010000000","1556 양재천로","8");
+		driver.InsertWholeRequest("8","1556 양재천로","8","1","2022-12-28","0010000000","0100000000","973 논현로","9");
+		driver.InsertWholeRequest("9","973 논현로","9","1","2022-10-34","0100000000","1000000000","149 영동대로","10");
+		driver.InsertWholeRequest("10","149 영동대로","10","1","2022-11-14","1000000000","0000000001","5824 Hester Squares","1");
 		
+		driver.InsertA2ARequest("01", "1", "1", null, 0, 0, 0, null);
+		(String a2a_id, String whole_request_id, String worker_id, String plate_number, int is_done,
+				int departure, int arrival, String done_time_stamp)
 	}
 	
 	public void InsertD2ARequest() {
-		
+		(String customer_id, String whole_request_id, String worker_id, String plate_number,
+				String warehouse_id, int from_d, int is_done, String done_time_stamp)
 	}
 	
 	public void InsertCSDepartment() {
@@ -333,17 +356,16 @@ public class InsertTupleDrive {
 
 	
 	public void InsertCSWorkerInfo() {
-		driver.InsertCSWorkerInfo("1","5",3);
-		driver.InsertCSWorkerInfo("2","2",10);
-		driver.InsertCSWorkerInfo("3","3",5);
-		driver.InsertCSWorkerInfo("4","7",1);
-		driver.InsertCSWorkerInfo("5","6",8);
-		driver.InsertCSWorkerInfo("6","4",9);
-		driver.InsertCSWorkerInfo("7","1",7);
-		driver.InsertCSWorkerInfo("8","9",2);
-		driver.InsertCSWorkerInfo("9","10",4);
-		driver.InsertCSWorkerInfo("10","8",6);
-		driver.InsertCSWorkerInfo("11","10",6);
+		driver.InsertCSWorkerInfo("21","5",3);
+		driver.InsertCSWorkerInfo("22","2",10);
+		driver.InsertCSWorkerInfo("23","3",5);
+		driver.InsertCSWorkerInfo("24","7",1);
+		driver.InsertCSWorkerInfo("25","6",8);
+		driver.InsertCSWorkerInfo("26","4",9);
+		driver.InsertCSWorkerInfo("27","1",7);
+		driver.InsertCSWorkerInfo("28","9",2);
+		driver.InsertCSWorkerInfo("29","10",4);
+		driver.InsertCSWorkerInfo("30","8",6);
 	}
 
 	public void InsertBoard() {
@@ -357,48 +379,100 @@ public class InsertTupleDrive {
 		driver.InsertBoard("8","10",3,"국외 택배","어떻게 보내나요?",1);
 		driver.InsertBoard("9","3",2,"배송완료아닌데 배송완료라고 함","아직 도착 안했는데 확인해보니 배송완료라는데요??",1);
 		driver.InsertBoard("10","4",3,"공휴일에 배달 가능한가요?","공휴일에 배달 가능한가요? 일요일은요?",1);
-		driver.InsertBoard("11","11",3,"인터넷 쇼핑?","인터넷 쇼핑으로 산거 반품 되나요?",1);
 	}
 
 	public void InsertBoardAnswer() {
-		driver.InsertBoardAnswer("1","1","답변 드립니다.","당사 홈페이지 내의 [조회/예약]-[택배조회]를 이용하시면 이동경로 확인이 가능합니다.");
-		driver.InsertBoardAnswer("2","2","답변 드립니다.","상품 인수를 위한 방문 희망 일로 지정하신 요청일에 방문합니다.");
-		driver.InsertBoardAnswer("4","4","답변 드립니다.","당사 홈페이지 내의 [조회/예약]-[택배조회]를 이용하시면 이동경로 확인이 가능합니다.");
-		driver.InsertBoardAnswer("5","5","답변 드립니다.","편의점으로 상품을 가져가시면 택배 서비스를 이용하실 수 있습니다. ");
-		driver.InsertBoardAnswer("6","6","답변 드립니다.","당사 홈페이지 내의 [조회/예약]-[택배조회]를 이용하시면 이동경로 확인이 가능합니다.");
-		driver.InsertBoardAnswer("7","7","답변 드립니다.","당사 홈페이지 내의 [조회/예약]-[택배조회]를 이용하시면 이동경로 확인이 가능합니다.");
-		driver.InsertBoardAnswer("8","8","답변 드립니다.","해외로 물품을 보내시는 경우 가까운 편의점 중 Postbox가 설치된 곳에 내방하시면 접수 가능합니다.");
-		driver.InsertBoardAnswer("9","9","답변 드립니다.","당사 홈페이지 내의 [조회/예약]-[택배조회]를 이용하시면 이동경로 확인이 가능합니다.");
-		driver.InsertBoardAnswer("10","10","답변 드립니다.","공휴일과 일요일은 택배사 휴무로 방문이 어려우니 양해 바랍니다. 더 나은 서비스를 제공하기 위해 최선을 다하겠습니다.");
-		driver.InsertBoardAnswer("11","11","답변 드립니다.","주문하신 물품 구입처에 반품 의사를 전달하시면 구매업체에서 직접 접수를 해주거나 택배사로 접수하시도록 안내를 받으실 수 있습니다. ");
+		driver.InsertBoardAnswer("1","21","답변 드립니다.","당사 홈페이지 내의 [조회/예약]-[택배조회]를 이용하시면 이동경로 확인이 가능합니다.");
+		driver.InsertBoardAnswer("2","22","답변 드립니다.","상품 인수를 위한 방문 희망 일로 지정하신 요청일에 방문합니다.");
+		driver.InsertBoardAnswer("4","24","답변 드립니다.","당사 홈페이지 내의 [조회/예약]-[택배조회]를 이용하시면 이동경로 확인이 가능합니다.");
+		driver.InsertBoardAnswer("5","25","답변 드립니다.","편의점으로 상품을 가져가시면 택배 서비스를 이용하실 수 있습니다. ");
+		driver.InsertBoardAnswer("6","26","답변 드립니다.","당사 홈페이지 내의 [조회/예약]-[택배조회]를 이용하시면 이동경로 확인이 가능합니다.");
+		driver.InsertBoardAnswer("7","27","답변 드립니다.","당사 홈페이지 내의 [조회/예약]-[택배조회]를 이용하시면 이동경로 확인이 가능합니다.");
+		driver.InsertBoardAnswer("8","28","답변 드립니다.","해외로 물품을 보내시는 경우 가까운 편의점 중 Postbox가 설치된 곳에 내방하시면 접수 가능합니다.");
+		driver.InsertBoardAnswer("9","29","답변 드립니다.","당사 홈페이지 내의 [조회/예약]-[택배조회]를 이용하시면 이동경로 확인이 가능합니다.");
+		driver.InsertBoardAnswer("10","30","답변 드립니다.","공휴일과 일요일은 택배사 휴무로 방문이 어려우니 양해 바랍니다. 더 나은 서비스를 제공하기 위해 최선을 다하겠습니다.");
 	}
 	
 	public void InsertFedexMarket() {
-		
+		driver.InsertFedexMarket("2000000001", "0000000001", "0000000001", "페덱스_장난감트럭", 10000, 10.0f, 15.0f, 15.0f, 75.5f);
+		driver.InsertFedexMarket("2000000002", "0000000010", "0000000001", "페덱스_장난감비행기", 15000, 15.0f, 13.0f, 8.0f, 34.5f);
+		driver.InsertFedexMarket("1000000001", "0000000100", "0000000010", "페덱스_편지봉투", 1000, 0.1f, 5.0f, 5.0f, 0.1f);
+		driver.InsertFedexMarket("3000100001", "0000001000", "0000000100", "페덱스_모자", 7000, 0.5f, 13.0f, 8.0f, 34.5f);
+		driver.InsertFedexMarket("3000560002", "0000010000", "0000001000", "페덱스_외투", 10000, 1.0f, 10.0f, 50.0f, 1.0f);
+		driver.InsertFedexMarket("3000543003", "0000100000", "0000010000", "페덱스_가방", 15000, 1.0f, 30.0f, 15.0f, 30.0f);
+		driver.InsertFedexMarket("4000010001", "0001000000", "0000100000", "페덱스_홀더", 2000, 0.2f, 10.0f, 30.0f, 1.0f);
+		driver.InsertFedexMarket("4000340002", "0010000000", "0000010000", "페덱스_공책", 1000, 0.2f, 10.0f, 30.0f, 2.5f);
+		driver.InsertFedexMarket("4000990003", "0100000000", "0000001000", "페덱스_볼펜", 1500, 0.01f, 0.5f, 6.0f, 0.5f);
+		driver.InsertFedexMarket("5000871001", "1000000000", "0010000000", "페덱스_컵", 14000, 0.5f, 5.0f, 5.0f, 13.5f);
 	}
 	
 	public void InsertFedexInventory() {
-		
+		driver.InsertFedexInventory("2000000001", "0000000001", 555);
+		driver.InsertFedexInventory("2000000002", "0000000010", 300);
+		driver.InsertFedexInventory("1000000001", "0000000100", 999);
+		driver.InsertFedexInventory("3000100001", "0000001000", 100);
+		driver.InsertFedexInventory("3000560002", "0000010000", 88);
+		driver.InsertFedexInventory("3000543003", "0000100000", 50);
+		driver.InsertFedexInventory("4000010001", "0001000000", 700);
+		driver.InsertFedexInventory("4000340002", "0010000000", 1500);
+		driver.InsertFedexInventory("4000990003", "0100000000", 500);
+		driver.InsertFedexInventory("5000871001", "1000000000", 10);
 	}
 	
 	public void InsertPickup() {
-		
+		driver.InsertPickUp("1", 0, 1, "초인종 누르시고 문 앞에 놔주세요");
+		driver.InsertPickUp("2", 0, 1, "초인종 누르시고 문 앞에 놔주세요");
+		driver.InsertPickUp("3", 1, 0, "경비실에 택배 놓고 전화 주세요");
+		driver.InsertPickUp("4", 0, 1, "문 앞에 놔주시고 문자 남겨주세요");
+		driver.InsertPickUp("5", 1, 0, "경비실에 택배 놓고 전화 주세요");
+		driver.InsertPickUp("6", 1, 0, "편의점에 택배 놓고 문자 남겨주세요");
+		driver.InsertPickUp("7", 1, 0, "제가 없으면 집안에 있으신 사람에게 부탁드립니다");
+		driver.InsertPickUp("8", 0, 0, "오시면 연락 부탁드리겠습니다");
+		driver.InsertPickUp("9", 0, 1, "초인종 누르시고 문 앞에 놔주세요");
+		driver.InsertPickUp("10", 1, 1, "초인종 누르시고 문 앞에 놔주세요");
 	}
 	
 	public void InsertDelegateInfo() {
-		
+		(String id, String message, String nickname, String cell_phone, String relationship)
 	}
 	
 	public void InsertWorkerBasePay() {
-		
+		driver.InsertWorkerBasePay(1, 1000);
+		driver.InsertWorkerBasePay(2, 1100);
+		driver.InsertWorkerBasePay(3, 1200);
+		driver.InsertWorkerBasePay(4, 1300);
+		driver.InsertWorkerBasePay(5, 1400);
+		driver.InsertWorkerBasePay(6, 1500);
+		driver.InsertWorkerBasePay(7, 1600);
+		driver.InsertWorkerBasePay(8, 1700);
+		driver.InsertWorkerBasePay(9, 1800);
+		driver.InsertWorkerBasePay(10, 2000);
 	}
 	
 	public void InsertRegulatedBasePay() {
-		
+		driver.InsertRegulatedBasePay(2020, 10000);
+		driver.InsertRegulatedBasePay(2021, 10150);
+		driver.InsertRegulatedBasePay(2022, 10300);
+		driver.InsertRegulatedBasePay(2023, 10450);
+		driver.InsertRegulatedBasePay(2024, 10600);
+		driver.InsertRegulatedBasePay(2025, 10750);
+		driver.InsertRegulatedBasePay(2026, 10900);
+		driver.InsertRegulatedBasePay(2027, 11050);
+		driver.InsertRegulatedBasePay(2028, 11200);
+		driver.InsertRegulatedBasePay(2029, 11350);
 	}
 	
-	public void InsertRequestMiniumCharge() {
-		
+	public void InsertRequestMinimumCharge() {
+		driver.InsertRequestMinimumCharge(2020, 10);
+		driver.InsertRequestMinimumCharge(2021, 10);
+		driver.InsertRequestMinimumCharge(2022, 11);
+		driver.InsertRequestMinimumCharge(2023, 11);
+		driver.InsertRequestMinimumCharge(2024, 12);
+		driver.InsertRequestMinimumCharge(2025, 12);
+		driver.InsertRequestMinimumCharge(2026, 13);
+		driver.InsertRequestMinimumCharge(2027, 13);
+		driver.InsertRequestMinimumCharge(2028, 13);
+		driver.InsertRequestMinimumCharge(2029, 13);
 	}
 	
 }
