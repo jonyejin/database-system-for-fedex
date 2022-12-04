@@ -91,8 +91,10 @@ public class DBConnection {
             //자원 해제
             if(connTemp != null && !connTemp.isClosed())
             	connTemp.close();
+            	System.out.println("Successfuly Disconnected!");
         } catch(SQLException e){
             e.printStackTrace();
+            System.out.println("Disconnection Failed");
         }
 	}
 }

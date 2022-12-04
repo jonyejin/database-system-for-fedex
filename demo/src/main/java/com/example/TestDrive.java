@@ -29,6 +29,8 @@ public final class TestDrive
 //    	drop table from db.
     	DT.DropTableAll();
     	
+//    	disconnect
+    	DBC.disConn();
 
     		
     }
