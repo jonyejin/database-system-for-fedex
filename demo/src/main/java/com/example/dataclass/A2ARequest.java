@@ -90,9 +90,9 @@ public class A2ARequest implements DataClass {
 		try {
 			while(rs.next()) {
 				this.a2a_id = rs.getString("a2a_id");
-				this.whole_request_id = rs.getString(whole_request_id);
-				this.worker_id = rs.getString(worker_id);
-				this.plate_number = rs.getString(plate_number);
+				this.whole_request_id = rs.getString("whole_request_id");
+				this.worker_id = rs.getString("worker_id");
+				this.plate_number = rs.getString("plate_number");
 				this.is_done = rs.getInt("is_done");
 				this.departure = rs.getInt("departure");
 				this.arrival = rs.getInt("arrival");
