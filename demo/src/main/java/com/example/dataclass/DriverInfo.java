@@ -1,6 +1,9 @@
 package com.example.dataclass;
 
-public class DriverInfo {
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class DriverInfo  implements DataClass{
 	private String worker_id;
 	private String vehicle_id; //=plate_number
 	private String license_type;
@@ -34,5 +37,21 @@ public class DriverInfo {
 	public String toString() {
 		return "DriverInfo [worker_id=" + worker_id + ", vehicle_id=" + vehicle_id + ", license_type=" + license_type
 				+ "]";
+	}
+
+	@Override
+	public void SelectTuple(ResultSet rs) {
+		// TODO Auto-generated method stub
+		try {
+			while(rs.next()) {
+				this.worker_id = rs.getString("worker_id");
+				this.vehicle_id = rs.getString("vehicle_id");
+				this.license_type = rs.getString("license_type");
+				toString();
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }

@@ -551,11 +551,11 @@ public class InsertTuple {
 	     }
 	}
 	
-	public void InsertDelegateInfo(String id, String message, String nickname, String cell_phone, String relationship) {
+	public void InsertDelegateInfo(String whole_request_id, String message, String nickname, String cell_phone, String relationship) {
 	    StringBuilder sb = new StringBuilder();
 	    table = "delegate_info";
 		 String sql = sb.append("insert into " + table + " values(")
-	                .append("'" + id + "',")
+	                .append("'" + whole_request_id + "',")
 	                .append("'" + message + "',")
 	                .append("'" + nickname + "',")
 	                .append("'" + cell_phone + "',")
