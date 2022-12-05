@@ -9,6 +9,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.example.dataclass.DataClass;
+
 public class SelectTuple {
 	private Connection conn = null;
 	private Statement stmt = null;
@@ -25,7 +27,7 @@ public class SelectTuple {
 		}
 	}
 	
-	public void SelectDummy () {
+	public void SelectDummy (DataClass DC) {
 	    List<Dummy> list = new ArrayList<>();
 	    table = "dummy";
 	    sql = "SELECT * FROM "+table;
