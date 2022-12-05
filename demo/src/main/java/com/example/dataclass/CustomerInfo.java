@@ -1,6 +1,9 @@
 package com.example.dataclass;
 
-public class CustomerInfo {
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class CustomerInfo implements DataClass{
 	private String customer_id;
 	private String first_name;
 	private String middle_name;
@@ -73,5 +76,25 @@ public class CustomerInfo {
 		return "CustomerInfo [customer_id=" + customer_id + ", first_name=" + first_name + ", middle_name="
 				+ middle_name + ", last_name=" + last_name + ", house_phone=" + house_phone + ", cell_phone="
 				+ cell_phone + "]";
+	}
+
+
+	@Override
+	public void SelectTuple(ResultSet rs) {
+		try {
+			while(rs.next()) {
+				this.customer_id = rs.getString("customer_id");
+				this.first_name = rs.getString("first_name");
+				this.middle_name = rs.getString("middle_name");
+				this.last_name = rs.getString("last_name");
+				this.house_phone = rs.getString("house_phone");
+				this.cell_phone = rs.getString("cell_phone");
+
+				toString();
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
