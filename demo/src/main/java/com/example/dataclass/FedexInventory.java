@@ -1,6 +1,9 @@
 package com.example.dataclass;
 
-public class FedexInventory {
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class FedexInventory  implements DataClass{
 	private String item_code;
 	private String area_id;
 	private int count;
@@ -34,5 +37,21 @@ public class FedexInventory {
 	public String toString() {
 		return "FedexInventory [item_code=" + item_code + ", area_id=" + area_id + ", count="
 				+ count + "]";
+	}
+
+	@Override
+	public void SelectTuple(ResultSet rs) {
+		// TODO Auto-generated method stub
+		try {
+			while(rs.next()) {
+				this.item_code = rs.getString("item_code");
+				this.area_id = rs.getString("area_id");
+				this.count = rs.getInt("count");
+				toString();
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }

@@ -1,6 +1,9 @@
 package com.example.dataclass;
 
-public class FedexMarket {
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class FedexMarket  implements DataClass{
 	private String item_code;
 	private int unit_measure_size_type;
 	private int unit_measure_weight_type;
@@ -84,5 +87,27 @@ public class FedexMarket {
 				+ ", unit_measure_weight_type=" + unit_measure_weight_type + ", item_name=" + item_name
 				+ ", item_price=" + item_price + ", weight=" + weight + ", width=" + width
 				+ ", height=" + height + ", depth=" + depth + "]";
+	}
+	@Override
+	public void SelectTuple(ResultSet rs) {
+		// TODO Auto-generated method stub
+		try {
+			while(rs.next()) {
+				this.item_code = rs.getString("item_code");
+				this.unit_measure_size_type = rs.getInt("unit_measure_size_type");
+				this.unit_measure_weight_type = rs.getInt("unit_measure_weight_type");
+				this.item_name = rs.getString("item_name");
+				this.item_price = rs.getInt("item_price");
+				this.weight = rs.getFloat("weight");
+				this.width = rs.getFloat("width");
+				this.height = rs.getFloat("height");
+				this.depth = rs.getFloat("depth");
+				
+				toString();
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
