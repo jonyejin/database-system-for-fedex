@@ -1,6 +1,9 @@
 package com.example.dataclass;
 
-public class Nation {
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class Nation implements DataClass{
 	private String nation_type;
 
 	public Nation(String nation_type) {
@@ -18,6 +21,20 @@ public class Nation {
 	@Override
 	public String toString() {
 		return "Nation [nation_type=" + nation_type + "]";
+	}
+
+	@Override
+	public void SelectTuple(ResultSet rs) {
+		// TODO Auto-generated method stub
+		try {
+			while(rs.next()) {
+				this.nation_type = rs.getString("nation_type");
+				toString();
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }
