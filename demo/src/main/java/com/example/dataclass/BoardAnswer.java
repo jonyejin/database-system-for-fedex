@@ -1,6 +1,9 @@
 package com.example.dataclass;
 
-public class BoardAnswer {
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class BoardAnswer implements DataClass{
 	private String complaint_id;
 	private String cs_worker_id;
 	private String title;
@@ -43,5 +46,22 @@ public class BoardAnswer {
 	public String toString() {
 		return "CustomerServiceAnswer [complaint_id=" + complaint_id + ", cs_worker_id=" + cs_worker_id + ", title="
 				+ title + ", body=" + body + "]";
+	}
+
+	@Override
+	public void SelectTuple(ResultSet rs) {
+		try {
+			while(rs.next()) {
+				this.complaint_id = rs.getString("complaint_id");
+				this.cs_worker_id = rs.getString("cs_worker_id");
+				this.title = rs.getString("title");
+				this.body = rs.getString("body");
+				toString();
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 }
