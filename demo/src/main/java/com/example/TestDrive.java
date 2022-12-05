@@ -19,7 +19,7 @@ public final class TestDrive
     	UpdateTuple UpdateTuple = new UpdateTuple(DBC);
     	InsertTupleDrive ITD = new InsertTupleDrive(DBC);
     	
-    	
+//    	drop table
     	DT.DropTableAll();
     	
 //    	create table

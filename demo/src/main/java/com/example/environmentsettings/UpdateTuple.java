@@ -80,7 +80,6 @@ public class UpdateTuple {
 		//desired format
 //		UPDATE table_name
 //		SET column1 = value1, column2 = value2, ...
-//		WHERE column11 = value11 and column12 = value12;
 		
 		StringBuilder sb = new StringBuilder();
 	    
