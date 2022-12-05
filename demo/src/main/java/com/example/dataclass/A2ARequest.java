@@ -1,6 +1,11 @@
 package com.example.dataclass;
 
-public class A2ARequest {
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.example.Dummy;
+
+public class A2ARequest implements DataClass {
 	private String a2a_id;
 	private String whole_request_id;
 	private String worker_id;
@@ -77,6 +82,27 @@ public class A2ARequest {
 		return "A2ARequest [a2a_id=" + a2a_id + ", whole_request_id=" + whole_request_id + ", worker_id=" + worker_id
 				+ ", plate_number=" + plate_number + ", is_done=" + is_done + ", departure=" + departure + ", arrival="
 				+ arrival + ", done_time_stamp=" + done_time_stamp + "]";
+	}
+
+	@Override
+	public void SelectTuple(ResultSet rs) {
+		// TODO Auto-generated method stub
+		try {
+			while(rs.next()) {
+				this.a2a_id = rs.getString("a2a_id");
+				this.whole_request_id = rs.getString(whole_request_id);
+				this.worker_id = rs.getString(worker_id);
+				this.plate_number = rs.getString(plate_number);
+				this.is_done = rs.getInt("is_done");
+				this.departure = rs.getInt("departure");
+				this.arrival = rs.getInt("arrival");
+				this.done_time_stamp = rs.getString("done_time_stamp");
+				toString();
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }
