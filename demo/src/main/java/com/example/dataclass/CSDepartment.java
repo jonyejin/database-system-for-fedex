@@ -1,6 +1,9 @@
 package com.example.dataclass;
 
-public class CSDepartment {
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class CSDepartment implements DataClass{
 	private String cs_department_id;
 	private String area_id;
 	
@@ -25,5 +28,19 @@ public class CSDepartment {
 	@Override
 	public String toString() {
 		return "CSDepartment [cs_department_id=" + cs_department_id + ", area_id=" + area_id + "]";
+	}
+	@Override
+	public void SelectTuple(ResultSet rs) {
+		// TODO Auto-generated method stub
+		try {
+			while(rs.next()) {
+				this.cs_department_id = rs.getString("cs_department_id");
+				this.area_id = rs.getString("area_id");
+				toString();
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
