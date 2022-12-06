@@ -60,9 +60,9 @@ public void NewCustomerProcedure(){
   }
 
   public void NewCustomerProcedureCall(String first_name, String middle_name, String last_name, 
-  String house_phone, String cell_phone,
-String card_number, String card_type, String cvc, 
-String expiration_year, String expiration_month){
+      String house_phone, String cell_phone,
+      String card_number, String card_type, String cvc, 
+      String expiration_year, String expiration_month){
 
     StringBuilder sb = new StringBuilder();
     String sql = sb.append("call new_customer(")
