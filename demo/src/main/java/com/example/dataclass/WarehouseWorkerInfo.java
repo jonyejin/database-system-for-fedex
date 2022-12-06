@@ -1,6 +1,9 @@
 package com.example.dataclass;
 
-public class WarehouseWorkerInfo {
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class WarehouseWorkerInfo implements DataClass {
 	private String worker_id;
 	private String warehouse_id;
 		
@@ -26,5 +29,18 @@ public class WarehouseWorkerInfo {
 	@Override
 	public String toString() {
 		return "WarehouseWorkerInfo [worker_id=" + worker_id + ", warehouse_id=" + warehouse_id + "]";
+	}
+
+	@Override
+	public void SelectTuple(ResultSet rs) {
+		// TODO Auto-generated method stub
+		try{
+			worker_id = rs.getString("worker_id");
+			warehouse_id = rs.getString("warehouse_id");
+			toString();
+		}
+		catch(SQLException e){
+			e.printStackTrace();
+		}
 	}
 }

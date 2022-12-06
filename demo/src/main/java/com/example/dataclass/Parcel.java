@@ -1,6 +1,9 @@
 package com.example.dataclass;
 
-public class Parcel {
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class Parcel implements DataClass{
 	private String parcel_id;
 	private String customer_id;
 	private String unit_measure_size_type;
@@ -77,6 +80,26 @@ public class Parcel {
 		return "Parcel [parcel_id=" + parcel_id + ", customer_id=" + customer_id + ", unit_measure_size_type="
 				+ unit_measure_size_type + ", unit_measure_weight_type=" + unit_measure_weight_type + ", weight="
 				+ weight + ", width=" + width + ", depth=" + depth + ", is_fragile=" + is_fragile + "]";
+	}
+
+	@Override
+	public void SelectTuple(ResultSet rs) {
+		// TODO Auto-generated method stub
+		try {
+			this.parcel_id = rs.getString("parcel_id");
+			this.customer_id = rs.getString("customer_id");
+			this.unit_measure_size_type = rs.getString("unit_measure_size_type");
+			this.unit_measure_weight_type = rs.getString("unit_measure_weight_type");
+			weight = rs.getFloat("weight");
+			width = rs.getFloat("width");
+			depth = rs.getFloat("depth");
+			is_fragile = rs.getInt("is_fragile");
+			toString();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 
 }

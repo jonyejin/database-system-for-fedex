@@ -1,6 +1,9 @@
 package com.example.dataclass;
 
-public class Payment {
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class Payment implements DataClass{
 	private String card_number;
 	private String customer_id;
 	private String card_type;
@@ -60,5 +63,23 @@ public class Payment {
 		return "Payment [card_number=" + card_number + ", customer_id=" + customer_id + ", card_type=" + card_type
 				+ ", cvc=" + cvc + ", expiration_year=" + expiration_year + ", expiration_month=" + expiration_month
 				+ "]";
+	}
+
+	@Override
+	public void SelectTuple(ResultSet rs) {
+		// TODO Auto-generated method stub
+		try {
+			card_number = rs.getString("card_number");
+			customer_id = rs.getString("customer_id");
+			card_type = rs.getString("card_type");
+			cvc = rs.getString("cvc");
+			expiration_year = rs.getString("expiration_year");
+			expiration_month = rs.getString("expiration_month");
+			toString();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 }

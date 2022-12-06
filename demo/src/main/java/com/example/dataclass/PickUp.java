@@ -1,6 +1,9 @@
 package com.example.dataclass;
 
-public class PickUp {
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class PickUp implements DataClass{
 	private String id;
 	private int is_delegate;
 	private int is_untact;
@@ -43,5 +46,21 @@ public class PickUp {
 	public String toString() {
 		return "PickUp [id=" + id + ", is_delegate=" + is_delegate + ", is_untact=" + is_untact + ", message=" + message
 				+ "]";
+	}
+
+	@Override
+	public void SelectTuple(ResultSet rs) {
+		// TODO Auto-generated method stub
+		try {
+			id = rs.getString("card_number");
+			is_delegate  = rs.getInt("card_number");
+			is_untact = rs.getInt("card_number");
+			message = rs.getString("card_number");
+			toString();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 }

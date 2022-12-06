@@ -1,6 +1,9 @@
 package com.example.dataclass;
 
-public class RegulatedBasePay {
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class RegulatedBasePay implements DataClass {
 	private int year;
 	private int base_pay;
 	
@@ -26,6 +29,20 @@ public class RegulatedBasePay {
 	@Override
 	public String toString() {
 		return "RegulatedBasePay [year=" + year + ", base_pay=" + base_pay + "]";
+	}
+
+	@Override
+	public void SelectTuple(ResultSet rs) {
+		// TODO Auto-generated method stub
+		try {
+			year  = rs.getInt("year");
+			base_pay = rs.getInt("base_pay");
+			toString();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 	
 }

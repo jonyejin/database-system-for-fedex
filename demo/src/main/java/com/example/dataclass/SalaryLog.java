@@ -1,6 +1,9 @@
 package com.example.dataclass;
 
-public class SalaryLog {
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class SalaryLog implements DataClass {
 	private String date;
 	private String worker_id;
 	private String monthly_pay;
@@ -43,6 +46,24 @@ public class SalaryLog {
 	public String toString() {
 		return "SalaryLog [date=" + date + ", worker_id=" + worker_id + ", monthly_pay=" + monthly_pay + ", incentive="
 				+ incentive + "]";
+	}
+
+
+	@Override
+	public void SelectTuple(ResultSet rs) {
+		// TODO Auto-generated method stub
+
+		try {
+			date = rs.getString("date");
+			worker_id = rs.getString("worker_id");
+			monthly_pay = rs.getString("monthly_pay");
+			incentive = rs.getString("incentive");
+			toString();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 
 }

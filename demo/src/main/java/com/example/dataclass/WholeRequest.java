@@ -1,6 +1,9 @@
 package com.example.dataclass;
 
-public class WholeRequest {
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class WholeRequest implements DataClass{
 	private String id;//
 	private String sender_address_id;//
 	private String customer_id;//
@@ -86,6 +89,26 @@ public class WholeRequest {
 				+ ", parcel_id=" + parcel_id + ", time_stamp=" + time_stamp + ", departure_area_id=" + departure_area_id
 				+ ", arrival_area_id=" + arrival_area_id + ", receiver_address_id=" + receiver_address_id
 				+ ", receiver_id=" + receiver_id + "]";
+	}
+
+	@Override
+	public void SelectTuple(ResultSet rs) {
+		// TODO Auto-generated method stub
+		try{
+			id = rs.getString("id");
+			sender_address_id = rs.getString("sender_address_id");
+			customer_id = rs.getString("customer_id");
+			parcel_id = rs.getString("parcel_id");
+			time_stamp = rs.getString("time_stamp");
+			departure_area_id = rs.getString("departure_area_id");
+			arrival_area_id = rs.getString("arrival_area_id");
+			receiver_address_id = rs.getString("receiver_address_id");
+			receiver_id = rs.getString("receiver_id");
+			toString();
+		}
+		catch(SQLException e){
+			e.printStackTrace();
+		}
 	}
 
 }

@@ -1,6 +1,9 @@
 package com.example.dataclass;
 
-public class Vehicle {
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class Vehicle implements DataClass{
 	private String plate_number;
 	private String nation_type;
 	private String type;
@@ -59,5 +62,22 @@ public class Vehicle {
 	public String toString() {
 		return "Vehicle [plate_number=" + plate_number + ", nation_type=" + nation_type + ", type=" + type + ", width="
 				+ width + ", height=" + height + ", depth=" + depth + "]";
+	}
+
+	@Override
+	public void SelectTuple(ResultSet rs) {
+		try{
+			plate_number = rs.getString("plate_number");
+			nation_type = rs.getString("nation_type");
+			type = rs.getString("type");
+			width = rs.getInt("width");
+			height = rs.getInt("height");
+			depth = rs.getInt("depth");
+			toString();
+		}
+		catch(SQLException e){
+			e.printStackTrace();
+		}
+		
 	}
 }

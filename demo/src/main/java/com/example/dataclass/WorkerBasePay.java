@@ -1,6 +1,10 @@
 package com.example.dataclass;
 
-public class WorkerBasePay {
+import java.sql.ResultSet;
+import java.sql.SQLClientInfoException;
+import java.sql.SQLException;
+
+public class WorkerBasePay implements DataClass {
 	private int seniority;
 	private int plus_amount;
 	
@@ -25,5 +29,18 @@ public class WorkerBasePay {
 	@Override
 	public String toString() {
 		return "WorkerBasePay [seniority=" + seniority + ", plus_amount=" + plus_amount + "]";
+	}
+
+	@Override
+	public void SelectTuple(ResultSet rs) {
+		// TODO Auto-generated method stub
+		try{
+			seniority = rs.getInt("seniority");
+			plus_amount = rs.getInt("plus_amount");
+			toString();
+		}catch(SQLException e){
+			e.getStackTrace();
+		}
+		
 	}
 }

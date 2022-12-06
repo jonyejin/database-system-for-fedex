@@ -1,6 +1,9 @@
 package com.example.dataclass;
 
-public class WarehouseConnection {
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class WarehouseConnection implements DataClass{
 	private String start_warehouse_area;
 	private String dest_warehouse_area;
 	private int edge_weight;
@@ -34,5 +37,18 @@ public class WarehouseConnection {
 	public String toString() {
 		return "WarehouseConnection [start_warehouse_area=" + start_warehouse_area + ", dest_warehouse_area="
 				+ dest_warehouse_area + ", edge_weight=" + edge_weight + "]";
+	}
+	@Override
+	public void SelectTuple(ResultSet rs) {
+		// TODO Auto-generated method stub
+		try{
+			start_warehouse_area = rs.getString("start_warehouse_area");
+			dest_warehouse_area = rs.getString("dest_warehouse_area");
+			edge_weight = rs.getInt("edge_weight");
+			toString();
+		}
+		catch(SQLException e){
+			e.printStackTrace();
+		}
 	}
 }

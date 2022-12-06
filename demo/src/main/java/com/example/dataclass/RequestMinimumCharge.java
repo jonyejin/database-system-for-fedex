@@ -1,6 +1,9 @@
 package com.example.dataclass;
 
-public class RequestMinimumCharge {
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class RequestMinimumCharge implements DataClass {
 	private int year;
 	private int minimum_charge;
 	
@@ -26,5 +29,19 @@ public class RequestMinimumCharge {
 	@Override
 	public String toString() {
 		return "RequestMinimumCharge [year=" + year + ", minimum_charge=" + minimum_charge + "]";
+	}
+
+	@Override
+	public void SelectTuple(ResultSet rs) {
+		// TODO Auto-generated method stub
+		try {
+			year  = rs.getInt("year");
+			minimum_charge = rs.getInt("minimum_charge");
+			toString();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 }
