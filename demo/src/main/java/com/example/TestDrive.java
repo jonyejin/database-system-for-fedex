@@ -39,12 +39,16 @@ public final class TestDrive
     	Where.put("customer_id", "1");
     	WhereType.put("customer_id", "String");
     	UpdateTuple.WithSetWhere(Table, Set, SetType, Where, WhereType);
+
+			Procedure newProcedure = new Procedure(DBC);
+			newProcedure.NewCustomerProcedure();
+			newProcedure.NewCustomerProcedureCall("yejin", "", "cho", "123123125", "123123125", "123123125", "123123125","123", "11", "22");
     	
 //    	drop table
-    	DT.DropTableAll();
+    	// DT.DropTableAll();
     	
 //    	disconnect
-    	DBC.disConn();
+    	// DBC.disConn();
 
     		
     }
