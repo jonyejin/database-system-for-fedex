@@ -562,7 +562,7 @@ public class CreateTable {
                 .append("is_answered tinyint,")
                 .append("primary key (complaint_id),")
                 .append("foreign key(whole_request_id)")
-                .append("references whole_request(id) on update cascade")
+                .append("references whole_request(id) on update cascade on delete cascade")
                 .append(");").toString();
     
         try {
@@ -584,7 +584,7 @@ public class CreateTable {
                 .append("foreign key(complaint_id)")
                 .append("references board(complaint_id) on update cascade,")
                 .append("foreign key(worker_id)")
-                .append("references cs_worker_info(worker_id) on update cascade")
+                .append("references cs_worker_info(worker_id) on update cascade on delete cascade")
                 .append(");").toString();
     
         try {
