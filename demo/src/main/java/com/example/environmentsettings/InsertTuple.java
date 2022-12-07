@@ -23,23 +23,6 @@ public class InsertTuple {
 		}
 	}
 	
-	public void InsertDummy(int id, String name, int grade) {
-	    StringBuilder sb = new StringBuilder();
-	    table = "dummy";
-		 String sql = sb.append("insert into " + table + " values(")
-	                .append(id + ",")
-	                .append("'" + name + "',")
-	                .append(grade)
-	                .append(");")
-	                .toString();
-		 try {
-	            stmt.executeUpdate(sql);
-	            System.out.println("insert "+table+ " tuple");
-	     } catch (SQLException e) {
-	            e.printStackTrace();
-	     }
-	}
-	
 	public void InsertCustomerInfo(String customer_id, String first_name, String middle_name, String last_name, String house_phone,
 			String cell_phone){
 	    StringBuilder sb = new StringBuilder();
