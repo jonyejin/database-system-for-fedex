@@ -7,6 +7,10 @@ public class WarehouseConnection implements DataClass{
 	private String start_warehouse_area;
 	private String dest_warehouse_area;
 	private int edge_weight;
+
+	public WarehouseConnection(){
+		
+	}
 	
 	public WarehouseConnection(String start_warehouse_area, String dest_warehouse_area, int edge_weight) {
 		super();
@@ -45,7 +49,7 @@ public class WarehouseConnection implements DataClass{
 			start_warehouse_area = rs.getString("start_warehouse_area");
 			dest_warehouse_area = rs.getString("dest_warehouse_area");
 			edge_weight = rs.getInt("edge_weight");
-			toString();
+			System.out.println(toString());
 		}
 		catch(SQLException e){
 			e.printStackTrace();

@@ -8,6 +8,10 @@ public class Warehouse implements DataClass {
 	private String warehouse_area;
 	private String warehouse_name;
 	
+	public Warehouse(){
+
+	}
+	
 	public Warehouse(String warehouse_id, String warehouse_area, String warehouse_name) {
 		super();
 		this.warehouse_id = warehouse_id;
@@ -47,7 +51,7 @@ public class Warehouse implements DataClass {
 			warehouse_id = rs.getString("warehouse_id");
 			warehouse_area = rs.getString("warehouse_area");
 			warehouse_name = rs.getString("warehouse_name");
-			toString();
+			System.out.println(toString());
 		}
 		catch(SQLException e){
 			e.printStackTrace();

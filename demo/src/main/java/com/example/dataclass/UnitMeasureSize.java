@@ -6,6 +6,10 @@ import java.sql.SQLException;
 public class UnitMeasureSize implements DataClass {
 	private String unit_measure_size_type;
 
+	public UnitMeasureSize(){
+		
+	}
+
 	public UnitMeasureSize(String unit_measure_weight_type) {
 		super();
 		this.unit_measure_size_type = unit_measure_weight_type;
@@ -28,7 +32,7 @@ public class UnitMeasureSize implements DataClass {
 		// TODO Auto-generated method stub
 		try{
 			unit_measure_size_type = rs.getString("unit_measure_size_type");
-			toString();
+			System.out.println(toString());
 		}
 		catch(SQLException e){
 			e.printStackTrace();

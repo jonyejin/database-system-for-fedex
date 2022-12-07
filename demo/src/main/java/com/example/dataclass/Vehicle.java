@@ -11,6 +11,10 @@ public class Vehicle implements DataClass{
 	private int height;
 	private int depth;
 
+	public Vehicle(){
+		
+	}
+
 	public Vehicle(String plate_number, String nation_type, String type, int width, int height, int depth) {
 		super();
 		this.plate_number = plate_number;
@@ -73,7 +77,7 @@ public class Vehicle implements DataClass{
 			width = rs.getInt("width");
 			height = rs.getInt("height");
 			depth = rs.getInt("depth");
-			toString();
+			System.out.println(toString());
 		}
 		catch(SQLException e){
 			e.printStackTrace();

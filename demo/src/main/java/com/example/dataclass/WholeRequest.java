@@ -13,6 +13,10 @@ public class WholeRequest implements DataClass{
 	private String arrival_area_id;
 	private String receiver_address_id;//
 	private String receiver_id;//
+
+	public WholeRequest(){
+		
+	}
 	
 	public WholeRequest(String id, String sender_address_id, String customer_id, String parcel_id, String time_stamp,
 			String departure_area_id, String arrival_area_id, String receiver_address_id, String receiver_id) {
@@ -104,7 +108,7 @@ public class WholeRequest implements DataClass{
 			arrival_area_id = rs.getString("arrival_area_id");
 			receiver_address_id = rs.getString("receiver_address_id");
 			receiver_id = rs.getString("receiver_id");
-			toString();
+			System.out.println(toString());
 		}
 		catch(SQLException e){
 			e.printStackTrace();

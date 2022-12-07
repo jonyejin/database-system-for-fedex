@@ -11,6 +11,10 @@ public class Payment implements DataClass{
 	private String expiration_year;
 	private String expiration_month;
 	
+	public Payment(){
+
+	}
+	
 	public Payment(String card_number, String customer_id, String card_type, String cvc, String expiration_year,
 			String expiration_month) {
 		super();
@@ -75,7 +79,7 @@ public class Payment implements DataClass{
 			cvc = rs.getString("cvc");
 			expiration_year = rs.getString("expiration_year");
 			expiration_month = rs.getString("expiration_month");
-			toString();
+			System.out.println(toString());
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

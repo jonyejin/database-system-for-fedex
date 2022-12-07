@@ -14,6 +14,10 @@ public class FedexMarket  implements DataClass{
 	private float height;
 	private float depth;
 	
+	public FedexMarket(){
+		
+	}
+
 	public FedexMarket(String item_code, int unit_measure_size_type, int unit_measure_weight_type, String item_name,
 			int item_price, float weight, float width, float height, float depth) {
 		super();
@@ -103,7 +107,7 @@ public class FedexMarket  implements DataClass{
 				this.height = rs.getFloat("height");
 				this.depth = rs.getFloat("depth");
 				
-				toString();
+				System.out.println(toString());
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
