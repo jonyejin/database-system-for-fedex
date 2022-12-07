@@ -6,6 +6,10 @@ import java.sql.SQLException;
 public class Area implements DataClass {
 	private String area_id;
 	
+	public Area(){
+		
+	}
+
 	public Area(String area_id) {
 		super();
 		this.area_id = area_id;

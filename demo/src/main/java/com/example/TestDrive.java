@@ -2,6 +2,8 @@ package com.example;
 
 import java.util.HashMap;
 
+import com.example.dataclass.A2ARequest;
+import com.example.dataclass.DataClass;
 import com.example.environmentsettings.CreateTable;
 import com.example.environmentsettings.DropTable;
 import com.example.environmentsettings.InsertTupleDrive;
@@ -18,6 +20,7 @@ public final class TestDrive
     	DropTable DT = new DropTable(DBC);
     	UpdateTuple UpdateTuple = new UpdateTuple(DBC);
     	InsertTupleDrive ITD = new InsertTupleDrive(DBC);
+		SelectTuple ST = new SelectTuple(DBC, (DataClass)(new A2ARequest()), "a2a_request");
     	
 //    	drop table
     	DT.DropTableAll();
@@ -40,13 +43,15 @@ public final class TestDrive
     	// WhereType.put("customer_id", "String");
     	// UpdateTuple.WithSetWhere(Table, Set, SetType, Where, WhereType);
 
-			Procedure newProcedure = new Procedure(DBC);
-			newProcedure.NewCustomerProcedure();
-			newProcedure.NewCustomerProcedureCall("yejin", "", "cho", "123123125", "123123125", "123123125", "123123125","123", "11", "22");
+		// Procedure newProcedure = new Procedure(DBC);
+		// newProcedure.NewCustomerProcedure();
+		// newProcedure.NewCustomerProcedureCall("yejin", "", "cho", "123123125", "123123125", "123123125", "123123125","123", "11", "22");
 
-			Trigger newTrigger = new Trigger(DBC);
-			newTrigger.CSQuestionDeleteTrigger();
-    	
+		// Trigger newTrigger = new Trigger(DBC);
+		// newTrigger.CSQuestionDeleteTrigger();
+
+		//select table
+    	ST.showResults();
 //    	drop table
     	// DT.DropTableAll();
     	

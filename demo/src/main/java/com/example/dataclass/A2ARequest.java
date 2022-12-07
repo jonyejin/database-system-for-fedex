@@ -12,6 +12,10 @@ public class A2ARequest implements DataClass {
 	private int departure;
 	private int arrival;
 	private String done_time_stamp;
+
+	public A2ARequest(){
+		
+	}
 	
 	public A2ARequest(String a2a_id, String whole_request_id, String worker_id, String plate_number, int is_done,
 			int departure, int arrival, String done_time_stamp) {
