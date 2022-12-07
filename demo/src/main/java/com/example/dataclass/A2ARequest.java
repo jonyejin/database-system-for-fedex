@@ -3,8 +3,6 @@ package com.example.dataclass;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.example.Dummy;
-
 public class A2ARequest implements DataClass {
 	private String a2a_id;
 	private String whole_request_id;
