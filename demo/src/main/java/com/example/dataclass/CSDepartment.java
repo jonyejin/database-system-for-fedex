@@ -7,6 +7,8 @@ public class CSDepartment implements DataClass{
 	private String cs_department_id;
 	private String area_id;
 	
+	public CSDepartment() {}
+	
 	public CSDepartment(String cs_department_id, String area_id) {
 		super();
 		this.cs_department_id = cs_department_id;
@@ -36,7 +38,7 @@ public class CSDepartment implements DataClass{
 			while(rs.next()) {
 				this.cs_department_id = rs.getString("cs_department_id");
 				this.area_id = rs.getString("area_id");
-				toString();
+				System.out.println(toString());
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

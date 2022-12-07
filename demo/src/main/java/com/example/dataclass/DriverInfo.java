@@ -8,6 +8,7 @@ public class DriverInfo  implements DataClass{
 	private String vehicle_id; //=plate_number
 	private String license_type;
 	
+	public DriverInfo() {}
 	public DriverInfo(String worker_id, String vehicle_id, String license_type) {
 		super();
 		this.worker_id = worker_id;
@@ -47,7 +48,7 @@ public class DriverInfo  implements DataClass{
 				this.worker_id = rs.getString("worker_id");
 				this.vehicle_id = rs.getString("vehicle_id");
 				this.license_type = rs.getString("license_type");
-				toString();
+				System.out.println(toString());
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

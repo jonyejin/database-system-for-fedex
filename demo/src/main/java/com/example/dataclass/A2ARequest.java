@@ -99,7 +99,7 @@ public class A2ARequest implements DataClass {
 				this.departure = rs.getInt("departure");
 				this.arrival = rs.getInt("arrival");
 				this.done_time_stamp = rs.getString("done_time_stamp");
-				toString();
+				System.out.println(toString());
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

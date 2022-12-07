@@ -13,6 +13,7 @@ public class D2ARequest  implements DataClass{
 	private int is_done;
 	private String done_time_stamp;
 	
+	public D2ARequest() {}
 	public D2ARequest(String customer_id, String whole_request_id, String worker_id, String plate_number,
 			String warehouse_id, int from_d, int is_done, String done_time_stamp) {
 		super();
@@ -95,7 +96,7 @@ public class D2ARequest  implements DataClass{
 				this.from_d = rs.getInt("from_d");
 				this.from_d = rs.getInt("from_d");
 				this.done_time_stamp = rs.getString("done_time_stamp");
-				toString();
+				System.out.println(toString());
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

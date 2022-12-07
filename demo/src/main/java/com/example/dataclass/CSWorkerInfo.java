@@ -8,6 +8,7 @@ public class CSWorkerInfo implements DataClass{
 	private String cs_department_id;
 	private int seat_no;
 	
+	public CSWorkerInfo() {}
 	public CSWorkerInfo(String worker_id, String cs_department_id, int seat_no) {
 		super();
 		this.worker_id = worker_id;
@@ -45,7 +46,7 @@ public class CSWorkerInfo implements DataClass{
 				this.worker_id = rs.getString("worker_id");
 				this.cs_department_id = rs.getString("cs_department_id");
 				this.seat_no = rs.getInt("seat_no");
-				toString();
+				System.out.println(toString());
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

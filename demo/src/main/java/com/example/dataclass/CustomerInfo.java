@@ -11,6 +11,8 @@ public class CustomerInfo implements DataClass{
 	private String house_phone;
 	private String cell_phone;
 	
+	public CustomerInfo() {}
+	
 	public CustomerInfo(String customer_id, String first_name, String middle_name, String last_name, String house_phone,
 			String cell_phone) {
 		super();
@@ -90,7 +92,7 @@ public class CustomerInfo implements DataClass{
 				this.house_phone = rs.getString("house_phone");
 				this.cell_phone = rs.getString("cell_phone");
 
-				toString();
+				System.out.println(toString());
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

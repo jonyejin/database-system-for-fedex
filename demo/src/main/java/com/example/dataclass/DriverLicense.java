@@ -7,6 +7,7 @@ public class DriverLicense  implements DataClass{
 	private String license_type;
 	private String nation_type;
 	
+	public DriverLicense() {}
 	public DriverLicense(String license_type, String nation_type) {
 		super();
 		this.license_type = license_type;
@@ -36,7 +37,7 @@ public class DriverLicense  implements DataClass{
 			while(rs.next()) {
 				this.license_type = rs.getString("license_type");
 				this.nation_type = rs.getString("nation_type");
-				toString();
+				System.out.println(toString());
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

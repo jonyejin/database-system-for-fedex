@@ -14,6 +14,8 @@ public class CustomerAddress implements DataClass{
 	private long pccc;
 	private int building_pwd;
 	
+	public CustomerAddress() {}
+	
 	public CustomerAddress(String address_1, String address_2, String customer_id, String country_region,
 			String town_city, String province_territory, int zip, long pccc, int building_pwd) {
 		super();
@@ -104,7 +106,7 @@ public class CustomerAddress implements DataClass{
 				this.zip = rs.getInt("zip");
 				this.pccc = rs.getLong("pccc");
 				this.building_pwd = rs.getInt("building_pwd");
-				toString();
+				System.out.println(toString());
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

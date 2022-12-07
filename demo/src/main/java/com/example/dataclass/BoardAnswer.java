@@ -9,6 +9,8 @@ public class BoardAnswer implements DataClass{
 	private String title;
 	private String body;
 	
+	public BoardAnswer() {}
+	
 	public BoardAnswer(String complaint_id, String cs_worker_id, String title, String body) {
 		super();
 		this.complaint_id = complaint_id;
@@ -56,7 +58,7 @@ public class BoardAnswer implements DataClass{
 				this.cs_worker_id = rs.getString("cs_worker_id");
 				this.title = rs.getString("title");
 				this.body = rs.getString("body");
-				toString();
+				System.out.println(toString());
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

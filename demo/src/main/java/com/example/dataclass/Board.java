@@ -11,6 +11,8 @@ public class Board implements DataClass{
 	private String body;
 	private int is_answered;
 	
+	public Board() {}
+	
 	public Board(String complaint_id, String whole_request_id, int question_type, String title, String body,
 			int is_answered) {
 		super();
@@ -76,7 +78,7 @@ public class Board implements DataClass{
 				this.title = rs.getString("title");
 				this.body = rs.getString("body");
 				this.is_answered = rs.getInt("is_answered");
-				toString();
+				System.out.println(toString());
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

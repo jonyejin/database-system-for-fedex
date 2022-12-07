@@ -8,6 +8,7 @@ public class FedexInventory  implements DataClass{
 	private String area_id;
 	private int count;
 	
+	public FedexInventory() {}
 	public FedexInventory(String item_code, String area_id, int count) {
 		super();
 		this.item_code = item_code;
@@ -47,7 +48,7 @@ public class FedexInventory  implements DataClass{
 				this.item_code = rs.getString("item_code");
 				this.area_id = rs.getString("area_id");
 				this.count = rs.getInt("count");
-				toString();
+				System.out.println(toString());
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

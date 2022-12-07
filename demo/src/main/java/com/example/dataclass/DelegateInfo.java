@@ -10,6 +10,7 @@ public class DelegateInfo  implements DataClass{
 	private String cell_phone;
 	private String relationship;
 	
+	public DelegateInfo() {}
 	public DelegateInfo(String id, String message, String nickname, String cell_phone, String relationship) {
 		super();
 		this.whole_request_id = id;
@@ -66,7 +67,7 @@ public class DelegateInfo  implements DataClass{
 				this.cell_phone = rs.getString("cell_phone");
 				this.relationship = rs.getString("relationship");
 
-				toString();
+				System.out.println(toString());
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
