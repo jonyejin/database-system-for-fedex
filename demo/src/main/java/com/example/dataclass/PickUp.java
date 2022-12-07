@@ -8,6 +8,10 @@ public class PickUp implements DataClass{
 	private int is_delegate;
 	private int is_untact;
 	private String message;
+
+	public PickUp(){
+		
+	}
 	
 	public PickUp(String id, int is_delegate, int is_untact, String message) {
 		super();
@@ -56,7 +60,7 @@ public class PickUp implements DataClass{
 			is_delegate  = rs.getInt("card_number");
 			is_untact = rs.getInt("card_number");
 			message = rs.getString("card_number");
-			toString();
+			System.out.println(toString());
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

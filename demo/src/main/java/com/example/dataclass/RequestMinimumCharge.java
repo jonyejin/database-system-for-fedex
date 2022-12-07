@@ -6,6 +6,10 @@ import java.sql.SQLException;
 public class RequestMinimumCharge implements DataClass {
 	private int year;
 	private int minimum_charge;
+
+	public RequestMinimumCharge(){
+		
+	}
 	
 	public RequestMinimumCharge(int year, int minimum_charge) {
 		super();
@@ -37,7 +41,7 @@ public class RequestMinimumCharge implements DataClass {
 		try {
 			year  = rs.getInt("year");
 			minimum_charge = rs.getInt("minimum_charge");
-			toString();
+			System.out.println(toString());
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

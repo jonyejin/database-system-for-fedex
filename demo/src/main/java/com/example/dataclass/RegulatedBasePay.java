@@ -6,6 +6,10 @@ import java.sql.SQLException;
 public class RegulatedBasePay implements DataClass {
 	private int year;
 	private int base_pay;
+
+	public RegulatedBasePay(){
+		
+	}
 	
 	public RegulatedBasePay(int year, int base_pay) {
 		super();
@@ -37,7 +41,7 @@ public class RegulatedBasePay implements DataClass {
 		try {
 			year  = rs.getInt("year");
 			base_pay = rs.getInt("base_pay");
-			toString();
+			System.out.println(toString());
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

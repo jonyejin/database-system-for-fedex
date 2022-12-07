@@ -12,6 +12,10 @@ public class Parcel implements DataClass{
 	private float width;
 	private float depth;
 	private int is_fragile;
+
+	public Parcel(){
+		
+	}
 	
 	public Parcel(String parcel_id, String customer_id, String unit_measure_size_type, String unit_measure_weight_type,
 			float weight, float width, float depth, int is_fragile) {
@@ -94,7 +98,7 @@ public class Parcel implements DataClass{
 			width = rs.getFloat("width");
 			depth = rs.getFloat("depth");
 			is_fragile = rs.getInt("is_fragile");
-			toString();
+			System.out.println(toString());
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

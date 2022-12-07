@@ -6,6 +6,10 @@ import java.sql.SQLException;
 public class Nation implements DataClass{
 	private String nation_type;
 
+	public Nation(){
+		
+	}
+
 	public Nation(String nation_type) {
 		super();
 		this.nation_type = nation_type;
@@ -29,7 +33,7 @@ public class Nation implements DataClass{
 		try {
 			while(rs.next()) {
 				this.nation_type = rs.getString("nation_type");
-				toString();
+				System.out.println(toString());
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

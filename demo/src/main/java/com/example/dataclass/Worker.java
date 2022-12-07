@@ -13,6 +13,10 @@ public class Worker implements DataClass{
 	private String cell_phone;
 	private String doe;
 
+	public Worker(){
+		
+	}
+
 	public Worker(String worker_id, String area_id, String first_name, String middle_name, String last_name,
 			String house_phone, String cell_phone, String doe) {
 		super();
@@ -93,7 +97,7 @@ public class Worker implements DataClass{
 			house_phone = rs.getString("house_phone");
 			cell_phone = rs.getString("cell_phone");
 			doe = rs.getString("doe");
-			toString();
+			System.out.println(toString());
 		}
 		catch(SQLException e){
 			e.printStackTrace();

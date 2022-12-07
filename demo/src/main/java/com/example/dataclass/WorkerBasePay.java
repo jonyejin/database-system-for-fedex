@@ -8,6 +8,10 @@ public class WorkerBasePay implements DataClass {
 	private int seniority;
 	private int plus_amount;
 	
+	public WorkerBasePay(){
+		
+	}
+
 	public WorkerBasePay(int seniority, int plus_amount) {
 		super();
 		this.seniority = seniority;
@@ -37,7 +41,7 @@ public class WorkerBasePay implements DataClass {
 		try{
 			seniority = rs.getInt("seniority");
 			plus_amount = rs.getInt("plus_amount");
-			toString();
+			System.out.println(toString());
 		}catch(SQLException e){
 			e.getStackTrace();
 		}

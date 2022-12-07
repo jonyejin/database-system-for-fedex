@@ -8,6 +8,10 @@ public class SalaryLog implements DataClass {
 	private String worker_id;
 	private String monthly_pay;
 	private String incentive;
+
+	public SalaryLog(){
+		
+	}
 	
 	public SalaryLog(String date, String worker_id, String monthly_pay, String incentive) {
 		super();
@@ -58,7 +62,7 @@ public class SalaryLog implements DataClass {
 			worker_id = rs.getString("worker_id");
 			monthly_pay = rs.getString("monthly_pay");
 			incentive = rs.getString("incentive");
-			toString();
+			System.out.println(toString());
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

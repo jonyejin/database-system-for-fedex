@@ -6,6 +6,10 @@ import java.sql.SQLException;
 public class WarehouseWorkerInfo implements DataClass {
 	private String worker_id;
 	private String warehouse_id;
+
+	public WarehouseWorkerInfo(){
+		
+	}
 		
 	public WarehouseWorkerInfo(String worker_id, String warehouse_id) {
 		super();
@@ -37,7 +41,7 @@ public class WarehouseWorkerInfo implements DataClass {
 		try{
 			worker_id = rs.getString("worker_id");
 			warehouse_id = rs.getString("warehouse_id");
-			toString();
+			System.out.println(toString());
 		}
 		catch(SQLException e){
 			e.printStackTrace();
