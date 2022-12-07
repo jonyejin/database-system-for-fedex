@@ -7,7 +7,7 @@ public class Area implements DataClass {
 	private String area_id;
 	
 	public Area(){
-		
+
 	}
 
 	public Area(String area_id) {
@@ -32,7 +32,7 @@ public class Area implements DataClass {
 		try {
 			while(rs.next()) {
 				this.area_id = rs.getString("area_id");
-				toString();
+				System.out.println(toString());
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

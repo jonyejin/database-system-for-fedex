@@ -3,6 +3,7 @@ package com.example;
 import java.util.HashMap;
 
 import com.example.dataclass.A2ARequest;
+import com.example.dataclass.Area;
 import com.example.dataclass.DataClass;
 import com.example.environmentsettings.CreateTable;
 import com.example.environmentsettings.DropTable;
@@ -20,7 +21,7 @@ public final class TestDrive
     	DropTable DT = new DropTable(DBC);
     	UpdateTuple UpdateTuple = new UpdateTuple(DBC);
     	InsertTupleDrive ITD = new InsertTupleDrive(DBC);
-		SelectTuple ST = new SelectTuple(DBC, (DataClass)(new A2ARequest()), "a2a_request");
+		SelectTuple ST = new SelectTuple(DBC, (DataClass)(new Area()), "area");
     	
 //    	drop table
     	DT.DropTableAll();

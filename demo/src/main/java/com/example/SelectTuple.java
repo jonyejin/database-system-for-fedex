@@ -29,20 +29,20 @@ public class SelectTuple {
     }
 
     public void showResults(){
-        try {
-            PreparedStatement ps = conn.prepareStatement(sql);
-            
-            try(ResultSet rs = ps.executeQuery()) {
-                while(rs.next()) {
-                    getDc().SelectTuple(rs);
-                }
-            } catch (Exception e) {
+    
+            PreparedStatement ps;
+            try {
+                ps = conn.prepareStatement(sql);
+                ResultSet rs = ps.executeQuery();
+                getDc().SelectTuple(rs);
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
+                
             
-        } catch (SQLException e1) {
-            e1.printStackTrace();
-        }
+                
+            
     }
 
     public void setTable(String tableName){
